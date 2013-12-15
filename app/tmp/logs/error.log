@@ -1,0 +1,36 @@
+2013-12-15 06:28:04 Error: [MissingControllerException] Controller class DigitalController could not be found.
+Exception Attributes: array (
+  'class' => 'DigitalController',
+  'plugin' => NULL,
+)
+Request URL: /digital/app/webroot/index.php/digital/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 06:28:04 Error: [MissingControllerException] Controller class DigitalController could not be found.
+Exception Attributes: array (
+  'class' => 'DigitalController',
+  'plugin' => NULL,
+)
+Request URL: /digital/app/webroot/index.php/digital/app/webroot/debug_kit/css/debug_toolbar.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 06:28:04 Error: [MissingControllerException] Controller class DigitalController could not be found.
+Exception Attributes: array (
+  'class' => 'DigitalController',
+  'plugin' => NULL,
+)
+Request URL: /digital/app/webroot/index.php/digital/app/webroot/debug_kit/js/js_debug_toolbar.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-15 06:28:04 Error: [MissingControllerException] Controller class DigitalController could not be found.
+Exception Attributes: array (
+  'class' => 'DigitalController',
+  'plugin' => NULL,
+)
+Request URL: /digital/app/webroot/index.php/digital/app/webroot/debug_kit/img/cake.icon.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
