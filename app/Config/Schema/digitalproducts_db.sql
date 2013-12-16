@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 16, 2013 at 02:41 AM
+-- Generation Time: Dec 16, 2013 at 05:29 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -34,8 +34,7 @@ CREATE TABLE IF NOT EXISTS `digi_coupons` (
   `coupon_code` varchar(20) COLLATE utf8_bin NOT NULL,
   `coupon_created_date` datetime NOT NULL,
   `coupon_used` int(11) NOT NULL,
-  PRIMARY KEY (`coupon_id`),
-  KEY `product_id` (`product_id`)
+  PRIMARY KEY (`coupon_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -50,8 +49,7 @@ CREATE TABLE IF NOT EXISTS `digi_customers` (
   `customer_email` varchar(200) COLLATE utf8_bin NOT NULL,
   `customer_purchased_date` datetime NOT NULL,
   `product_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`customer_id`),
-  KEY `product_id` (`product_id`)
+  PRIMARY KEY (`customer_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -77,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `digi_images` (
 
 CREATE TABLE IF NOT EXISTS `digi_options` (
   `option_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `option_name` varchar(64) NOT NULL DEFAULT '',
-  `option_value` longtext NOT NULL,
+  `option_name` varchar(50) NOT NULL DEFAULT '',
+  `option_value` varchar(512) NOT NULL,
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=627 ;
@@ -115,11 +113,12 @@ CREATE TABLE IF NOT EXISTS `digi_products` (
   `product_name` longtext COLLATE utf8_bin NOT NULL,
   `product_description` longtext COLLATE utf8_bin NOT NULL,
   `product_price` float NOT NULL,
-  `product_image_id` bigint(20) unsigned NOT NULL,
-  `product_link` text COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`product_id`),
-  UNIQUE KEY `product_image_id` (`product_image_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+  `product_image_id` bigint(20) unsigned DEFAULT NULL,
+  `product_link` text COLLATE utf8_bin,
+  `product_paused` tinyint(1) NOT NULL DEFAULT '0',
+  `product_file_id` bigint(20) unsigned DEFAULT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -134,10 +133,23 @@ CREATE TABLE IF NOT EXISTS `digi_products_purchased` (
   `product_id` bigint(20) unsigned NOT NULL,
   `customer_id` bigint(20) unsigned NOT NULL,
   `coupon_id` bigint(20) unsigned DEFAULT NULL,
-  PRIMARY KEY (`product_purchased_id`),
-  KEY `product_id` (`product_id`),
-  KEY `customer_id` (`customer_id`),
-  KEY `coupon_id` (`coupon_id`)
+  PRIMARY KEY (`product_purchased_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `digi_product_files`
+--
+
+CREATE TABLE IF NOT EXISTS `digi_product_files` (
+  `product_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_file_name` varchar(100) COLLATE utf8_bin NOT NULL,
+  `product_file_description` varchar(100) COLLATE utf8_bin NOT NULL,
+  `product_file_source` varchar(200) COLLATE utf8_bin NOT NULL,
+  `product_file_extension` varchar(10) COLLATE utf8_bin NOT NULL,
+  `product_file_size` double NOT NULL,
+  PRIMARY KEY (`product_file_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -166,36 +178,6 @@ CREATE TABLE IF NOT EXISTS `digi_tokens` (
   `token_created_date` datetime NOT NULL,
   PRIMARY KEY (`token_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `digi_coupons`
---
-ALTER TABLE `digi_coupons`
-  ADD CONSTRAINT `digi_coupons_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `digi_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `digi_customers`
---
-ALTER TABLE `digi_customers`
-  ADD CONSTRAINT `digi_customers_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `digi_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `digi_products`
---
-ALTER TABLE `digi_products`
-  ADD CONSTRAINT `digi_products_ibfk_1` FOREIGN KEY (`product_image_id`) REFERENCES `digi_images` (`image_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `digi_products_purchased`
---
-ALTER TABLE `digi_products_purchased`
-  ADD CONSTRAINT `digi_products_purchased_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `digi_products` (`product_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `digi_products_purchased_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `digi_customers` (`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `digi_products_purchased_ibfk_3` FOREIGN KEY (`coupon_id`) REFERENCES `digi_coupons` (`coupon_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
