@@ -34,6 +34,1499 @@ Request URL: /digital/app/webroot/index.php/digital/app/webroot/debug_kit/img/ca
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
+2013-12-17 00:21:09 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/admin
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 00:21:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/admin
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:01:56 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /digital/pages/display
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName('display')
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render('display', NULL)
+#2 C:\wamp\www\digital\app\Controller\PagesController.php(70): Controller->render('display')
+#3 [internal function]: PagesController->display('display')
+#4 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-12-17 05:13:30 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Pages\display\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Pages\\display\\index.ctp',
+)
+Request URL: /digital/pages/display/index
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName('display/index')
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render('display/index', NULL)
+#2 C:\wamp\www\digital\app\Controller\PagesController.php(70): Controller->render('display/index')
+#3 [internal function]: PagesController->display('display', 'index')
+#4 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-12-17 05:14:40 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Pages\display\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Pages\\display\\index.ctp',
+)
+Request URL: /digital/pages/display/index
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName('display/index')
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render('display/index', NULL)
+#2 C:\wamp\www\digital\app\Controller\PagesController.php(70): Controller->render('display/index')
+#3 [internal function]: PagesController->display('display', 'index')
+#4 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-12-17 05:14:54 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Pages\display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Pages\\display.ctp',
+)
+Request URL: /digital/pages/display/
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName('display')
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render('display', NULL)
+#2 C:\wamp\www\digital\app\Controller\PagesController.php(70): Controller->render('display')
+#3 [internal function]: PagesController->display('display')
+#4 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-12-17 05:28:05 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /digital/
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:28:06 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /digital/
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:45:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:46:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:46:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:39 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:39 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/bootstrap.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:39 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/jquery.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:47 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:47 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/jquery.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:47 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/bootstrap.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:49 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/jquery.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:49 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/bootstrap.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:47:49 Error: [MissingControllerException] Controller class ThemesController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/themes/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:48:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:49:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:49:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:57:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/spring/bootstrap.css
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:57:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:57:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/spring/bootstrap.css
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:57:20 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/spring/bootstrap.css
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 05:57:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:04:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:04:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:06:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:06:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:06:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:08:53 Error: Fatal Error (1): Call to a member function findById() on a non-object in [C:\wamp\www\digital\app\Controller\ProductsController.php, line 40]
+2013-12-17 06:08:53 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\Error\ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\wamp\www\dig...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\wamp\www\dig...', 40, Array)
+#2 C:\wamp\www\digital\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\wamp\www\dig...', 40, Array)
+#3 C:\wamp\www\digital\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 06:08:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:09:17 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Products\buy.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Products\\buy.ctp',
+)
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 06:09:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:09:29 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Products\buy.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Products\\buy.ctp',
+)
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName(NULL)
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render(NULL, NULL)
+#2 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(194): Controller->render()
+#3 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 06:09:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:11:42 Error: [MissingViewException] View file "C:\wamp\www\digital\app\View\Products\sping.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'C:\\wamp\\www\\digital\\app\\View\\Products\\sping.ctp',
+)
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\View\View.php(459): View->_getViewFileName('sping')
+#1 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(952): View->render('sping', NULL)
+#2 C:\wamp\www\digital\app\Controller\ProductsController.php(46): Controller->render('sping')
+#3 [internal function]: ProductsController->buy('1')
+#4 C:\wamp\www\digital\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#5 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#7 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-12-17 06:11:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:12:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:13:00 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:13:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:13:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:13:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:13:50 Error: [MissingActionException] Action ProductsController::images() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductsController',
+  'action' => 'images',
+)
+Request URL: /digital/shop/images/header_img/download_link.jpg
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-17 06:14:02 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/images/header_img/download_link.jpg
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:14:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:14:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:14:37 Error: [MissingActionException] Action ProductsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductsController',
+  'action' => 'css',
+)
+Request URL: /digital/shop/css/images/header_img/download_link.jpg
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-17 06:25:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:25:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:25:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:25:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:26:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:26:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:26:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:26:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:27:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:27:41 Error: [MissingControllerException] Controller class ImagesController could not be found.
+Exception Attributes: array (
+  'class' => 'ImagesController',
+  'plugin' => NULL,
+)
+Request URL: /digital/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:27:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:06 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:30 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:50 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:28:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:29:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:30:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:30:34 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /digital/css/css/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:30:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:32:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:32:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:35:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:35:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:36:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:36:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:36:55 Error: [MissingActionException] Action ProductsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'ProductsController',
+  'action' => 'css',
+)
+Request URL: /digital/shop/css/switch/images/pattern/spring.png
+Stack Trace:
+#0 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 C:\wamp\www\digital\lib\Cake\Routing\Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-12-17 06:38:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:38:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:38:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:38:56 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:39:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:39:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:39:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:39:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:40:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:40:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:41:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:41:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:41:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:41:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:42:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:42:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:43:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:43:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:43:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:43:58 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:46:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:46:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:47:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:49:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/jquery.min.map
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 06:50:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:13:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:14:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:14:51 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:14:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:15:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:15:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:58:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 07:59:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:00:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:00:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:01:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:02:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:02:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/twitter
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:02:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:03:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:03:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:03:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:03:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:04:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:06:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:06:07 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:06:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:06:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:08:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:08:28 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:08:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:09:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:09:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:12:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:13:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:14:31 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:15:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:15:46 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:15:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:16:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:16:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:16:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:16:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:17:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:17:57 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:21:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:21:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/ownload_link.jpg
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:21:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
 2013-12-15 13:21:04 Error: [MissingControllerException] Controller class PageController could not be found.
 Exception Attributes: array (
   'class' => 'PageController',
@@ -42,4 +1535,32 @@ Exception Attributes: array (
 Request URL: /digital/page
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> d5905f31751dc2b1813d6097b19d19320793c80a
+#1 {main}
+2013-12-17 08:40:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:40:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 08:40:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 C:\wamp\www\digital\app\webroot\index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}

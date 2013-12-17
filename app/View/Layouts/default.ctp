@@ -27,36 +27,35 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<?php echo $cakeDescription ?>:
 		<?php echo $title_for_layout; ?>
 	</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+        <style type="text/css" id="enject"></style>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
+    <?php echo $this->fetch('content'); ?>
 
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
+    <?php 
+        echo $this->Html->script('jquery.js');
+        echo $this->Html->script('business_ltd_1.0.js');
+        echo $this->Html->script('bootstrap.js');
+    ?>
+    <script type="text/javascript">
+        $(function() {
+            // Setup drop down menu
+            $('.dropdown-toggle').dropdown();
+                
+            // Fix input element click problem
+            $('.dropdown input, .dropdown label').click(function(e) {
+                e.stopPropagation();
+                });
+            });
+    </script>
 </body>
 </html>
