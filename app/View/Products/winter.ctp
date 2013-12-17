@@ -12,9 +12,9 @@ if (!Configure::read('debug')):
 endif;
 
 App::uses('Debugger', 'Utility');
-echo $this->Html->css('css/font-awesome');
+echo $this->Html->css('main/font-awesome');
 echo $this->Html->css('winter/bootstrap.css');
-echo $this->Html->css('css/base.css', array('id' => 'callCss', 'media' => 'screen'));
+echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'screen'));
 ?>
 <div class="container-fluid" style="background:rgba(34, 34, 34, 0);">
     <div class="row">

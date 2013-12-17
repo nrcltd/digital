@@ -68,7 +68,7 @@ class DATABASE_CONFIG {
 		'login' => 'cakephpuser',
 		'password' => '123456',
 		'database' => 'digitalproducts_db',
-		'prefix' => 'digi_',
+		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
 
@@ -79,7 +79,7 @@ class DATABASE_CONFIG {
 		'login' => 'cakephpuser',
 		'password' => '123456',
 		'database' => 'digitalproducts_db',
-		'prefix' => 'digi_',
+		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
 }
