@@ -3,8 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/XAMPP/htdocs/digital/index.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Config/core.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/summer.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/spring.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Model/AppModel.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Layouts/default.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Model/Product.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Controller/ProductsController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Model/Option.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Config/routes.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/winter.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/autumn.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Config/database.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Model/Theme.php</file>
         </group>
     </open-files>
 </project-private>
