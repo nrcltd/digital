@@ -97,3 +97,823 @@ Request URL: /digital/js/business_ltd_1.0.js
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-12-17 21:13:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:13:15 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:13:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:13:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:13:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:13:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:13:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:21:40 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 40]
+2013-12-17 21:21:40 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:21:40 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:22:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:22:49 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 40]
+2013-12-17 21:22:49 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:22:50 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:22:52 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 40]
+2013-12-17 21:22:52 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:22:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:23:23 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 40]
+2013-12-17 21:23:23 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 40)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 40, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:23:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:27:01 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 46]
+2013-12-17 21:27:01 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:27:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:27:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Products.id' in 'where clause'
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Product...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Product...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Product...', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2880): DboSource->read(Object(AppModel), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2852): Model->_readDataSource('first', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(599): Model->find('first', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('findById', Array, Object(AppModel))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(47): Model->__call('findById', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(47): AppModel->findById('1')
+#10 [internal function]: ProductsController->buy('1')
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#14 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-12-17 21:27:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:30:21 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 46]
+2013-12-17 21:30:21 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:30:21 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:30:23 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 46]
+2013-12-17 21:30:23 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:30:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:30:25 Error: Fatal Error (1): Call to a member function findById() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php, line 46]
+2013-12-17 21:30:25 Error: [FatalErrorException] Call to a member function findById() on a non-object
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 46, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-17 21:30:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:32:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Product.id' in 'where clause'
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Product...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Product...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Product...', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Product), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2852): Model->_readDataSource('first', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(599): Model->find('first', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('findById', Array, Object(Product))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(46): Model->__call('findById', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(46): Product->findById('1')
+#10 [internal function]: ProductsController->buy('1')
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#14 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-12-17 21:32:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:39:04 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:39:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:39:16 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/buy
+Stack Trace:
+#0 [internal function]: ProductsController->buy()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:39:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:39:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:39:54 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/index
+Stack Trace:
+#0 [internal function]: ProductsController->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:39:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:40:19 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/index
+Stack Trace:
+#0 [internal function]: ProductsController->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:40:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:41:17 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/index
+Stack Trace:
+#0 [internal function]: ProductsController->index('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:41:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:41:20 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/
+Stack Trace:
+#0 [internal function]: ProductsController->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:41:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:41:22 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/
+Stack Trace:
+#0 [internal function]: ProductsController->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:41:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:41:27 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 [internal function]: ProductsController->index('buy', '1')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:41:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:41:29 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 [internal function]: ProductsController->index('buy', '1')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:41:29 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Product.id' in 'where clause'
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Product...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Product...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Product...', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Product), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2852): Model->_readDataSource('first', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(599): Model->find('first', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('findById', Array, Object(Product))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(46): Model->__call('findById', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(46): Product->findById('1')
+#10 [internal function]: ProductsController->buy('1')
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#14 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-12-17 21:42:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:10 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/buy/
+Stack Trace:
+#0 [internal function]: ProductsController->buy()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 21:42:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:17 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:34 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:34 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:42:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Product.id' in 'where clause'
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Product...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Product...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Product...', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Product), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2852): Model->_readDataSource('first', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(599): Model->find('first', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('findById', Array, Object(Product))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(46): Model->__call('findById', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(46): Product->findById('1')
+#10 [internal function]: ProductsController->buy('1')
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#14 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-12-17 21:42:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 21:45:44 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:13:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:15:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:15:38 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:16:36 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:19:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:22:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:22:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:23:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:24:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:25:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:27:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:27:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:28:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:28:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:30:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'finByOptionName' at line 1
+Request URL: /digital/shop/buy/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('finByOptionName', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('finByOptionName', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('finByOptionName', Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('finByOptionName', Array, Object(Option))
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(53): Model->__call('finByOptionName', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(53): Option->finByOptionName('frontend_theme')
+#7 [internal function]: ProductsController->buy('1')
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-17 22:30:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:30:23 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:35:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:35:03 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/buy/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->buy('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 22:35:22 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:35:22 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/buy/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->buy('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-17 22:35:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:36:13 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:36:26 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:37:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:37:24 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-17 22:38:27 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /digital/js/business_ltd_1.0.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

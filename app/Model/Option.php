@@ -31,5 +31,6 @@ App::uses('Model', 'Model');
  *
  * @package       app.Model
  */
-class ProductsModel extends Model {
+class Option extends AppModel {
+    
 }

@@ -32,18 +32,38 @@ App::uses('AppController', 'Controller');
  */
 class ProductsController extends AppController {
 
+    public $helpers = array('Html', 'Form');
+    
+    public function index() {
+        throw new NotFoundException(__('Invalid Product'));
+    }
+    
     public function buy($id = null) {
         if (!$id) {
             throw new NotFoundException(__('Invalid Product'));
         }
-
-//        $product = $this->Products->findById($id);
-//        if (!$product) {
-//            throw new NotFoundException(__('Invalid Product'));
-//        }
         
-        $this->set('product', null);
-        $this->render('winter');
+        $product = $this->Product->findById($id);
+        if (!$product) {
+            throw new NotFoundException(__('Invalid Product'));
+        }
+//        debug($product['Product']['product_name']);
+        // load theme
+        $this->loadModel('Option');
+        $option = $this->Option->findByOptionName('frontend_theme');
+        $optionCode = 'spring';
+        if ($option) {
+            $optionValue = $option['Option']['option_value'];
+            $this->loadModel('Theme');
+            $theme = $this->Theme->findById($optionValue);
+            if ($theme) {
+                $optionCode = $theme['Theme']['theme_code'];
+            }
+        }
+//        debug($option);
+        $this->set('product', $product);
+        $this->set('title_for_layout', $product['Product']['product_name']);
+        $this->render($optionCode);
     }
 
 }
