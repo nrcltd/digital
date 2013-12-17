@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 16, 2013 at 05:29 AM
+-- Generation Time: Dec 17, 2013 at 08:42 AM
 -- Server version: 5.5.20
 -- PHP Version: 5.3.10
 
@@ -118,7 +118,14 @@ CREATE TABLE IF NOT EXISTS `digi_products` (
   `product_paused` tinyint(1) NOT NULL DEFAULT '0',
   `product_file_id` bigint(20) unsigned DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `digi_products`
+--
+
+INSERT INTO `digi_products` (`product_id`, `product_name`, `product_description`, `product_price`, `product_image_id`, `product_link`, `product_paused`, `product_file_id`) VALUES
+(1, 'test', 'test tesst', 45, 5, 'test', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -178,6 +185,56 @@ CREATE TABLE IF NOT EXISTS `digi_tokens` (
   `token_created_date` datetime NOT NULL,
   PRIMARY KEY (`token_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `groups`
+--
+
+CREATE TABLE IF NOT EXISTS `groups` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_bin NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `groups`
+--
+
+INSERT INTO `groups` (`id`, `name`, `created`, `modified`) VALUES
+(1, 'administrators', '2012-07-05 17:16:24', '2012-07-05 17:16:24'),
+(2, 'managers', '2012-07-05 17:16:34', '2012-07-05 17:16:34'),
+(3, 'users', '2012-07-05 17:16:45', '2012-07-05 17:16:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) COLLATE utf8_bin NOT NULL,
+  `password` varchar(40) COLLATE utf8_bin NOT NULL,
+  `email` varchar(150) COLLATE utf8_bin NOT NULL,
+  `first_name` varchar(40) COLLATE utf8_bin DEFAULT NULL,
+  `middle_name` varchar(40) COLLATE utf8_bin DEFAULT NULL,
+  `last_name` varchar(40) COLLATE utf8_bin DEFAULT NULL,
+  `group_id` int(4) DEFAULT '4',
+  `is_active` tinyint(1) DEFAULT '1',
+  `created_date` datetime DEFAULT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `first_name`, `middle_name`, `last_name`, `group_id`, `is_active`, `created_date`, `timestamp`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.com', 'Admin', '', '', 1, 1, NULL, '0000-00-00 00:00:00');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
