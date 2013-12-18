@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 17, 2013 at 10:38 PM
--- Server version: 5.5.31
--- PHP Version: 5.4.19
+-- Generation Time: Dec 18, 2013 at 07:00 AM
+-- Server version: 5.5.20
+-- PHP Version: 5.3.10
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `digitalproducts_db`
 --
-CREATE DATABASE IF NOT EXISTS `digitalproducts_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `digitalproducts_db`;
 
 -- --------------------------------------------------------
 
@@ -51,22 +49,6 @@ CREATE TABLE IF NOT EXISTS `customers` (
   `customer_email` varchar(200) COLLATE utf8_bin NOT NULL,
   `customer_purchased_date` datetime NOT NULL,
   `product_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `file_products`
---
-
-CREATE TABLE IF NOT EXISTS `file_products` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `product_file_name` varchar(100) COLLATE utf8_bin NOT NULL,
-  `product_file_description` varchar(100) COLLATE utf8_bin NOT NULL,
-  `product_file_source` varchar(200) COLLATE utf8_bin NOT NULL,
-  `product_file_extension` varchar(10) COLLATE utf8_bin NOT NULL,
-  `product_file_size` double NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
@@ -128,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `options` (
 
 INSERT INTO `options` (`id`, `option_name`, `option_value`) VALUES
 (612, 'seller_name', 'Truong Ba Phuong'),
-(613, 'seller_description', 'Description'),
+(613, 'seller_description', 'Get hands-on with my ideas. Pencil takes care of the lines so you can use your finger to smooth rough edges                                  blend color directly on the page. Good jobs guys!.Testing'),
 (614, 'seller_facebook_id', 'facebook id'),
 (615, 'seller_twitter_id', 'twitter id'),
 (616, 'seller_photo', 'photo id link from table dig_images'),
@@ -139,7 +121,7 @@ INSERT INTO `options` (`id`, `option_name`, `option_value`) VALUES
 (621, 'smtp_port', 'smtp port'),
 (622, 'smtp_password', 'smtp password'),
 (623, 'use_php_email', 'check box use php email: yer or no'),
-(624, 'frontend_theme', '2'),
+(624, 'frontend_theme', '1'),
 (625, 'currency_code', '$'),
 (626, 'domain_name', 'localhost');
 
@@ -166,7 +148,23 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `product_name`, `product_description`, `product_price`, `product_image_id`, `product_link`, `product_paused`, `product_file_id`) VALUES
-(1, 'test', 'test tesst', 45, 5, 'test', 0, 1);
+(1, 'The Chart of 300 Hand Tools Test Name', '<p>his meticulously organized chart places 300 hand tools into five categories: tools that measure, stabilize, mark, divide and manipulate. 24" x 36"</p>\r\n<p>Pencil is made to make you happy, and we back that up with our return policies. If you''re not pleased, just contact us within 30 days and we will get you a refund or replacement. While we hope it doesn''t come to that, we''ll make it as painless as possible with free return shipping. In addition to the <a href="#">"30-day Satisfaction Guarantee,"</a> Pencil is covered by a limited warranty for a full year.</p>\r\nTest', 45.8, 5, 'test', 0, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_files`
+--
+
+CREATE TABLE IF NOT EXISTS `product_files` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `product_file_name` varchar(100) COLLATE utf8_bin NOT NULL,
+  `product_file_description` varchar(100) COLLATE utf8_bin NOT NULL,
+  `product_file_source` varchar(200) COLLATE utf8_bin NOT NULL,
+  `product_file_extension` varchar(10) COLLATE utf8_bin NOT NULL,
+  `product_file_size` double NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

@@ -61,7 +61,29 @@ class ProductsController extends AppController {
             }
         }
 //        debug($option);
+        
+        $option = $this->Option->findByOptionName('currency_code');
+        $currencyCcode = '$';
+        if ($option) {
+           $currencyCcode = $option['Option']['option_value']; 
+        }
+        
+        $option = $this->Option->findByOptionName('seller_name');
+        $sellerName = '';
+        if ($option) {
+           $sellerName = $option['Option']['option_value']; 
+        }
+        
+        $option = $this->Option->findByOptionName('seller_description');
+        $sellerDescription = '';
+        if ($option) {
+           $sellerDescription = $option['Option']['option_value']; 
+        }
+        
         $this->set('product', $product);
+        $this->set('currencyccode', $currencyCcode);
+        $this->set('sellername', $sellerName);
+        $this->set('sellerdescription', $sellerDescription);
         $this->set('title_for_layout', $product['Product']['product_name']);
         $this->render($optionCode);
     }

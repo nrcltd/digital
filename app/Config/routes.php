@@ -30,7 +30,7 @@
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	//Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
+        //Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
  * Routing to controler Products, Action Buy, View Dynamic

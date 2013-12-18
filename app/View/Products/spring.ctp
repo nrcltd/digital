@@ -84,7 +84,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                 <div class="row">
                     <!-- Sectionone begin ======================================== -->
                     <div style="color:white; background:rgba(54, 57, 59, 1);border-bottom: 1px solid #ffffff;">
-                        <p style="font-size:1.4em;padding:10px"><b>The Chart of 300 Hand Tools</b></p>
+                        <p style="font-size:1.4em;padding:10px"><b><?php echo $product['Product']['product_name'] ?></b></p>
                     </div>
 
                     <section id="header_img" style="height:300px; 
@@ -95,8 +95,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                     <!-- Sectionone ends ======================================== -->            
 
                     <div class="col-md-7 pad_left_right">
-                        <p>his meticulously organized chart places 300 hand tools into five categories: tools that measure, stabilize, mark, divide and manipulate. 24" x 36"</p>
-                        <p>Pencil is made to make you happy, and we back that up with our return policies. If you're not pleased, just contact us within 30 days and we will get you a refund or replacement. While we hope it doesn't come to that, we'll make it as painless as possible with free return shipping. In addition to the <a href="#">"30-day Satisfaction Guarantee,"</a> Pencil is covered by a limited warranty for a full year.</p>
+                        <?php echo $product['Product']['product_description'] ?>
                         <br>
                     </div>
                     <div class="col-md-5 pad_left_right">
@@ -104,8 +103,8 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                         <div class="panel panel-warning" style="font-size:0.9em;">
                             <i class="left-inner-addon"><img id="callcorner" src="<?php echo $this->Html->url('/img/corner/spring.png', true)?>" alt="..."></i>
                             <div class="panel-heading">
-                                <b><span style="font-size: 26.3px;">Now </span><span style="font-size: 35.4px;">$12.00 </span></b>
-                                <span style="font-size:18px; color:#ebedee;"><STRIKE><sub>$ 25.99</sub></STRIKE></span>
+                                <b><span style="font-size: 26.3px;">Now </span><span style="font-size: 35.4px;"><?php echo $currencyccode.number_format($product['Product']['product_price'], 2);?> </span></b>
+                                <span style="font-size:18px; color:#ebedee;"><STRIKE><sub></sub></STRIKE></span>
                             </div>
                             <div class="panel-body" >
 
@@ -202,11 +201,10 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                             <a href="#"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/user_pic.png', true)?>" alt="..."></a>
                         </div>
                         <div class="col-sm-9 pad_left_right">
-                            <h3 class="media-heading text-primary" style="color:#2c3e50;">Patty Griffin</h3>
-                            <small style="font-size:0.7em;">MARCH 16,2013 AT 3:44 AM</small>
-                            <p>Get hands-on with my ideas. Pencil takes care of the lines so you can use your finger to smooth rough edges 
-                                blend color directly on the page. Good jobs guys!</p>
-
+                            <h3 class="media-heading text-primary" style="color:#2c3e50;"><?php echo $sellername;?></h3>
+                            <small style="font-size:0.7em;">&nbsp;</small>
+                            <p><?php echo $sellerdescription;?></p>
+                            
                             <!-- Social icons begin ======================================== -->
                             <p>
                                 <a href="#"><img src="<?php echo $this->Html->url('/img/facebook.png', true)?>" alt="..."></a>
