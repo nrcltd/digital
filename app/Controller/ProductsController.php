@@ -38,7 +38,7 @@ class ProductsController extends AppController {
         throw new NotFoundException(__('Invalid Product'));
     }
     
-    public function buy($id = null) {
+    public function view($id = null) {
         if (!$id) {
             throw new NotFoundException(__('Invalid Product'));
         }

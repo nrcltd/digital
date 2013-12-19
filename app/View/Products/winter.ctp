@@ -141,7 +141,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                             <i class="icon-envelope"></i>
                                             <input class="form-control" id="focusedInput" type="text" placeholder="Email">
                                         </div><br>
-                                        <div class="right-inner-addon">
+                                        <div>
                                             <input class="form-control" id="focusedInput" type="text" placeholder="Coupon code (if you have any)">
                                         </div><br>
                                         <div id="demo" class="collapse out">

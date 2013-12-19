@@ -16,46 +16,65 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 $cakeDescription = __d('digital_shop', 'Digital Sell');
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
-	</title>
+    <head>
+        <?php echo $this->Html->charset(); ?>
+        <title>
+            <?php echo $cakeDescription ?>:
+            <?php echo $title_for_layout; ?>
+        </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php
-		echo $this->Html->meta('icon');
+        <?php
+        echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-        <style type="text/css" id="enject"></style>
-</head>
-<body>
-    <?php echo $this->fetch('content'); ?>
-
-    <?php 
-        echo $this->Html->script('jquery.js');
-        echo $this->Html->script('business_ltd_1.0.js');
+        echo $this->Html->css('cake.generic');
+        echo $this->Html->script('jquery-1.8.3.min.js');
+//        echo $this->Html->script('business_ltd_1.0.js');
         echo $this->Html->script('bootstrap.js');
-    ?>
-    <script type="text/javascript">
-        $(function() {
-            // Setup drop down menu
-            $('.dropdown-toggle').dropdown();
-                
-            // Fix input element click problem
-            $('.dropdown input, .dropdown label').click(function(e) {
-                e.stopPropagation();
+        echo $this->Html->script('jqBootstrapValidation.js');
+        echo $this->fetch('meta');
+        echo $this->fetch('css');
+        echo $this->fetch('script');
+        ?>
+        <style type="text/css" id="enject"></style>
+    </head>
+    <body>
+        <?php echo $this->fetch('content'); ?>
+        <script type="text/javascript">
+            $(function() {
+                // Setup drop down menu
+                $('.dropdown-toggle').dropdown();
+
+                // Fix input element click problem
+                $('.dropdown input, .dropdown label').click(function(e) {
+                    e.stopPropagation();
                 });
+
+//                $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
             });
-    </script>
-</body>
+
+
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $("input,textarea,select").jqBootstrapValidation(
+                        {
+                            preventSubmit: true,
+                            submitError: function($form, event, errors) {
+                                // Here I do nothing, but you could do something like display 
+                                // the error messages to the user, log, etc.
+                            },
+                            submitSuccess: function($form, event) {
+                            },
+                            filter: function() {
+                                return $(this).is(":visible");
+                            }
+                        }
+                );
+            });
+        </script>
+    </body>
 </html>

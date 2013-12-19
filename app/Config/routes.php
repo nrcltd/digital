@@ -33,10 +33,10 @@
         //Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
 
 /**
- * Routing to controler Products, Action Buy, View Dynamic
+ * Routing to controler Products, Action view, View Dynamic
  */
 	Router::connect(
-		'/shop/:action/*', array('controller' => 'products', 'action' => 'buy')
+		'/shop/:action/*', array('controller' => 'products', 'action' => 'view')
 	);
 
 /**
