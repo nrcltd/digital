@@ -51,4 +51,23 @@ class Order extends AppModel {
         )
     );
 
+    public $hasOne = 'Token';
+     
+    public function addOrder($data) {
+        $data['Order']['orderstatus'] = 'Pending';
+        $data['Order']['purchased_date'] = date("Y-m-d H:i:s");
+        $this->set($data);
+        if ($this->validates()) {
+            
+            $this->create();
+            $this->save($data);
+            $data['id'] = $this->id;
+            $dataToken = array('id' =>  $data['id'], 'token_id' => $this->Token->addToken());
+//            debug($this->saveField('token_id', $this->Token->addToken()));
+            $this->saveField('token_id', $this->Token->addToken());
+
+            return $data['id'];
+        }
+        return false;
+    }
 }

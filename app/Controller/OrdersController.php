@@ -44,12 +44,10 @@ class OrdersController extends AppController {
 
 //        debug($this->Order);
         $data = $this->request->data;
-        $data['Order']['orderstatus'] = 'Pending';
-        $data['Order']['purchased_date'] = date("Y-m-d H:i:s");
 //        debug($data);
-        $this->Order->set($data);
+        $this->Order->addOrder($data);
 //        debug($this->Order->invalidFields());
-        $this->Order->save();
+//        $this->Order->save();
 
 //        debug($this->Order->validates());
 //        if ($this->Order->validates()) {

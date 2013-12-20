@@ -136,36 +136,38 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                     </ul>
 
 
-                                    <div class="right-inner-addon">
-                                        <i class="icon-user"></i>
-                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="User name">-->
-                                        <?php
-                                        echo $this->Form->input('customer_name', array(
-                                            'type' => 'text',
-                                            'label' => false,
-                                            'class' => 'form-control',
-                                            'id' => 'focusedInput',
-                                            'placeholder' => 'User name',
-                                            'data-validation-regex-regex' =>'[a-z]'
-                                        ));
-                                        ?>
-                                        <p class="help-block" style="display: block"></p>
+                                    <div class="right-inner-addon control-group">
+                                            <i class="icon-user"></i>
+                                            <!--<input class="form-control" id="focusedInput" type="text" placeholder="User name">-->
+                                            <?php
+                                            echo $this->Form->input('customer_name', array(
+                                                'type' => 'text',
+                                                'label' => false,
+                                                'class' => 'form-control',
+                                                'id' => 'focusedInput',
+                                                'placeholder' => 'User name',
+                                                'data-validation-regex-regex' => '[A-Za-z0-9]+', 
+                                                'data-validation-regex-message' => 'Alphabets and numbers only' 
+                                            ));
+                                            ?>
+     
                                     </div><br>
-                                    <div class="right-inner-addon">
-                                        <i class="icon-envelope"></i>
-                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="Email">-->
-                                        <?php
-                                        echo $this->Form->input('customer_email', array(
-                                            'type' => 'email',
-                                            'label' => false,
-                                            'class' => 'form-control',
-                                            'id' => 'focusedInput',
-                                            'placeholder' => 'Email'
-                                        ));
-                                        ?> 
-                                        <p class="help-block" style="display: block"></p>
+                                    <div class="right-inner-addon control-group">
+                                        
+                                            <i class="icon-envelope"></i>
+                                            <!--<input class="form-control" id="focusedInput" type="text" placeholder="Email">-->
+                                            <?php
+                                            echo $this->Form->input('customer_email', array(
+                                                'type' => 'email',
+                                                'label' => false,
+                                                'class' => 'form-control',
+                                                'id' => 'focusedInput',
+                                                'placeholder' => 'Email'
+                                            ));
+                                            ?>
+                                        
                                     </div><br>
-                                    <div>
+                                    <div class="control-group">
                                         <!--<input class="form-control" id="focusedInput" type="text" placeholder="Coupon code (if you have any)">-->
                                         <?php
                                         echo $this->Form->input('coupon_code', array(
@@ -173,7 +175,9 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                             'label' => false,
                                             'class' => 'form-control',
                                             'id' => 'focusedInput',
-                                            'placeholder' => 'Coupon code (if you have any)'
+                                            'placeholder' => 'Coupon code (if you have any)',
+                                            'data-validation-regex-regex' => '[A-Za-z0-9]+', 
+                                            'data-validation-regex-message' => 'Alphabets and numbers only' 
                                         ));
                                         ?>
                                     </div><br>

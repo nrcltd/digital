@@ -31,6 +31,7 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
         echo $this->Html->meta('icon');
 
         echo $this->Html->css('cake.generic');
+        echo $this->Html->css('main/errors.css');
         echo $this->Html->script('jquery-1.8.3.min.js');
 //        echo $this->Html->script('business_ltd_1.0.js');
         echo $this->Html->script('bootstrap.js');
@@ -60,20 +61,7 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
         </script>
         <script type="text/javascript">
             $(function() {
-                $("input,textarea,select").jqBootstrapValidation(
-                        {
-                            preventSubmit: true,
-                            submitError: function($form, event, errors) {
-                                // Here I do nothing, but you could do something like display 
-                                // the error messages to the user, log, etc.
-                            },
-                            submitSuccess: function($form, event) {
-                            },
-                            filter: function() {
-                                return $(this).is(":visible");
-                            }
-                        }
-                );
+                $("input,textarea,select").not("[type=submit]").jqBootstrapValidation();
             });
         </script>
     </body>
