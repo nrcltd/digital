@@ -33,7 +33,7 @@ App::uses('Validation', 'Utility');
  */
 class OrdersController extends AppController {
 
-    public $helpers = array('Html', 'Form');
+    public $helpers = array('Html','Form','PaypalIpn.Paypal');
 
     public function index() {
         
@@ -41,14 +41,23 @@ class OrdersController extends AppController {
 
     public function add() {
 //        $this->Order->set($this->request->data);
-
 //        debug($this->Order);
         $data = $this->request->data;
 //        debug($data);
-        $this->Order->addOrder($data);
+        $result = $this->Order->addOrder($data);
+        if ($result == false) {
+            exit;
+        } else {
+            return $this->redirect(
+                            array(
+                                'action' => 'invoice',
+                                '?' => array(
+                                    'id' => $result['id'],
+                                    'token' => $result['token'])
+            ));
+        }
 //        debug($this->Order->invalidFields());
 //        $this->Order->save();
-
 //        debug($this->Order->validates());
 //        if ($this->Order->validates()) {
 //            // it validated logic
@@ -60,6 +69,53 @@ class OrdersController extends AppController {
 //            $errors = $this->Order->validationErrors;
 //            debug($this->request->data['Order']['customer_email']);
 //        }
+    }
+
+    public function invoice() {
+
+        $this->loadModel('Option');
+        $option = $this->Option->findByOptionName('frontend_theme');
+        $optionCode = 'spring';
+        if ($option) {
+            $optionValue = $option['Option']['option_value'];
+            $this->loadModel('Theme');
+            $theme = $this->Theme->findById($optionValue);
+            if ($theme) {
+                $optionCode = $theme['Theme']['theme_code'];
+            }
+        }
+//        debug($this->request);
+        $orderid = $this->request->query['id'];
+        $tokencode = $this->request->query['token'];
+        if (empty($orderid)) {
+            throw new NotFoundException();
+        }
+        if (empty($tokencode)) {
+            throw new NotFoundException();
+        }
+
+        $order = $this->Order->findOrder($orderid,$tokencode);
+//        debug($order);
+        $this->set('theme', $optionCode);
+        if ($order == false) {
+            throw new NotFoundException();
+        }
+        $product_id = $order['Order']['product_id'];
+//        debug($product_id);
+        
+        $this->loadModel('Product');
+        $product = $this->Product->findById($product_id);
+        $this->set('product', $product);
+        
+        $this->loadModel('Option');
+        $option = $this->Option->findByOptionName('currency_code');
+        $currencyCode = '$';
+        if ($option) {
+           $currencyCode = $option['Option']['option_value']; 
+        }
+        $this->set('currencyccode', $currencyCode);
+        $this->set('order', $order);
+        $this->set('title_for_layout', 'Invoice #'.$order['Order']['id']);
     }
 
 }

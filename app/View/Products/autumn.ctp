@@ -24,7 +24,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
 
         <div class="col-sm-6">  
-            <body style="background-image:url('<?php echo $this->Html->url('/img/pattern/autumn.png', true)?>'); center;">
+            <body style="background-image:url('<?php echo $this->Html->url('/img/pattern/autumn.png', true) ?>'); center;">
 
                 <nav class="navbar navbar-wrapper navbar-inverse navbar-fixed-top" role="navigation">
                     <div class="container" style="display:none">
@@ -90,7 +90,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                     </div>
 
                     <section id="header_img" style="height:300px; 
-                             background-image:url('<?php echo $this->Html->url('/img/download_link.jpg', true)?>')">
+                             background-image:url('<?php echo $this->Html->url('/img/download_link.jpg', true) ?>')">
                     </section>
 
                     <br>
@@ -103,58 +103,94 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                     <div class="col-md-5 pad_left_right">
 
                         <div class="panel panel-warning" style="font-size:0.9em;">
-                            <i class="left-inner-addon"><img id="callcorner" src="<?php echo $this->Html->url('/img/corner/autumn.png', true)?>" alt="..."></i>
+                            <i class="left-inner-addon"><img id="callcorner" src="<?php echo $this->Html->url('/img/corner/autumn.png', true) ?>" alt="..."></i>
                             <div class="panel-heading">
-                                <b><span style="font-size: 26.3px;">Now </span><span style="font-size: 35.4px;"><?php echo $currencyccode.number_format($product['Product']['product_price'], 2);?> </span></b>
+                                <b><span style="font-size: 26.3px;">Now </span><span style="font-size: 35.4px;"><?php echo $currencyccode . number_format($product['Product']['product_price'], 2); ?> </span></b>
                                 <span style="font-size:18px; color:#ebedee;"><STRIKE><sub></sub></STRIKE></span>
                             </div>
                             <div class="panel-body" >
 
                                 <i class="left-addon" style="position: relative; z-index: -1;">
-                                    <img id="callcorner" src="<?php echo $this->Html->url('/img/gradient corner.png', true)?>" alt="..."></i>
+                                    <img id="callcorner" src="<?php echo $this->Html->url('/img/gradient corner.png', true) ?>" alt="..."></i>
 
 
 
-                                <form  role="form" >
-
-                                    <div class="form-group" style="font-size: 14px;">
-                                        <p> You will get :</p>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                                <span>.mov</span><span class="pull-right">894.39kb</span>
-                                                <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
-                                                    <i>Includes working file*</i></p>
-                                            </li>
-                                            <li>
-                                                <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                                <span>PSD 300dpi</span><span class="pull-right">- KB</span>                   
-                                            </li>
-                                        </ul>
-
-
-                                        <div class="right-inner-addon">
-                                            <i class="icon-user"></i>
-                                            <input class="form-control" id="focusedInput" type="text" placeholder="User name">
-                                        </div><br>
-                                        <div class="right-inner-addon">
-                                            <i class="icon-envelope"></i>
-                                            <input class="form-control" id="focusedInput" type="text" placeholder="Email">
-                                        </div><br>
-                                        <div>
-                                            <input class="form-control" id="focusedInput" type="text" placeholder="Coupon code (if you have any)">
-                                        </div><br>
-                                        <div id="demo" class="collapse out">
-                                            <input class="form-control" type="text" placeholder="Coupon code"> 
-                                        </div>
+                                <!--<form  role="form" >-->
+                                <?php
+                                echo $this->Form->create('Order', array('url' => array('controller' => 'Orders', 'action' => 'add')));
+                                ?>
+                                <div class="form-group" style="font-size: 14px;">
+                                    <p> You will get :</p>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
+                                            <span>.mov</span><span class="pull-right">894.39kb</span>
+                                            <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
+                                                <i>Includes working file*</i></p>
+                                        </li>
+                                        <li>
+                                            <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
+                                            <span>PSD 300dpi</span><span class="pull-right">- KB</span>                   
+                                        </li>
+                                    </ul>
 
 
-
-                                        <!-- <hr style="border-top: 1.5px dotted green; width:150px" /> -->
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Download</b></button>
+                                    <div class="right-inner-addon control-group">
+                                        <i class="icon-user"></i>
+                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="User name">-->
+                                        <?php
+                                        echo $this->Form->input('customer_name', array(
+                                            'type' => 'text',
+                                            'label' => false,
+                                            'class' => 'form-control',
+                                            'id' => 'focusedInput',
+                                            'placeholder' => 'User name',
+                                            'data-validation-regex-regex' => '[A-Za-z0-9]+',
+                                            'data-validation-regex-message' => 'Alphabets and numbers only'
+                                        ));
+                                        ?>
+                                    </div><br>
+                                    <div class="right-inner-addon control-group">
+                                        <i class="icon-envelope"></i>
+                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="Email">-->
+                                        <?php
+                                        echo $this->Form->input('customer_email', array(
+                                            'type' => 'email',
+                                            'label' => false,
+                                            'class' => 'form-control',
+                                            'id' => 'focusedInput',
+                                            'placeholder' => 'Email'
+                                        ));
+                                        ?>
+                                    </div><br>
+                                    <div class="control-group">
+                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="Coupon code (if you have any)">-->
+                                        <?php
+                                        echo $this->Form->input('coupon_code', array(
+                                            'type' => 'text',
+                                            'label' => false,
+                                            'class' => 'form-control',
+                                            'id' => 'focusedInput',
+                                            'placeholder' => 'Coupon code (if you have any)',
+                                            'data-validation-regex-regex' => '[A-Za-z0-9]+',
+                                            'data-validation-regex-message' => 'Alphabets and numbers only'
+                                        ));
+                                        ?>
+                                    </div><br>
+                                    <div id="demo" class="collapse out">
+                                        <input class="form-control" type="text" placeholder="Coupon code"> 
                                     </div>
-                                </form>
 
+
+                                    <?php
+                                    echo $this->Form->input('product_id', array('type' => 'hidden', 'value' => $product['Product']['id']));
+                                    ?>
+
+                                    <!-- <hr style="border-top: 1.5px dotted green; width:150px" /> -->
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Download</b></button>
+                                </div>
+                                <!--                                </form>-->
+                                <?php echo $this->Form->end(); ?>
                             </div></div>
 
                     </div>
@@ -200,17 +236,17 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                 <div class="uparrowdiv">
                     <div class="row"><br>
                         <div class="col-xs-3 pad_left_right">
-                            <a href="#"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/user_pic.png', true)?>" alt="..."></a>
+                            <a href="#"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/user_pic.png', true) ?>" alt="..."></a>
                         </div>
                         <div class="col-sm-9 pad_left_right">
-                            <h3 class="media-heading text-primary" style="color:#2c3e50;"><?php echo $sellername;?></h3>
+                            <h3 class="media-heading text-primary" style="color:#2c3e50;"><?php echo $sellername; ?></h3>
                             <small style="font-size:0.7em;">&nbsp;</small>
-                            <p><?php echo $sellerdescription;?></p>
+                            <p><?php echo $sellerdescription; ?></p>
 
                             <!-- Social icons begin ======================================== -->
                             <p>
-                                <a href="#"><img src="<?php echo $this->Html->url('/img/facebook.png', true)?>" alt="..."></a>
-                                <a href="#"><img src="<?php echo $this->Html->url('/img/twitter.png', true)?>" alt="..."></a>                   
+                                <a href="#"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
+                                <a href="#"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
                             </p>
                             <!-- Social icons end ======================================== -->
                         </div>

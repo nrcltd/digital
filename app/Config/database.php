@@ -69,7 +69,7 @@ class DATABASE_CONFIG {
 		'password' => '123456',
 		'database' => 'digitalproducts_db',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		//'encoding' => 'utf-8',
 	);
 
 	public $test = array(
@@ -80,6 +80,6 @@ class DATABASE_CONFIG {
 		'password' => '123456',
 		'database' => 'digitalproducts_db',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		//'encoding' => 'utf-8',
 	);
 }

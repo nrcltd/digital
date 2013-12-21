@@ -63,9 +63,9 @@ class ProductsController extends AppController {
 //        debug($option);
         
         $option = $this->Option->findByOptionName('currency_code');
-        $currencyCcode = '$';
+        $currencyCode = '$';
         if ($option) {
-           $currencyCcode = $option['Option']['option_value']; 
+           $currencyCode = $option['Option']['option_value']; 
         }
         
         $option = $this->Option->findByOptionName('seller_name');
@@ -81,7 +81,7 @@ class ProductsController extends AppController {
         }
         
         $this->set('product', $product);
-        $this->set('currencyccode', $currencyCcode);
+        $this->set('currencyccode', $currencyCode);
         $this->set('sellername', $sellerName);
         $this->set('sellerdescription', $sellerDescription);
         $this->set('title_for_layout', $product['Product']['product_name']);

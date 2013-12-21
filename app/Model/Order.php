@@ -50,9 +50,9 @@ class Order extends AppModel {
             ) 
         )
     );
-
+    
     public $hasOne = 'Token';
-     
+    
     public function addOrder($data) {
         $data['Order']['orderstatus'] = 'Pending';
         $data['Order']['purchased_date'] = date("Y-m-d H:i:s");
@@ -62,12 +62,40 @@ class Order extends AppModel {
             $this->create();
             $this->save($data);
             $data['id'] = $this->id;
-            $dataToken = array('id' =>  $data['id'], 'token_id' => $this->Token->addToken());
+//            $dataToken = array('id' =>  $data['id'], 'token_id' => $this->Token->addToken());
 //            debug($this->saveField('token_id', $this->Token->addToken()));
-            $this->saveField('token_id', $this->Token->addToken());
+            $token = $this->Token->addToken($this->id);
+            $data['token'] = $token['token_code'];
 
-            return $data['id'];
+            return $data;
         }
         return false;
+    }
+    
+    public  function findOrder($orderid, $token_code) {
+        $token = $this->Token->find('first', array(
+            'conditions' => array(
+                'Token.token_code' => $token_code)
+        ));
+        if (empty($token)) {
+            return false;
+        }
+        
+        $token_id = $token['Token']['id'];
+        $result = $this->find('first', array(
+            'conditions' => array(
+                'Order.id' => $orderid, 
+                'Token.id' => $token_id,
+                'Order.orderstatus' => 'Pending'),
+            'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
+                'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
+        ));
+        
+        if (empty($result)) {
+            return false;
+        } else {
+            return $result;
+        }
+//        debug($token);
     }
 }

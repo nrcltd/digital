@@ -33,7 +33,7 @@ App::uses('Model', 'Model');
  */
 class Token extends AppModel {
 
-    public function addToken() {
+    public function addToken($order_id) {
         $this->create();
         $tokenHead = uniqid();
         $tokenMid = substr(md5(rand()), 0, 25);
@@ -41,10 +41,11 @@ class Token extends AppModel {
         $token = $tokenHead . $tokenMid . $tokenTail;
         $this->set('token_code', $token);
         $this->set('token_created_date', date("Y-m-d H:i:s"));
+        $this->set('order_id', $order_id);
         $this->save();
 
-        
-        return $this->id;
+        $data = array('id' => $this->id, 'token_code' => $token);
+        return $data;
     }
 
 }
