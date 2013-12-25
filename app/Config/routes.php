@@ -40,11 +40,14 @@ Router::connect(
         '/products/:action/*', array('controller' => 'products', 'action' => 'view')
 );
 
+Router::connect(
+        '/admin/', array('plugin' => 'admin', 'controller' => 'admin', 'action' => 'index')
+);
 
 /* Paypal IPN plugin */
 Router::connect('/paypal_ipn/process', array('plugin' => 'paypal_ipn', 'controller' => 'InstantPaymentNotifications', 'action' => 'process'));
 /* Optional Route, but nice for administration */
-Router::connect('/paypal_ipn/:action/*', array('admin' => 'true', 'plugin' => 'paypal_ipn', 'controller' => 'InstantPaymentNotifications', 'action' => 'index'));
+//Router::connect('/paypal_ipn/:action/*', array('admin' => 'true', 'plugin' => 'paypal_ipn', 'controller' => 'InstantPaymentNotifications', 'action' => 'index'));
 /* End Paypal IPN plugin */
 
 /**

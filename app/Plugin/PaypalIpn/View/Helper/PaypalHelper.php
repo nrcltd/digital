@@ -41,6 +41,7 @@ class PaypalHelper extends AppHelper {
 				$importConfig['file'] = 'Config' . DS . 'paypal_ipn_config.php';
 				App::import($importConfig);
 			}
+                        
 			if (!class_exists('PaypalIpnConfig')) {
 				trigger_error(__d('paypal_ipn', 'PaypalIpnConfig: The configuration could not be loaded.'), E_USER_ERROR);
 			}
