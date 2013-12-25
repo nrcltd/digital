@@ -2014,3 +2014,171 @@ Stack Trace:
 #3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(OrdersController), Object(CakeRequest), Object(CakeResponse))
 #4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-12-25 01:48:59 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 01:49:00 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:17:24 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:17:28 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:17:38 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:17:38 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/
+Stack Trace:
+#0 [internal function]: ProductsController->view()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:20:13 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/
+Stack Trace:
+#0 [internal function]: ProductsController->view()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:27:42 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/
+Stack Trace:
+#0 [internal function]: ProductsController->view()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:28:57 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/
+Stack Trace:
+#0 [internal function]: ProductsController->view()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:29:00 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/
+Stack Trace:
+#0 [internal function]: ProductsController->view()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:31:08 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/View/Products/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/View/Products/index.ctp',
+)
+Request URL: /digital/shop/view/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName('index')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('index', NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(44): Controller->render('index')
+#3 [internal function]: ProductsController->view()
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-12-25 02:43:11 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:43:21 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:43:38 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 02:44:04 Error: [NotFoundException] Invalid Product
+Request URL: /digital/shop/view/themes/images/photo.png
+Stack Trace:
+#0 [internal function]: ProductsController->view('themes', 'images', 'photo.png')
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-25 03:16:35 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 03:17:28 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-25 03:21:32 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

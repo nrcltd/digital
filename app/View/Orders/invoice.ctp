@@ -61,7 +61,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                         <td class="center">1</td>
 
                                         <td>
-                                            <a href="<?php echo $this->Html->url(array('controller' => 'shop',
+                                            <a href="<?php echo $this->Html->url(array('controller' => 'products',
                                                 'action'=>'view', $product["Product"]['id'])) ?>"><?php echo $product["Product"]['product_name'] ?></a>
                                         </td>
                                         <td> --- </td>

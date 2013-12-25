@@ -36,7 +36,8 @@ class OrdersController extends AppController {
     public $helpers = array('Html','Form','PaypalIpn.Paypal');
 
     public function index() {
-        
+        $this->layout = 'error404';
+        $this->render('index');
     }
 
     public function add() {
@@ -46,7 +47,8 @@ class OrdersController extends AppController {
 //        debug($data);
         $result = $this->Order->addOrder($data);
         if ($result == false) {
-            exit;
+            $this->index();
+            return;
         } else {
             return $this->redirect(
                             array(
@@ -88,17 +90,20 @@ class OrdersController extends AppController {
         $orderid = $this->request->query['id'];
         $tokencode = $this->request->query['token'];
         if (empty($orderid)) {
-            throw new NotFoundException();
+            $this->index();
+            return;
         }
         if (empty($tokencode)) {
-            throw new NotFoundException();
+            $this->index();
+            return;
         }
 
         $order = $this->Order->findOrder($orderid,$tokencode);
 //        debug($order);
         $this->set('theme', $optionCode);
         if ($order == false) {
-            throw new NotFoundException();
+            $this->index();
+            return;
         }
         $product_id = $order['Order']['product_id'];
 //        debug($product_id);

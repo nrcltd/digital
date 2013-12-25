@@ -33,19 +33,22 @@ App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
 
     public $helpers = array('Html', 'Form');
-    
+
     public function index() {
-        throw new NotFoundException(__('Invalid Product'));
+        $this->layout = 'error404';
+        $this->render('index');
     }
-    
+
     public function view($id = null) {
         if (!$id) {
-            throw new NotFoundException(__('Invalid Product'));
+            $this->index();
+            return;
         }
-        
+
         $product = $this->Product->findById($id);
         if (!$product) {
-            throw new NotFoundException(__('Invalid Product'));
+            $this->index();
+            return;
         }
 //        debug($product['Product']['product_name']);
         // load theme
@@ -61,25 +64,25 @@ class ProductsController extends AppController {
             }
         }
 //        debug($option);
-        
+
         $option = $this->Option->findByOptionName('currency_code');
         $currencyCode = '$';
         if ($option) {
-           $currencyCode = $option['Option']['option_value']; 
+            $currencyCode = $option['Option']['option_value'];
         }
-        
+
         $option = $this->Option->findByOptionName('seller_name');
         $sellerName = '';
         if ($option) {
-           $sellerName = $option['Option']['option_value']; 
+            $sellerName = $option['Option']['option_value'];
         }
-        
+
         $option = $this->Option->findByOptionName('seller_description');
         $sellerDescription = '';
         if ($option) {
-           $sellerDescription = $option['Option']['option_value']; 
+            $sellerDescription = $option['Option']['option_value'];
         }
-        
+
         $this->set('product', $product);
         $this->set('currencyccode', $currencyCode);
         $this->set('sellername', $sellerName);

@@ -37,7 +37,7 @@ Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home
  * Routing to controler Products, Action view, View Dynamic
  */
 Router::connect(
-        '/shop/:action/*', array('controller' => 'products', 'action' => 'view')
+        '/products/:action/*', array('controller' => 'products', 'action' => 'view')
 );
 
 
