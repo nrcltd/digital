@@ -8,22 +8,23 @@
 <div class="tab-pane fade in active" id="settings">
 
 
-    <div class="" style="clear:both;">
+    <div class="row">
 
         <H4 style="margin-top:0px;">Seller information</H4>
         <div class="col-sm-3" style="float:left;text-align:center;">
-            <button type="submit" class="btn btn-circle btn-lg btn-success btn-md btn-block"><i  style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br></button><b>Upload photos</b>
+            <button type="submit" class="btn btn-circle btn-lg btn-success btn-md btn-block">
+                <i style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br></button><b>Upload photos</b>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9" style="float:right;">
 
-            <div>
+            <div style="clear:both;">
                 <div class="col-sm-6" style="margin-bottom:5px;">
                     <input class="form-control" id="focusedInput" type="text" placeholder="Name" style="font-size:12px;">
                 </div>
                 <div class="col-sm-6"></div>
             </div>
 
-            <div>
+            <div style="clear:both;">
                 <div class="col-sm-12" style="margin-bottom:5px;">
                     <textarea class="form-control" rows="6" style="width:100%;font-size:12px;" placeholder="Product description"></textarea>
                 </div>
@@ -37,7 +38,7 @@
                     </div>
                     <i class="left-inner-addon"><img src="<?php echo $this->Html->url('/admin/img/facebook.png', true) ?>"></i>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6" style="margin-bottom:5px;">
                     <div  class="right-inner-addon left-inner-addon">
                         <i class="glyphicon glyphicon-link"></i>
                         <input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">
@@ -160,3 +161,4 @@
 
         <div class="col-sm-7"></div>
     </div>
+</div>

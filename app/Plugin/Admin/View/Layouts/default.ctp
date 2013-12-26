@@ -58,11 +58,19 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
                                 <!-- Nav tabs -->
                                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                                     <ul class="nav navbar-nav">
-                                        <li class="<?php echo $menu[0];?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard', 'action' => 'index')); ?>">Dashboard</a></li>
-                                        <li class="<?php echo $menu[1];?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>">Product</a></li>
-                                        <li class="<?php echo $menu[2];?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'customers', 'action' => 'index')); ?>">Customers</a></li>
-                                        <li class="<?php echo $menu[3];?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'index')); ?>">Coupons</a></li>
-                                        <li class="<?php echo $menu[4];?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'index')); ?>"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                                        <?php if (!empty($menu)): ?>
+                                            <li class="<?php echo $menu[0]; ?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard', 'action' => 'index')); ?>">Dashboard</a></li>
+                                            <li class="<?php echo $menu[1]; ?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>">Product</a></li>
+                                            <li class="<?php echo $menu[2]; ?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'customers', 'action' => 'index')); ?>">Customers</a></li>
+                                            <li class="<?php echo $menu[3]; ?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'index')); ?>">Coupons</a></li>
+                                            <li class="<?php echo $menu[4]; ?>"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'index')); ?>"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                                        <?php else : ?>
+                                            <li><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard', 'action' => 'index')); ?>">Dashboard</a></li>
+                                            <li><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>">Product</a></li>
+                                            <li><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'customers', 'action' => 'index')); ?>">Customers</a></li>
+                                            <li><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'index')); ?>">Coupons</a></li>
+                                            <li><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'index')); ?>"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                                        <?php endif; ?>
                                     </ul>
                                 </div>
                             </div>

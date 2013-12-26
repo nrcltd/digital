@@ -9100,3 +9100,102 @@ Request URL: /digital/admin/setting1
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-12-26 13:32:33 Error: [MissingControllerException] Controller class Setting1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Setting1Controller',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/setting1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:32:45 Error: [MissingControllerException] Controller class Admin1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Admin1Controller',
+  'plugin' => NULL,
+)
+Request URL: /digital/admin1/products
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:32:55 Error: [MissingControllerException] Controller class Admin1Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Admin1Controller',
+  'plugin' => NULL,
+)
+Request URL: /digital/admin1/products
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:36:35 Error: [MissingControllerException] Controller class StyleController could not be found.
+Exception Attributes: array (
+  'class' => 'StyleController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/style/images/facebook.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:36:35 Error: [MissingControllerException] Controller class StyleController could not be found.
+Exception Attributes: array (
+  'class' => 'StyleController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/style/images/twitter.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:37:34 Error: [MissingControllerException] Controller class StyleController could not be found.
+Exception Attributes: array (
+  'class' => 'StyleController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/style/images/facebook.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:37:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/img/twitter.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:37:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/img/twitter.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:37:37 Error: [MissingControllerException] Controller class StyleController could not be found.
+Exception Attributes: array (
+  'class' => 'StyleController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/style/images/facebook.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:37:49 Error: [MissingControllerException] Controller class StyleController could not be found.
+Exception Attributes: array (
+  'class' => 'StyleController',
+  'plugin' => 'Admin',
+)
+Request URL: /digital/admin/style/images/facebook.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-26 13:44:17 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
