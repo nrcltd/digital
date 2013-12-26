@@ -9199,3 +9199,12 @@ Request URL: /digital/Admin/js/jquery.min.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-12-26 23:22:29 Error: [MissingControllerException] Controller class ShopController could not be found.
+Exception Attributes: array (
+  'class' => 'ShopController',
+  'plugin' => NULL,
+)
+Request URL: /digital/shop/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
