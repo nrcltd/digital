@@ -30,12 +30,14 @@
                 <td style="border-right: 2px solid white;">Sale $</td>
                 <td>Product page link</td>
             </tr>
+            <?php if (!empty($products)):?>
             <tr>
                 <td>Power ABC</td>
                 <td>2</td>
                 <td>200</td>
                 <td>http://webproduct.com <button type="button" class="btn btn-success btn-xs">copy</button></td>
             </tr>
+            <?php endif;?>
             <tr >
                 <td>Power ABC</td>
                 <td>2</td>

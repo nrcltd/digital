@@ -7,6 +7,7 @@
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/AdminAppController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/UsersController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/autumn.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Coupons/add.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Errors/error400.ctp</file>
@@ -18,6 +19,8 @@
             <file>file:/Applications/XAMPP/htdocs/digital/app/Config/routes.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/DashboardController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Layouts/error404.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Model/Product.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Setting/index.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/ProductsController.php</file>
         </group>
     </open-files>
