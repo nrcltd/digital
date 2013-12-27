@@ -24,6 +24,8 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
         echo $this->Html->css('/Admin/css/base.css');
         echo $this->Html->meta('icon');
         ?>
+        <?php echo $this->Html->script('/Admin/js/jquery.js'); ?>
+        <?php echo $this->Html->script('/Admin/js/bootstrap.js'); ?>
         <style type="text/css" id="enject"></style>
 
     </head>
@@ -98,8 +100,7 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
             </div>
         </div>
 
-        <?php echo $this->Html->script('/Admin/js/jquery.js'); ?>
-        <?php echo $this->Html->script('/Admin/js/bootstrap.js'); ?>
+
         <script>
             $(function() {
                 $('#myTab a:last').tab('show')

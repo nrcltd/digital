@@ -37,10 +37,9 @@
             </table>
 
             <div class="">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-3"><button type="submit" class="btn btn-success btn-md btn-block"><b>Save</b></i></button><br></div>
-                <div class="col-sm-3"><button type="submit" class="btn btn-warning btn-md btn-block"><b>Pause</b></i></button><br></div>
-                <div class="col-sm-3"></div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"><button type="submit" class="btn btn-success btn-md btn-block"><b>Save</b></i></button><br></div>
+                <div class="col-sm-4"></div>
             </div>
         </form>
         <br>

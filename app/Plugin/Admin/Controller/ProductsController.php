@@ -10,7 +10,7 @@ class ProductsController extends AdminAppController {
     public $uses = array('Admin.Product');
 
     public function index() {
-        $products =  $this->Product->find('all');
+        $products = $this->Product->find('all');
 //        debug($products);
         $this->set('products', $products);
         $this->setMenuItems();
@@ -20,6 +20,14 @@ class ProductsController extends AdminAppController {
     public function add() {
         $this->setMenuItems();
         $this->render('add');
+    }
+
+    public function edit($id = null) {
+        $products = $this->Product->findById($id);
+        $this->set('products', $products);
+//        debug($products);
+        $this->setMenuItems();
+        $this->render('edit');
     }
 
 }

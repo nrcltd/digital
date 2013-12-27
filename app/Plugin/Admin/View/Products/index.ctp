@@ -30,34 +30,26 @@
                 <td style="border-right: 2px solid white;">Sale $</td>
                 <td>Product page link</td>
             </tr>
-            <?php if (!empty($products)):?>
-            <tr>
-                <td>Power ABC</td>
-                <td>2</td>
-                <td>200</td>
-                <td>http://webproduct.com <button type="button" class="btn btn-success btn-xs">copy</button></td>
-            </tr>
-            <?php endif;?>
-            <tr >
-                <td>Power ABC</td>
-                <td>2</td>
-                <td>200</td>
-                <td>http://webproduct.com</td>
-            </tr>
-            <tr >
-                <td>Power ABC</td>
-                <td>2</td>
-                <td>200</td>
-                <td>http://webproduct.com</td>
-            </tr>
-            <tr >             
-                <td>Power ABC</td>
-                <td>2</td>
-                <td>200</td>
-                <td>http://webproduct.com</td>
-            </tr>
-        </table>
+            <?php if (!empty($products)): ?>
+                <?php for ($index = 0; $index < count($products); $index++) { ?>
+                    <tr>
+                        <td><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'edit', $products[$index]['Product']['id'])); ?>"><?php echo $products[$index]['Product']['product_name']; ?></a></td>
+                        <?php if (!empty($products)): ?>
+                            <td><?php echo count($products[$index]['Order']); ?></td>
+                        <?php else : ?>
+                            <td>0</td>
+                        <?php endif; ?>
+                        <td><?php echo $products[$index]['Product']['product_price']; ?></td>
+                        <td><?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?> <button type="button" class="btn btn-success btn-xs">copy</button></td>
+                    </tr>
+                <?php } ?>
+            <?php endif; ?>
 
-    </div><div class="pull-right">Iphone Ipad</div>
+        </table>
+    </div><div class="pull-right" style="visibility: hidden">Iphone Ipad</div>
 
 </div>
+
+<script type="text/javascript">
+
+</script>
