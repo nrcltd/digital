@@ -4,6 +4,7 @@
  *
  */
 ?>
+
 <!-- Tab coupons  -->  
 <div class="tab-pane fade in active" id="coupons">
 
@@ -17,9 +18,9 @@
                 </button>
                 <ul class="dropdown-menu">
                     <!-- Dropdown menu links -->
-                    <li><a href="#">Name</a></li>
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">...</a></li>
+                    <?php for ($index1 = 0; $index1 < count($products); $index1++) { ?>
+                        <li><a href="#"><?php echo $products[$index1]['Product']['product_name'] ?></a></li>
+                    <?php } ?>
                 </ul>
             </div><div style="visibility: hidden;">.</div>
         </div>
@@ -31,9 +32,9 @@
             </div>
         </div>
         <div class="col-sm-4" style="margin-bottom:5px;">
-            <a a href="#add-coupons" data-toggle="tab">
+            <a a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'add')); ?>">
                 <button type="submit" class="btn btn-md btn-block" style="background-color:black;color:white;">
-                    <a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'add')); ?>" style="color:white"><b>add coupons </b></a><i class="glyphicon glyphicon-plus"></i></button></a>
+                    <b>add coupons </b><i class="glyphicon glyphicon-plus"></i></button></a>
             <br>
         </div>
     </div>
@@ -46,30 +47,14 @@
                 <td style="border-right: 2px solid white;">Quantity</td>
                 <td>Actions</td>
             </tr>
-            <tr>
-                <td>Test Coupons code</td>
-                <td>2</td>
-                <td>100</td>
-                <td><button type="button" class="btn btn-warning btn-xs">Delete</button></td>
-            </tr>
-            <tr >
-                <td>Test Coupons code</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr >
-                <td>Test Coupons code</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr >            
-                <td>Test Coupons code</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <?php for ($index = 0; $index < count($coupons); $index++) { ?>
+                <tr>
+                    <td><?php echo $coupons[$index]['Coupon']['coupon_code'] ?></td>
+                    <td><?php echo $coupons[$index]['Coupon']['coupon_amount'] ?></td>
+                    <td><?php echo $coupons[$index]['Coupon']['coupon_quantity'] ?></td>
+                    <td><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'delete', $coupons[$index]['Coupon']['id'])); ?>"><button type="button" class="btn btn-warning btn-xs">Delete</button></a></td>
+                </tr>
+            <?php } ?>
         </table>
     </div>
 

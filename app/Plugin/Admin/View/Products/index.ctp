@@ -14,8 +14,8 @@
             </div>
         </div>
         <div class="col-sm-3"></div>
-        <div class="col-sm-4"><a href="#add-product" data-toggle="tab">
-                <button type="submit" class="btn btn-md btn-block" style="background-color:black;color:white;"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'add')); ?>" style="color:white"><b>Add new product </b></a><i class="glyphicon glyphicon-plus"></i></button>
+        <div class="col-sm-4"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'add')); ?>">
+                <button type="submit" class="btn btn-md btn-block" style="background-color:black;color:white;"><b>Add new product </b><i class="glyphicon glyphicon-plus"></i></button>
                 <br>
             </a>
         </div>
@@ -40,7 +40,7 @@
                             <td>0</td>
                         <?php endif; ?>
                         <td><?php echo $products[$index]['Product']['product_price']; ?></td>
-                        <td><?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?> <button type="button" class="btn btn-success btn-xs">copy</button></td>
+                        <td><a href="<?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?>"><?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?></a> <button type="button" class="btn btn-success btn-xs">copy</button></td>
                     </tr>
                 <?php } ?>
             <?php endif; ?>

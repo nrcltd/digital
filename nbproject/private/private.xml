@@ -4,23 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/CouponsController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/AdminAppController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/UsersController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/autumn.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Coupons/add.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Errors/error400.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Layouts/default.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Products/index.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Layouts/error.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Model/Coupon.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Coupons/index.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/AdminController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Config/routes.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/DashboardController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Layouts/error404.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Products/add.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Model/Product.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Setting/index.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/ProductsController.php</file>
         </group>
     </open-files>

@@ -98,6 +98,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                     <div class="col-md-7 pad_left_right">
                         <?php echo $product['Product']['product_description'] ?>
+                        <div style="visibility: hidden; height: 1px">Pencil is made to make you happy, and we back that up with our return policies. If </div>
                         <br>
                     </div>
                     <div class="col-md-5 pad_left_right">
@@ -144,9 +145,9 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                             'label' => false,
                                             'class' => 'form-control',
                                             'id' => 'focusedInput',
-                                            'placeholder' => 'User name',
-                                            'data-validation-regex-regex' => '[A-Za-z0-9]+',
-                                            'data-validation-regex-message' => 'Alphabets and numbers only'
+                                            'placeholder' => 'User name'
+//                                            'data-validation-regex-regex' => '[A-Za-z0-9]+',
+//                                            'data-validation-regex-message' => 'Alphabets and numbers only'
                                         ));
                                         ?>
                                     </div><br>

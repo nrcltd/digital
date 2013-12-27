@@ -18,12 +18,12 @@ class UsersController extends AdminAppController {
 
             $user = $this->User->find('all', array('conditions' => array('User.username' => $this->data['User']['username'], 'User.password' => md5($this->data['User']['password']))));
             if ($user != false) {
-                $this->Session->setFlash('Thank you for logging in!');
+//                $this->Session->setFlash('Thank you for logging in!');
                 $this->Session->write('User', $user);
-                $this->Redirect(array('controller' => 'setting', 'action' => 'index'));
+                $this->Redirect(array('controller' => 'dashboard', 'action' => 'index'));
                 exit();
             } else {
-                $this->Session->setFlash('Incorrect username/password!', true);
+                $this->Session->setFlash('Incorrect username/password!');
                 $this->Redirect(array('action' => 'login'));
                 exit();
             }

@@ -98,6 +98,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                     <div class="col-md-7 pad_left_right">
                         <?php echo $product['Product']['product_description'] ?>
+                        <div style="visibility: hidden; height: 1px">Pencil is made to make you happy, and we back that up with our return policies. If </div>
                         <br>
                     </div>
                     <div class="col-md-5 pad_left_right">
@@ -137,35 +138,35 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
 
                                     <div class="right-inner-addon control-group">
-                                            <i class="icon-user"></i>
-                                            <!--<input class="form-control" id="focusedInput" type="text" placeholder="User name">-->
-                                            <?php
-                                            echo $this->Form->input('customer_name', array(
-                                                'type' => 'text',
-                                                'label' => false,
-                                                'class' => 'form-control',
-                                                'id' => 'focusedInput',
-                                                'placeholder' => 'User name',
-                                                'data-validation-regex-regex' => '[A-Za-z0-9]+', 
-                                                'data-validation-regex-message' => 'Alphabets and numbers only' 
-                                            ));
-                                            ?>
-     
+                                        <i class="icon-user"></i>
+                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="User name">-->
+                                        <?php
+                                        echo $this->Form->input('customer_name', array(
+                                            'type' => 'text',
+                                            'label' => false,
+                                            'class' => 'form-control',
+                                            'id' => 'focusedInput',
+                                            'placeholder' => 'User name'
+//                                            'data-validation-regex-regex' => '[A-Za-z0-9]+',
+//                                            'data-validation-regex-message' => 'Alphabets and numbers only'
+                                        ));
+                                        ?>
+
                                     </div><br>
                                     <div class="right-inner-addon control-group">
-                                        
-                                            <i class="icon-envelope"></i>
-                                            <!--<input class="form-control" id="focusedInput" type="text" placeholder="Email">-->
-                                            <?php
-                                            echo $this->Form->input('customer_email', array(
-                                                'type' => 'email',
-                                                'label' => false,
-                                                'class' => 'form-control',
-                                                'id' => 'focusedInput',
-                                                'placeholder' => 'Email'
-                                            ));
-                                            ?>
-                                        
+
+                                        <i class="icon-envelope"></i>
+                                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="Email">-->
+                                        <?php
+                                        echo $this->Form->input('customer_email', array(
+                                            'type' => 'email',
+                                            'label' => false,
+                                            'class' => 'form-control',
+                                            'id' => 'focusedInput',
+                                            'placeholder' => 'Email'
+                                        ));
+                                        ?>
+
                                     </div><br>
                                     <div class="control-group">
                                         <!--<input class="form-control" id="focusedInput" type="text" placeholder="Coupon code (if you have any)">-->
@@ -176,8 +177,8 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                             'class' => 'form-control',
                                             'id' => 'focusedInput',
                                             'placeholder' => 'Coupon code (if you have any)',
-                                            'data-validation-regex-regex' => '[A-Za-z0-9]+', 
-                                            'data-validation-regex-message' => 'Alphabets and numbers only' 
+                                            'data-validation-regex-regex' => '[A-Za-z0-9]+',
+                                            'data-validation-regex-message' => 'Alphabets and numbers only'
                                         ));
                                         ?>
                                     </div><br>
@@ -188,14 +189,13 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                     <?php
                                     echo $this->Form->input('product_id', array('type' => 'hidden', 'value' => $product['Product']['id']));
                                     ?>
-                                    
+
                                     <!-- <hr style="border-top: 1.5px dotted green; width:150px" /> -->
                                     <!--                                        <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Download</b></button>-->
                                     <?php
 //                                    echo $this->Form->submit('Download', array('class' => 'btn btn-primary btn-lg btn-block', 'style' => 'font-size: 24px;'));
-                                    
                                     ?>
-                                        <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Download</b></button>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Download</b></button>
                                 </div>
                                 <!--</form>-->
                                 <?php echo $this->Form->end(); ?>

@@ -7,7 +7,7 @@
 <!-- Tab add-product  -->        
 
 <div class="tab-pane fade in active" style="clear:both;" id="add-product"><br>
-
+    <?php echo $this->Session->flash(); ?>
     <div class="">
         <div class="col-sm-4">
             <button type="submit" class="btn btn-success btn-md btn-block"><i  style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br><b>Upload photos</b></button>
@@ -22,7 +22,7 @@
 
         <!--        <form class="form-inline" role="form">-->
         <?php
-        echo $this->Form->create('Product', array('url' => array('controller' => 'Products', 'action' => 'edit'), 'class' => 'form-inline', 'role' => 'form'));
+        echo $this->Form->create('Product', array('url' => array('controller' => 'products', 'action' => 'edit', $products['Product']['id']), 'class' => 'form-inline', 'role' => 'form'));
         ?>
         <table class="table table-bordered">
             <tr style="visibility: hidden;">

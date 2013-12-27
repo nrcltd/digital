@@ -20,28 +20,66 @@
 
 
 
-        <form class="form-inline" role="form">
-            <table class="table table-bordered">
-                <tr style="visibility: hidden;">
-                    <td ><input type="text" class="form-control" id="" placeholder="" style=""></td>
-                    <td><input type="text" class="form-control" id="" placeholder="" style=""></td>
-                    <td><input type="text" class="form-control" id="" placeholder="" style=""></td>
-                <tr>
-                    <td colspan="2"><input type="text" class="form-control no-border" id="" placeholder="Product name" style=""></td>
-                    <td><input type="text" class="form-control no-border" id="" placeholder="Price" style=""></td>
-                </tr>
-                <tr>
-                    <td colspan="3"><textarea class="form-control no-border" rows="10" style="width:100%;" placeholder="Product description"></textarea></td>
-                </tr>
-                </tr>
-            </table>
+        <!--<form class="form-inline" role="form">-->
+        <?php
+        echo $this->Form->create('Product', array('url' => array('controller' => 'products', 'action' => 'add'), 'class' => 'form-inline', 'role' => 'form'));
+        ?>
+        <table class="table table-bordered">
+            <tr style="visibility: hidden;">
+                <td ><input type="text" class="form-control" id="" placeholder="" style=""></td>
+                <td><input type="text" class="form-control" id="" placeholder="" style=""></td>
+                <td><input type="text" class="form-control" id="" placeholder="" style=""></td>
+            <tr>
+                <td colspan="2">
+                    <!--<input type="text" class="form-control no-border" id="" placeholder="Product name" style="">-->
+                    <?php
+                    echo $this->Form->input('product_name', array(
+                        'type' => 'text',
+                        'label' => false,
+                        'class' => 'form-control no-border',
+                        'placeholder' => 'Product name'
+                    ));
+                    ?>
+                </td>
+                <td>
+                    <!--<input type="text" class="form-control no-border" id="" placeholder="Price" style="">-->
+                    <?php
+                    echo $this->Form->input('product_price', array(
+                        'type' => 'text',
+                        'label' => false,
+                        'class' => 'form-control no-border',
+                        'placeholder' => 'Price'
+                    ));
+                    ?>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <!--<textarea class="form-control no-border" rows="10" style="width:100%;" placeholder="Product description"></textarea>-->
+                    <?php
+                    echo $this->Form->input('product_description', array(
+                        'type' => 'textarea',
+                        'label' => false,
+                        'escape' => false,
+                        'class' => 'form-control no-border',
+                        'rows' => '10',
+                        'style' => 'width:100%',
+                        'placeholder' => 'Product description'
+                    ));
+                    ?>
+                </td>
+            </tr>
+            </tr>
+        </table>
 
-            <div class="">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4"><button type="submit" class="btn btn-success btn-md btn-block"><b>Save</b></i></button><br></div>
-                <div class="col-sm-4"></div>
-            </div>
-        </form>
+        <div class="">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"><button type="submit" class="btn btn-success btn-md btn-block"><b>Save</b></i></button><br></div>
+            <div class="col-sm-4"></div>
+        </div>
+
+        <!--</form>-->
+        <?php echo $this->Form->end(); ?>
         <br>
 
 

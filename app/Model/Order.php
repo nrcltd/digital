@@ -34,13 +34,13 @@ App::uses('Model', 'Model');
 class Order extends AppModel {
 
     public $validate = array(
-        'customer_name' => array(
-            'rule_1' => array(
-                'rule' => 'alphaNumeric',
-                'required' => true,
-                'message' => 'Alphabets and numbers only'
-            )
-        ),
+//        'customer_name' => array(
+//            'rule_1' => array(
+//                'rule' => 'alphaNumeric',
+//                'required' => true,
+//                'message' => 'Alphabets and numbers only'
+//            )
+//        ),
         'customer_email' => 'email',
         'coupon_code' => array (
            'rule_3' => array(
