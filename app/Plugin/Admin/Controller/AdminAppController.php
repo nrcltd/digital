@@ -21,6 +21,7 @@ class AdminAppController extends AppController {
             'className' => 'Admin.BootstrapPaginator'
         )
     );
+    var $components = array('Export.Export');
 
     // Check if they are logged in
 

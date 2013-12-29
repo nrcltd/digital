@@ -52,6 +52,19 @@ class Product extends AppModel {
         return false;
     }
 
+    public function searchProducts($keyword = '') {
+        if (empty($keyword)) {
+            $products = $this->find('all');
+        } else {
+
+            $products = $this->find('all', array(
+                'conditions' => array('UPPER(Product.product_name) like' => '%' . strtoupper($keyword) . '%') //array of conditions
+            ));
+        }
+
+        return $products;
+    }
+
 }
 
 ?>

@@ -8,10 +8,12 @@
 <div class="tab-pane fade in active" id="Product"><br>
     <div class="">
         <div class="col-sm-5">
-            <div class="right-inner-addon">
-                <i class="glyphicon glyphicon-search"></i>
-                <input class="form-control" id="focusedInput" type="text" placeholder="Search by product name" style="font-size:12px;">
-            </div>
+            <form method="Get" id="SearchForm" name="SearchForm" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>">
+                <div class="right-inner-addon">
+                    <i class="glyphicon glyphicon-search" style="cursor: pointer" onclick="search();"></i>
+                    <input class="form-control" id="focusedInput" type="text" name="keyword" value="<?php echo $keyword; ?>" placeholder="Search by product name" style="font-size:12px;">
+                </div>
+            </form>
         </div>
         <div class="col-sm-3"></div>
         <div class="col-sm-4"><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'add')); ?>">
@@ -51,5 +53,7 @@
 </div>
 
 <script type="text/javascript">
-
+    function search() {
+        $("#SearchForm").submit();
+    }
 </script>

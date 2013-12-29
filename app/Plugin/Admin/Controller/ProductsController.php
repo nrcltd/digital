@@ -10,7 +10,10 @@ class ProductsController extends AdminAppController {
     public $uses = array('Admin.Product');
 
     public function index() {
-        $products = $this->Product->find('all');
+        $keyword = $this->request->query('keyword');
+//        debug(empty($keyword));
+        $this->set('keyword', $keyword);
+        $products = $this->Product->searchProducts($keyword);
 //        debug($products);
         $this->set('products', $products);
         $this->setMenuItems();

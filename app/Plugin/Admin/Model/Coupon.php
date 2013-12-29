@@ -45,7 +45,7 @@ class Coupon extends AppModel {
     );
 
     public function addCoupon($data) {
-        $data['Coupon']['product_id'] = 1;
+//        $data['Coupon']['product_id'] = $id;
         $availableCouponCode = array();
         $arrcouponcode = $this->find('all', array(
             'fields' => array('DISTINCT Coupon.coupon_code')
@@ -69,6 +69,28 @@ class Coupon extends AppModel {
         }
 
         return false;
+    }
+
+    public function searchCoupons($productkey = '', $keyword = '') {
+        if (!(empty($productkey)) && !(empty($keyword))) {
+            $products = $this->find('all', array(
+                'conditions' => array('UPPER(Coupon.coupon_code) like' => '%' . strtoupper($keyword) . '%',
+                    'Coupon.product_id' => $productkey)
+            ));
+        } else if (!empty($productkey)) {
+
+            $products = $this->find('all', array(
+                'conditions' => array('Coupon.product_id' => $productkey)
+            ));
+        } else if (!empty($keyword)) {
+            $products = $this->find('all', array(
+                'conditions' => array('UPPER(Coupon.coupon_code) like' => '%' . strtoupper($keyword) . '%')
+            ));
+        } else {
+            $products = $this->find('all');
+        }
+
+        return $products;
     }
 
 }

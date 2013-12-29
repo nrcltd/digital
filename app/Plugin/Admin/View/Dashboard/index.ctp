@@ -14,6 +14,9 @@
     <div class="col-sm-3">
         <button type="submit" class="btn btn-success btn-md btn-block"><b>Weekly</b></button>
     </div>
+    <div class="col-sm-1">
+
+    </div>
     <div class="col-sm-3">
         <button type="submit" class="btn btn-success btn-md btn-block"><b>Monthly</b></button>
     </div>
@@ -21,8 +24,16 @@
     <div class="col-sm-3"></div> <br><br><br>
 
     <!--             <div id="chart_div" style="" class="table-responsive"></div> -->
+    <div class="col-sm-12">
+        <div style="col-sm-12">
+                <div class="graph-container centered" style="background-color: transparent">
+                    <div id="myfirstchart" style="height: 250px;"></div>
+                </div>
+        </div>
+    </div>
 </div>
-<div id="myfirstchart" style="height: 250px;"></div>
+
+
 
 <script type="text/javascript">
     new Morris.Area({

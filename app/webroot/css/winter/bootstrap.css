@@ -4746,7 +4746,7 @@ a.list-group-item:focus {
   border-bottom-color: #d6e9c6;
 }
 .panel-warning {
-  border-color:;
+  /*border-color:;*/
   background-color: rgba(0, 0, 0, 0);
 }
 .panel-warning > .panel-heading {

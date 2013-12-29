@@ -7,11 +7,11 @@
  * @package       app.View.Pages
  * @since         CakePHP(tm) v 0.10.0.1076
  */
-if (!Configure::read('debug')):
-    throw new NotFoundException();
-endif;
-
-App::uses('Debugger', 'Utility');
+//if (!Configure::read('debug')):
+//    throw new NotFoundException();
+//endif;
+//
+//App::uses('Debugger', 'Utility');
 echo $this->Html->css('main/font-awesome');
 echo $this->Html->css('winter/bootstrap.css');
 echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'screen'));

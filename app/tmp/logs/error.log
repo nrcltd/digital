@@ -9405,3 +9405,827 @@ Stack Trace:
 #3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-12-29 14:09:34 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] Operation timed out',
+  'enabled' => true,
+)
+Request URL: /digital/admin/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/ConnectionManager.php(107): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(3454): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1124): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(3476): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1350): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/Helper/FormHelper.php(199): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/Helper/FormHelper.php(451): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Users/login.ctp(11): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#14 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-12-29 14:32:54 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('2')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 14:33:06 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('2')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 14:33:14 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('1')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 14:33:14 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('1')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 14:33:15 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('1')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 14:33:21 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('1')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 14:39:05 Error: [NotFoundException] Not Found
+Request URL: /digital/products/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(931): include()
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(893): View->_evaluate('/Applications/X...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(462): View->_render('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render('spring', NULL)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Controller/ProductsController.php(91): Controller->render('spring')
+#5 [internal function]: ProductsController->view('1')
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-29 15:27:49 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:28:48 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:33:35 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:34:17 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:36:11 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:36:44 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:40:32 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:41:12 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:41:27 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:41:35 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:42:52 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:42:53 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:42:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:45:55 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:46:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:48:58 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:51:45 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:52:18 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:53:22 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:53:52 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:53:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:53:56 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:53:57 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:54:19 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:54:35 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:54:36 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:54:37 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:54:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:57:10 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:58:20 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 15:58:43 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 16:16:11 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 16:16:34 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 16:16:42 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:37:15 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:37:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:38:23 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:38:34 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:38:36 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:38:39 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:38:50 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:38:55 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:40:32 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:40:44 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:40:57 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:41:11 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:42:05 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:42:09 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:42:28 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:42:44 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 17:51:40 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Product.' in 'field list'
+Request URL: /digital/admin/customers?product=1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT DISTINCT...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT DISTINCT...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT DISTINCT...', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Product), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2852): Model->_readDataSource('first', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(599): Model->find('first', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('findById', Array, Object(Product))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php(40): Model->__call('findById', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php(40): Product->findById('1', Array)
+#10 [internal function]: CustomersController->index()
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CustomersController), Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#14 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2013-12-29 18:04:39 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?productexport=&emailexport=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:05:10 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?productexport=1&emailexport=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:05:59 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=2&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:14:31 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:14:34 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:15:25 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:17:31 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:18:54 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:20:03 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Customers/export.ctp',
+)
+Request URL: /digital/admin/customers/export?product=&email=
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/View/View.php(459): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(952): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-12-29 18:55:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Product.order_id' in 'on clause'
+Request URL: /digital/admin/customers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Order`....', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('SELECT `Order`....', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1077): DboSource->fetchAll('SELECT `Order`....', false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2880): DboSource->read(Object(Order), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2852): Model->_readDataSource('all', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php(33): Model->find('all')
+#7 [internal function]: CustomersController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CustomersController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-29 19:05:38 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'seachOrder' at line 1
+Request URL: /digital/admin/customers
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('seachOrder', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(666): DboSource->execute('seachOrder', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('seachOrder', Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(801): DboSource->query('seachOrder', Array, Object(Order))
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php(19): Model->__call('seachOrder', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php(19): Order->seachOrder(NULL, NULL)
+#7 [internal function]: CustomersController->index()
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CustomersController), Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CustomersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-12-29 19:10:00 Error: Fatal Error (1): Call to a member function searchProducts() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/ProductsController.php, line 16]
+2013-12-29 19:10:00 Error: [FatalErrorException] Call to a member function searchProducts() on a non-object
+Request URL: /digital/admin/products
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 16)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 16, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 16, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 19:10:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Model/Product.php, line 57]
+2013-12-29 19:10:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /digital/admin/products
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 57, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 57, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 19:10:22 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Model/Product.php, line 57]
+2013-12-29 19:10:22 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /digital/admin/products
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 57)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 57, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 57, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 19:36:32 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'product_id' cannot be null
+Request URL: /digital/admin/coupons/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `di...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `di...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Coupon), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Model/Coupon.php(66): Model->save(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/CouponsController.php(43): Coupon->addCoupon(Array, NULL)
+#6 [internal function]: CouponsController->add()
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(CouponsController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CouponsController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-12-29 19:36:50 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 19:39:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-29 20:06:36 Error: Fatal Error (1): Cannot use object of type Theme as array in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Setting/index.ctp, line 142]
+2013-12-29 20:06:36 Error: [FatalErrorException] Cannot use object of type Theme as array
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Applications/X...', 142)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Applications/X...', 142, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Applications/X...', 142, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 20:07:06 Error: Fatal Error (1): Cannot use object of type Theme as array in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/View/Setting/index.ctp, line 142]
+2013-12-29 20:07:06 Error: [FatalErrorException] Cannot use object of type Theme as array
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Cannot use obje...', '/Applications/X...', 142)
+#1 [internal function]: ErrorHandler::handleError(1, 'Cannot use obje...', '/Applications/X...', 142, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Cannot use obje...', '/Applications/X...', 142, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-29 20:10:59 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

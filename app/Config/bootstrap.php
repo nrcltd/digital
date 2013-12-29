@@ -77,6 +77,11 @@ CakePlugin::load('DebugKit');
  * Admin section
  */
 CakePlugin::load('Admin',array('bootstrap' => true));
+
+/*
+ * Export csv
+ */
+CakePlugin::load('Export'); 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
  *

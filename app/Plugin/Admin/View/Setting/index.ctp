@@ -7,6 +7,9 @@
 <!-- Tab settings  -->  
 <div class="tab-pane fade in active" id="settings">
 
+    <?php
+    echo $this->Form->create('Setting', array('url' => array('controller' => 'setting', 'action' => 'index')));
+    ?>
 
     <div class="row">
 
@@ -19,14 +22,34 @@
 
             <div style="clear:both;">
                 <div class="col-sm-6" style="margin-bottom:5px;">
-                    <input class="form-control" id="focusedInput" type="text" placeholder="Name" style="font-size:12px;">
+<!--                    <input class="form-control" id="focusedInput" type="text" placeholder="Name" style="font-size:12px;">-->
+
+                    <?php
+                    echo $this->Form->input('seller_name', array(
+                        'type' => 'text',
+                        'label' => false,
+                        'class' => 'form-control',
+                        'style' => 'font-size:12px',
+                        'placeholder' => 'Name'
+                    ));
+                    ?>
                 </div>
                 <div class="col-sm-6"></div>
             </div>
 
             <div style="clear:both;">
                 <div class="col-sm-12" style="margin-bottom:5px;">
-                    <textarea class="form-control" rows="6" style="width:100%;font-size:12px;" placeholder="Product description"></textarea>
+                    <!--<textarea class="form-control" rows="6" style="width:100%;font-size:12px;" placeholder="Product description"></textarea>-->
+                    <?php
+                    echo $this->Form->input('seller_description', array(
+                        'type' => 'textarea',
+                        'label' => false,
+                        'rows' => '6',
+                        'class' => 'form-control',
+                        'style' => 'width:100%;font-size:12px;',
+                        'placeholder' => 'Product description'
+                    ));
+                    ?>
                 </div>
             </div>
 
@@ -34,14 +57,32 @@
                 <div class="col-sm-6" style="margin-bottom:5px;">
                     <div  class="right-inner-addon left-inner-addon">
                         <i class="glyphicon glyphicon-link"></i>
-                        <input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">
+                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">-->
+                        <?php
+                        echo $this->Form->input('seller_facebook_id', array(
+                            'type' => 'text',
+                            'label' => false,
+                            'class' => 'form-control',
+                            'style' => 'font-size:12px',
+                            'placeholder' => ''
+                        ));
+                        ?>
                     </div>
                     <i class="left-inner-addon"><img src="<?php echo $this->Html->url('/admin/img/facebook.png', true) ?>"></i>
                 </div>
                 <div class="col-sm-6" style="margin-bottom:5px;">
                     <div  class="right-inner-addon left-inner-addon">
                         <i class="glyphicon glyphicon-link"></i>
-                        <input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">
+                        <!--<input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">-->
+                        <?php
+                        echo $this->Form->input('seller_twitter_id', array(
+                            'type' => 'text',
+                            'label' => false,
+                            'class' => 'form-control',
+                            'style' => 'font-size:12px',
+                            'placeholder' => ''
+                        ));
+                        ?>
                     </div>
                     <i class="left-inner-addon"><img src="<?php echo $this->Html->url('/admin/img/twitter.png', true) ?>"></i>
                 </div>
@@ -55,7 +96,16 @@
         <div class="col-sm-5">
             <H4>Merchant PayPal account</H4>
             <div>
-                <input class="form-control" id="focusedInput" type="text" placeholder="PayPal account ID" style="font-size:12px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="PayPal account ID" style="font-size:12px;">-->
+                <?php
+                echo $this->Form->input('seller_paypal_account', array(
+                    'type' => 'text',
+                    'label' => false,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'PayPal account ID'
+                ));
+                ?>
             </div>
         </div>
         <div class="col-sm-7"></div>
@@ -67,7 +117,17 @@
             <H4>Change password</H4>
             <div class="right-inner-addon">
                 <i class="glyphicon glyphicon-lock"></i>
-                <input class="form-control" id="focusedInput" type="text" placeholder="New password" style="font-size:12px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="New password" style="font-size:12px;">-->
+            
+                <?php
+                echo $this->Form->input('seller_password', array(
+                    'type' => 'password',
+                    'label' => false,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'New password'
+                ));
+                ?>
             </div>
         </div>
         <div class="col-sm-5">
@@ -89,7 +149,16 @@
         <div class="col-sm-5">
             <H4>SMTP/PHP mail</H4>
             <div class="right-inner-addon" style="margin-bottom:5px;">
-                <input class="form-control" id="focusedInput" type="text" placeholder="Smtp host" style="font-size:12px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp host" style="font-size:12px;">-->
+            <?php
+                echo $this->Form->input('smtp_host', array(
+                    'type' => 'text',
+                    'label' => false,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'Smtp host'
+                ));
+                ?>
             </div>
         </div>
         <div class="col-sm-5">
@@ -104,7 +173,16 @@
     <div class="" style="clear:both;">
         <div class="col-sm-5">
             <div class="right-inner-addon" style="margin-bottom:5px;">
-                <input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
+            <?php
+                echo $this->Form->input('smtp_user', array(
+                    'type' => 'text',
+                    'label' => false,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'Smtp user'
+                ));
+                ?>
             </div>
         </div>
         <div class="col-sm-7"></div>
@@ -114,7 +192,17 @@
     <div class="" style="clear:both;">
         <div class="col-sm-5">
             <div class="right-inner-addon" style="margin-bottom:5px;">
-                <input class="form-control" id="focusedInput" type="text" placeholder="Smtp password" style="font-size:12px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp password" style="font-size:12px;">-->
+            
+                 <?php
+                echo $this->Form->input('smtp_password', array(
+                    'type' => 'text',
+                    'label' => false,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'Smtp password'
+                ));
+                ?>
             </div>
         </div>
         <div class="col-sm-4">
@@ -131,16 +219,16 @@
             <H4>Themes</H4>
 
             <div class="btn-group" style="margin-bottom:5px;">
-                <button type="button" class="btn btn-default btn-block" style="width:85%;">Winter</button>
+                <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;">Winter</button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:15%;">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu">
                     <!-- Dropdown menu links -->
-                    <li><a href="#">Winter</a></li>
-                    <li><a href="#">Spring</a></li>
-                    <li><a href="#">...</a></li>
+                    <?php for ($index = 0; $index < count($themes); $index++) { ?>
+                        <li><a href="#"><?php echo $themes[$index]['Theme']['theme_name'] ?></a></li>
+                    <?php } ?>
                 </ul>
             </div>  
 
@@ -161,4 +249,6 @@
 
         <div class="col-sm-7"></div>
     </div>
+
+    <?php echo $this->Form->end(); ?>
 </div>

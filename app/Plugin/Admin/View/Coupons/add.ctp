@@ -39,6 +39,16 @@
             ?>
             <br>
         </div>
+        <?php
+            echo $this->Form->input('product_id', array(
+                'type' => 'hidden',
+                'label' => false,
+                'value' => $product,
+                'class' => 'form-control',
+                'style' => 'font-size:12px',
+                'placeholder' => 'Amount'
+            ));
+            ?>
     </div>
 
     <div>

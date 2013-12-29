@@ -4,7 +4,7 @@ body{margin:0px; padding-top: 70px;padding-bottom: 20px;
 
 /* downarrowdiv hover*/
 .col-sm-6:hover, .thumbnail:hover {-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);box-shadow: 0 5px 10px rgba(0, 0, 0, 1);}
-.
+
 
 /* signin form */
 .form-signin
