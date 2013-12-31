@@ -3,6 +3,34 @@
 class Setting extends AppModel {
 
     public $useTable = false;
+    public $validate = array(
+        'seller_name' => array(
+            'rule_1' => array(
+                'rule' => 'notEmpty'
+            )
+        )
+        ,
+        'seller_description' => array(
+            'rule_2' => array(
+                'rule' => 'notEmpty'
+            )
+        ),
+        'seller_facebook_id' => array(
+            'rule_3' => array(
+                'rule' => 'notEmpty'
+            )
+        ),
+        'seller_twitter_id' => array(
+            'rule_3' => array(
+                'rule' => 'notEmpty'
+            )
+        ),
+        'seller_paypal_account' => array(
+            'rule_3' => array(
+                'rule' => 'notEmpty'
+            )
+        )
+    );
     public $_schema = array(
         'seller_name' => array(
             'type' => 'string',

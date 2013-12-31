@@ -28,6 +28,7 @@
                     echo $this->Form->input('seller_name', array(
                         'type' => 'text',
                         'label' => false,
+                        'value' => $seller_name,
                         'class' => 'form-control',
                         'style' => 'font-size:12px',
                         'placeholder' => 'Name'
@@ -45,6 +46,7 @@
                         'type' => 'textarea',
                         'label' => false,
                         'rows' => '6',
+                        'value' => $seller_description,
                         'class' => 'form-control',
                         'style' => 'width:100%;font-size:12px;',
                         'placeholder' => 'Product description'
@@ -62,6 +64,7 @@
                         echo $this->Form->input('seller_facebook_id', array(
                             'type' => 'text',
                             'label' => false,
+                            'value' => $seller_facebook_id,
                             'class' => 'form-control',
                             'style' => 'font-size:12px',
                             'placeholder' => ''
@@ -78,6 +81,7 @@
                         echo $this->Form->input('seller_twitter_id', array(
                             'type' => 'text',
                             'label' => false,
+                            'value' => $seller_twitter_id,
                             'class' => 'form-control',
                             'style' => 'font-size:12px',
                             'placeholder' => ''
@@ -101,6 +105,7 @@
                 echo $this->Form->input('seller_paypal_account', array(
                     'type' => 'text',
                     'label' => false,
+                    'value' => $seller_paypal_account,
                     'class' => 'form-control',
                     'style' => 'font-size:12px',
                     'placeholder' => 'PayPal account ID'
@@ -154,6 +159,7 @@
                 echo $this->Form->input('smtp_host', array(
                     'type' => 'text',
                     'label' => false,
+                    'value' => $smtp_host,
                     'class' => 'form-control',
                     'style' => 'font-size:12px',
                     'placeholder' => 'Smtp host'
@@ -178,6 +184,7 @@
                 echo $this->Form->input('smtp_user', array(
                     'type' => 'text',
                     'label' => false,
+                    'value' => $smtp_user,
                     'class' => 'form-control',
                     'style' => 'font-size:12px',
                     'placeholder' => 'Smtp user'
@@ -198,6 +205,7 @@
                 echo $this->Form->input('smtp_password', array(
                     'type' => 'text',
                     'label' => false,
+                    'value' => $smtp_password,
                     'class' => 'form-control',
                     'style' => 'font-size:12px',
                     'placeholder' => 'Smtp password'

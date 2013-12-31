@@ -40,15 +40,15 @@
             <br>
         </div>
         <?php
-            echo $this->Form->input('product_id', array(
-                'type' => 'hidden',
-                'label' => false,
-                'value' => $product,
-                'class' => 'form-control',
-                'style' => 'font-size:12px',
-                'placeholder' => 'Amount'
-            ));
-            ?>
+        echo $this->Form->input('product_id', array(
+            'type' => 'hidden',
+            'label' => false,
+            'value' => $product,
+            'class' => 'form-control',
+            'style' => 'font-size:12px',
+            'placeholder' => 'Amount'
+        ));
+        ?>
     </div>
 
     <div>
@@ -56,10 +56,17 @@
             <button type="submit" class="btn btn-success btn-md btn-block"><b>Add</b></button>
         </div>
         <div class="col-sm-3" style="margin-bottom:5px;">
-            <button type="submit" class="btn btn-success btn-md btn-block"><b>Cancel</b></button>
+            <button type="button" id="btncancel" class="btn btn-success btn-md btn-block" onclick="cancel();"><b>Cancel</b></button>
         </div>
         <div class="col-sm-6">
         </div>
     </div>
     <?php echo $this->Form->end(); ?>
 </div>
+
+<script type="text/javascript">
+    function cancel() {
+        window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'index')); ?>';
+        ;
+    }
+</script>

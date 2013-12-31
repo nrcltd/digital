@@ -10229,3 +10229,80 @@ Request URL: /digital/Admin/js/jquery.min.map
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-12-31 18:33:53 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-12-31 19:37:42 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'option_name'
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `di...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `di...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Option), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1662): Model->save(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php(25): Model->saveField('option_value', 'Truong Ba Phuon...')
+#6 [internal function]: SettingController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SettingController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(SettingController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-12-31 19:38:05 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'option_name'
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `di...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(1004): DboSource->execute('INSERT INTO `di...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1827): DboSource->create(Object(Option), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(1662): Model->save(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php(26): Model->saveField('option_value', 'Truong Ba Phuon...')
+#6 [internal function]: SettingController->index()
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SettingController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(SettingController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-12-31 19:41:01 Error: Fatal Error (1): Call to a member function updateAll() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php, line 24]
+2013-12-31 19:41:01 Error: [FatalErrorException] Call to a member function updateAll() on a non-object
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Error/ErrorHandler.php(205): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 24)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 24, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 24, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-12-31 19:41:25 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ba Phuong a  WHERE `Option`.`option_name` like 'seller_name'' at line 1
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('UPDATE `digital...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/Database/Mysql.php(402): DboSource->execute('UPDATE `digital...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2521): Mysql->update(Object(Option), Array, NULL, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php(26): Model->updateAll(Array, Array)
+#5 [internal function]: SettingController->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SettingController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(SettingController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-12-31 19:42:09 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Ba Phuong a  WHERE `Option`.`option_name` = 'seller_name'' at line 1
+Request URL: /digital/admin/setting
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('UPDATE `digital...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Datasource/Database/Mysql.php(402): DboSource->execute('UPDATE `digital...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Model/Model.php(2521): Mysql->update(Object(Option), Array, NULL, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php(26): Model->updateAll(Array, Array)
+#5 [internal function]: SettingController->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(SettingController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(SettingController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

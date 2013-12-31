@@ -15,7 +15,7 @@
         </div>
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
-            <button type="submit" class="btn btn-md btn-block" style="background-color:black;color:white;"><b>Product list  </b><i class="glyphicon glyphicon-list"></i></button>
+            <button type="submit" class="btn btn-md btn-block" style="background-color:black;color:white;" onclick="productlist();"><b>Product list  </b><i class="glyphicon glyphicon-list"></i></button>
         </div>
 
 
@@ -100,3 +100,8 @@
 
     </div>
 </div><br>
+<script type="text/javascript">
+    function productlist() {
+        window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>';
+    }
+</script>

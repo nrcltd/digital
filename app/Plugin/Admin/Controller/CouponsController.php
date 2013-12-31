@@ -49,9 +49,14 @@ class CouponsController extends AdminAppController {
                 $this->Redirect(array('controller' => 'coupons', 'action' => 'index'));
             }
         } else {
-            $this->set('product', $id);
-            $this->setMenuItems();
-            $this->render('add');
+            if (empty($id)) {
+                $this->Redirect(array('controller' => 'coupons', 'action' => 'index'));
+                exit();
+            } else {
+                $this->set('product', $id);
+                $this->setMenuItems();
+                $this->render('add');
+            }
         }
     }
 
