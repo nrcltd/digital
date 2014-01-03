@@ -144,8 +144,8 @@
         </div>
         <div class="col-sm-2">
             <H4 style="visibility: hidden;">OK</H4>
-            <button class="btn-circle btn-green"><span class="glyphicon glyphicon-ok"></span></button>
-            <button class="btn-circle btn-red"><span class="glyphicon glyphicon-remove"></span></button>
+            <button type="button" class="btn-circle btn-green"><span class="glyphicon glyphicon-ok"></span></button>
+            <button type="button" class="btn-circle btn-red"><span class="glyphicon glyphicon-remove"></span></button>
         </div>
     </div>
 
