@@ -3,6 +3,10 @@
  * Admin Index
  *
  */
+//echo $this->Html->css('/Admin/css/upload.css');
+//echo $this->Html->script('/Admin/js/jquery-1.8.3.min.js');
+//echo $this->Html->script('/Admin/js/jquery.imgareaselect.min.js');
+//echo $this->Html->script('/Admin/js/effects.js');
 ?>
 <!-- Tab settings  -->  
 <div class="tab-pane fade in active" id="settings">
@@ -15,7 +19,7 @@
 
         <H4 style="margin-top:0px;">Seller information</H4>
         <div class="col-sm-3" style="float:left;text-align:center;">
-            <button type="submit" class="btn btn-circle btn-lg btn-success btn-md btn-block">
+            <button type="submit" class="btn btn-circle btn-lg btn-success btn-md btn-block" data-toggle="modal" data-target="#myModal">
                 <i style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br></button><b>Upload photos</b>
         </div>
         <div class="col-sm-9" style="float:right;">
@@ -123,29 +127,22 @@
             <div class="right-inner-addon">
                 <i class="glyphicon glyphicon-lock"></i>
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="New password" style="font-size:12px;">-->
-            
-                <?php
-                echo $this->Form->input('seller_password', array(
-                    'type' => 'password',
-                    'label' => false,
-                    'class' => 'form-control',
-                    'style' => 'font-size:12px',
-                    'placeholder' => 'New password'
-                ));
-                ?>
+
+                <input class="form-control" id="seller_password" type="password" placeholder="New password" style="font-size:12px;">
+
             </div>
         </div>
         <div class="col-sm-5">
             <H4 style="visibility: hidden;">Confirm password</H4>
             <div class="right-inner-addon">
                 <i class="glyphicon glyphicon-lock"></i>
-                <input class="form-control" id="focusedInput" type="text" placeholder="Confirm password" style="font-size:12px;">
+                <input class="form-control" id="confirm_seller_password" type="password" placeholder="Confirm password" style="font-size:12px;">
             </div>
         </div>
         <div class="col-sm-2">
             <H4 style="visibility: hidden;">OK</H4>
-            <button type="button" class="btn-circle btn-green"><span class="glyphicon glyphicon-ok"></span></button>
-            <button type="button" class="btn-circle btn-red"><span class="glyphicon glyphicon-remove"></span></button>
+            <button type="button" class="btn-circle btn-green" onclick="updatepassword();"><span class="glyphicon glyphicon-ok"></span></button>
+            <button type="button" class="btn-circle btn-red" onclick="resetpassword();"><span class="glyphicon glyphicon-remove"></span></button>
         </div>
     </div>
 
@@ -155,7 +152,7 @@
             <H4>SMTP/PHP mail</H4>
             <div class="right-inner-addon" style="margin-bottom:5px;">
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp host" style="font-size:12px;">-->
-            <?php
+                <?php
                 echo $this->Form->input('smtp_host', array(
                     'type' => 'text',
                     'label' => false,
@@ -169,9 +166,31 @@
         </div>
         <div class="col-sm-5">
             <H4 style="visibility: hidden;">User PHP mail</H4>
-            <div class="right-inner-addon">
+            <div class="input-group input text">
+                <span class="input-group-addon">
+                    <!--<input type="checkbox">-->
+                    <!--<input name="data[Setting][use_php_email]" type="checkbox" id="SettingUsePhpEmail">-->
+                    <?php
+                    if ($use_php_email == 1) {
+                        echo $this->Form->input('use_php_email', array(
+                            'type' => 'checkbox',
+                            'label' => false,
+                            'checked' => 'checked'
+                        ));
+                    } else {
+                        echo $this->Form->input('use_php_email', array(
+                            'type' => 'checkbox',
+                            'label' => false
+                        ));
+                    }
+                    ?>
+                </span>
                 <input class="form-control" id="focusedInput" type="text" placeholder="User PHP mail" style="font-size:12px;">
-            </div>
+            </div><!-- /input-group -->
+            <!--<div class="right-inner-addon">-->
+
+<!--                <input class="form-control" id="focusedInput" type="text" placeholder="User PHP mail" style="font-size:12px;">-->
+            <!--</div>-->
         </div>
         <div class="col-sm-2"></div>
     </div>
@@ -180,7 +199,7 @@
         <div class="col-sm-5">
             <div class="right-inner-addon" style="margin-bottom:5px;">
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
-            <?php
+                <?php
                 echo $this->Form->input('smtp_user', array(
                     'type' => 'text',
                     'label' => false,
@@ -200,8 +219,8 @@
         <div class="col-sm-5">
             <div class="right-inner-addon" style="margin-bottom:5px;">
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp password" style="font-size:12px;">-->
-            
-                 <?php
+
+                <?php
                 echo $this->Form->input('smtp_password', array(
                     'type' => 'text',
                     'label' => false,
@@ -227,7 +246,15 @@
             <H4>Themes</H4>
 
             <div class="btn-group" style="margin-bottom:5px;">
-                <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;">Winter</button>
+                <?php
+                echo $this->Form->input('frontend_theme', array(
+                    'type' => 'hidden',
+                    'label' => false,
+                    'value' => $frontend_theme,
+                    'id' => 'frontend_theme'
+                ));
+                ?>
+                <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;" id="theme_value_selector"><?php echo $theme_selector; ?></button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:15%;">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
@@ -235,7 +262,7 @@
                 <ul class="dropdown-menu">
                     <!-- Dropdown menu links -->
                     <?php for ($index = 0; $index < count($themes); $index++) { ?>
-                        <li><a href="#"><?php echo $themes[$index]['Theme']['theme_name'] ?></a></li>
+                        <li><a href="javascript:updatetheme(<?php echo $themes[$index]['Theme']['id'] ?>, '<?php echo $themes[$index]['Theme']['theme_name'] ?>');"><?php echo $themes[$index]['Theme']['theme_name'] ?></a></li>
                     <?php } ?>
                 </ul>
             </div>  
@@ -260,3 +287,59 @@
 
     <?php echo $this->Form->end(); ?>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
+            </div>
+            <div class="modal-body">
+                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/javascript">
+    function resetpassword() {
+        $("#seller_password").val("");
+        $("#confirm_seller_password").val("");
+    }
+
+    function updatepassword() {
+        var password = $("#seller_password").val();
+        var confirm_seller_password = $("#confirm_seller_password").val();
+        if (password.length === 0)
+            return;
+        if (confirm_seller_password.length === 0)
+            return;
+        if (password.length < 6)
+            return;
+        if (password !== confirm_seller_password)
+            return;
+        var data = {password: password};
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updatepassword')); ?>",
+            data: data,
+            success: function(data) {
+//                alert(data);
+                resetpassword();
+            }
+
+        });
+    }
+
+    function updatetheme(id, theme_name) {
+        $("#frontend_theme").val(id);
+        $("#theme_value_selector").html(theme_name);
+    }
+
+    $(function() {
+        $('.checkbox').removeClass('checkbox');
+    })
+</script>

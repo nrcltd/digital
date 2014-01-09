@@ -15,6 +15,7 @@ class SettingController extends AdminAppController {
         if ($this->request->isPost()) {
 
             $setting = $this->request->data['Setting'];
+//            debug($setting);
             foreach (array_keys($setting) as $key) {
 //                debug($setting[$key]);
 
@@ -22,7 +23,7 @@ class SettingController extends AdminAppController {
 //                $id = $option['Option']['id'];
 
                 $this->Option->updateAll(
-                        array('Option.option_value' => '\''.$setting[$key].'\''), array('Option.option_name' => $key)
+                        array('Option.option_value' => '\'' . $setting[$key] . '\''), array('Option.option_name' => $key)
                 );
 
 //                $this->Option->Id = $id;
@@ -39,9 +40,35 @@ class SettingController extends AdminAppController {
             $this->set($op['Option']['option_name'], $op['Option']['option_value']);
         }
 
+        $option = $this->Option->findByOptionName('frontend_theme');
+        $frontend_theme = '';
+        if ($option) {
+            $frontend_theme = $option['Option']['option_value'];
+        }
+
+        $themes = $this->Theme->find('all');
+        $th = $this->Theme->findById($frontend_theme);
+        $this->set('theme_selector', ($th['Theme']['theme_name']));
         $this->setMenuItems();
-        $this->set('themes', $this->Theme->find('all'));
+        $this->set('themes', $themes);
         $this->render('index');
+    }
+
+    public function updatepassword() {
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+                $newpassword = $this->request->data('password');
+                $userid = $this->Session->read('UserID');
+
+                $this->loadModel('User');
+                $this->User->id = $userid;
+                $data = array('id' => $userid, 'password' => md5($newpassword));
+                $this->User->save($data);
+
+//                debug(md5($newpassword));
+            }
+        }
+        exit();
     }
 
 }
