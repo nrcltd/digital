@@ -2,7 +2,7 @@
 
 class Image extends AppModel {
 
-    public function addImage($width, $height, $name, $year, $month, $day) {
+    public function addImage($width, $height, $name, $year, $month, $day, $ext) {
 
         $img = $this->findByImageName($name);
         if (empty($img)) {
@@ -13,6 +13,7 @@ class Image extends AppModel {
             $this->set('image_year', $year);
             $this->set('image_month', $month);
             $this->set('image_day', $day);
+            $this->set('image_ext', $ext);
 //        debug($month);
             $this->save();
         } else {
@@ -23,6 +24,7 @@ class Image extends AppModel {
             $this->set('image_year', $year);
             $this->set('image_month', $month);
             $this->set('image_day', $day);
+            $this->set('image_ext', $ext);
 //        debug($month);
             $this->save();
         }

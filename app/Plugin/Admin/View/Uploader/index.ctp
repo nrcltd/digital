@@ -42,6 +42,9 @@ if (strlen($large_photo_exists) > 0) {
                     return true;
                 }
             });
+    <?php if ($update_image_info == true) { ?>
+                parent.updateimage(<?php echo $image_id ?>);
+    <?php } ?>
         });
 
         $(window).load(function() {
@@ -72,11 +75,20 @@ if (strlen($large_photo_exists) > 0) {
             <input type="hidden" name="y2" value="" id="y2" />
             <input type="hidden" name="w" value="" id="w" />
             <input type="hidden" name="h" value="" id="h" />
+
+            <input type="hidden" name="year" value="<?php echo $year; ?>"/>
+            <input type="hidden" name="month" value="<?php echo $month; ?>" />
+            <input type="hidden" name="day" value="<?php echo $day; ?>" />
+            <input type="hidden" name="filename" value="<?php echo $filename; ?>" />
+            <input type="hidden" name="fileext" value="<?php echo $fileext; ?>" />
+
             <input type="submit" name="upload_thumbnail" value="Save Thumbnail" id="save_thumb" />
         </form>
     </div>
     <hr />
 <?php } ?>
 <form name="photo" enctype="multipart/form-data" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>" method="post">
-    Photo <input type="file" name="image" size="30" /> <input type="submit" name="upload" value="Upload" />
+    Photo 
+    <input type="file" name="image" size="30" /> 
+    <input type="submit" name="upload" value="Upload" />
 </form>

@@ -62,4 +62,16 @@ class ProductsController extends AdminAppController {
         }
     }
 
+    public function updateavatar() {
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+                $imageid = $this->request->data('imageid');
+                $this->Product->id = $this->request->data('productid');
+                $this->Product->set('product_image_id', $imageid);
+                $this->Product->save();
+            }
+        }
+        exit();
+    }
+
 }

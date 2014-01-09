@@ -342,4 +342,17 @@
     $(function() {
         $('.checkbox').removeClass('checkbox');
     })
+    
+    function updateimage(imageid) {
+        var data = {imageid: imageid};
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updateavatar')); ?>",
+            data: data,
+            success: function(data) {
+                
+            }
+
+        });
+    }
 </script>

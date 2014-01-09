@@ -71,4 +71,20 @@ class SettingController extends AdminAppController {
         exit();
     }
 
+    public function updateavatar() {
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+                $this->loadModel('Option');
+//                debug($this->request);
+                $imageid = $this->request->data('imageid');
+                $this->Option->updateAll(
+                        array('Option.option_value' => '\'' . $imageid . '\''), array('Option.option_name' => 'seller_photo')
+                );
+                
+//                debug($imageid);
+            }
+        }
+        exit();
+    }
+
 }

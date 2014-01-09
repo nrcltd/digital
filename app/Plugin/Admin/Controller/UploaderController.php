@@ -34,22 +34,42 @@ class UploaderController extends AdminAppController {
 
         $folder = 'upload';
         $rootfolder = WWW_ROOT . 'img' . DS . $folder;
-        $this->upload_dir = $rootfolder . DS . date("Y") . DS . date("m") . DS . date("d");
-        $this->upload_path = $rootfolder . DS . date("Y") . DS . date("m") . DS . date("d") . DS;
-        $this->set('upload_path', 'img' . DS . $folder . DS . date("Y") . DS . date("m") . DS . date("d") . DS);
 
+        $this->set('update_image_info', false);
         $large_photo_exists = '';
         $error = '';
         if ($this->request->isPost()) {
 
-            if (!isset($_SESSION['random_key']) || strlen($_SESSION['random_key']) == 0) {
-                $_SESSION['random_key'] = strtotime(date('Y-m-d H:i:s'));
-                $_SESSION['user_file_ext'] = "";
-            }
+//            if (!isset($_SESSION['random_key']) || strlen($_SESSION['random_key']) == 0) {
+//                $_SESSION['random_key'] = strtotime(date('Y-m-d H:i:s'));
+//                $_SESSION['user_file_ext'] = "";
+//            }
 
-            $this->large_image_name = $this->large_image_prefix . $_SESSION['random_key'];
-            $this->thumb_image_name = $this->thumb_image_prefix . $_SESSION['random_key'];
-            $this->resize_image_name = $this->resize_image_prefix . $_SESSION['random_key'];
+            $filename_temp = strtotime(date('Y-m-d H:i:s'));
+            $filename_ext = '';
+            $year = date("Y");
+            $month = date("m");
+            $day = date("d");
+            if (!empty($this->request->data['upload_thumbnail'])) {
+                $year = $this->request->data['year'];
+                $month = $this->request->data['month'];
+                $day = $this->request->data['day'];
+                $filename_temp = $this->request->data['filename'];
+                $filename_ext = $this->request->data['fileext'];
+                $this->set('fileext', $filename_ext);
+//                debug($this->request);
+            }
+            
+            $this->upload_dir = $rootfolder . DS . $year . DS . $month . DS . $day;
+            $this->upload_path = $rootfolder . DS . $year . DS . $month . DS . $day . DS;
+            $this->set('upload_path', 'img' . DS . $folder . DS . $year . DS . $month . DS . $day . DS);
+            $this->set('year', $year);
+            $this->set('month', $month);
+            $this->set('day', $day);
+            $this->set('filename', $filename_temp);
+            $this->large_image_name = $this->large_image_prefix . $filename_temp;
+            $this->thumb_image_name = $this->thumb_image_prefix . $filename_temp;
+            $this->resize_image_name = $this->resize_image_prefix . $filename_temp;
             $this->allowed_image_ext = array_unique($this->allowed_image_types);
 
             foreach ($this->allowed_image_ext as $mime_type => $ext) {
@@ -57,26 +77,26 @@ class UploaderController extends AdminAppController {
             }
 
             //Image Locations
-            $this->large_image_location = $this->upload_path . $this->large_image_name . $_SESSION['user_file_ext'];
-            $this->thumb_image_location = $this->upload_path . $this->thumb_image_name . $_SESSION['user_file_ext'];
-            $this->resize_image_location = $this->upload_path . $this->resize_image_name . $_SESSION['user_file_ext'];
+            $this->large_image_location = $this->upload_path . $this->large_image_name . $filename_ext;
+            $this->thumb_image_location = $this->upload_path . $this->thumb_image_name . $filename_ext;
+            $this->resize_image_location = $this->upload_path . $this->resize_image_name . $filename_ext;
 
 
             if (!is_dir($rootfolder)) {
                 mkdir($rootfolder, 0777);
                 chmod($rootfolder, 0777);
             }
-            if (!is_dir($rootfolder . DS . date("Y"))) {
-                mkdir($rootfolder . DS . date("Y"), 0777);
-                chmod($rootfolder . DS . date("Y"), 0777);
+            if (!is_dir($rootfolder . DS . $year)) {
+                mkdir($rootfolder . DS . $year, 0777);
+                chmod($rootfolder . DS . $year, 0777);
             }
-            if (!is_dir($rootfolder . DS . date("Y") . DS . date("m"))) {
-                mkdir($rootfolder . DS . date("Y") . DS . date("m"), 0777);
-                chmod($rootfolder . DS . date("Y") . DS . date("m"), 0777);
+            if (!is_dir($rootfolder . DS . $year . DS . $month)) {
+                mkdir($rootfolder . DS . $year . DS . $month, 0777);
+                chmod($rootfolder . DS . $year . DS . $month, 0777);
             }
-            if (!is_dir($rootfolder . DS . date("Y") . DS . date("m") . DS . date("d"))) {
-                mkdir($rootfolder . DS . date("Y") . DS . date("m") . DS . date("d"), 0777);
-                chmod($rootfolder . DS . date("Y") . DS . date("m") . DS . date("d"), 0777);
+            if (!is_dir($rootfolder . DS . $year . DS . $month . DS . $day)) {
+                mkdir($rootfolder . DS . $year . DS . $month . DS . $day, 0777);
+                chmod($rootfolder . DS . $year . DS . $month . DS . $day, 0777);
             }
 
             $data = $this->request->data;
@@ -121,8 +141,8 @@ class UploaderController extends AdminAppController {
 //                        $this->large_image_location = $this->large_image_location. $file_ext;
 //                        $this->thumb_image_location = $this->thumb_image_location. $file_ext;
                         //put the file ext in the session so we know what file to look for once its uploaded
-                        $_SESSION['user_file_ext'] = "." . $file_ext;
-
+                        $filename_ext = "." . $file_ext;
+                        $this->set('fileext', $filename_ext);
                         move_uploaded_file($userfile_tmp, $this->large_image_location);
                         chmod($this->large_image_location, 0777);
 
@@ -136,8 +156,7 @@ class UploaderController extends AdminAppController {
                             $scale = 1;
                             $uploaded = $this->resizeImage($this->large_image_location, $width, $height, $scale);
                         }
-                        $this->Image->addImage($width, $height, $_SESSION['random_key'], date("Y"), date("m"), date("d"));
-                        
+
                         //Delete the thumbnail file so the user can create a new one
                         if (file_exists($this->thumb_image_location)) {
                             unlink($this->thumb_image_location);
@@ -160,16 +179,23 @@ class UploaderController extends AdminAppController {
                 $cropped = $this->resizeThumbnailImage($this->thumb_image_location, $this->large_image_location, $w, $h, $x1, $y1, $scale);
 
                 $resized = $this->resizeThumbnailImage($this->resize_image_location, $this->large_image_location, $w, $h, $x1, $y1, 1);
+
+                $width = $this->getWidth($this->large_image_location);
+                $height = $this->getHeight($this->large_image_location);
+                $imageid = $this->Image->addImage($width, $height, $filename_temp, date("Y"), date("m"), date("d"), $filename_ext);
+
+                $this->set('update_image_info', true);
+                $this->set('image_id', $imageid);
             }
         }
 
         if (file_exists($this->large_image_location)) {
             if (file_exists($this->thumb_image_location)) {
-                $thumb_photo_exists = "<img src=\"" . $this->upload_path . $this->thumb_image_name . $_SESSION['user_file_ext'] . "\" alt=\"Thumbnail Image\"/>";
+                $thumb_photo_exists = "<img src=\"" . $this->upload_path . $this->thumb_image_name  . "\" alt=\"Thumbnail Image\"/>";
             } else {
                 $thumb_photo_exists = "";
             }
-            $large_photo_exists = "<img src=\"" . $this->upload_path . $this->large_image_name . $_SESSION['user_file_ext'] . "\" alt=\"Large Image\"/>";
+            $large_photo_exists = "<img src=\"" . $this->upload_path . $this->large_image_name  . "\" alt=\"Large Image\"/>";
         } else {
             $large_photo_exists = "";
             $thumb_photo_exists = "";

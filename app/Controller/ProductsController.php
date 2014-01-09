@@ -83,6 +83,20 @@ class ProductsController extends AppController {
             $sellerDescription = $option['Option']['option_value'];
         }
 
+        $option = $this->Option->findByOptionName('seller_photo');
+        $seller_photo = '';
+        if ($option) {
+            $seller_photo = $option['Option']['option_value'];
+        }
+        $this->set("image_user_url", '');
+        if (!empty($seller_photo)) {
+            $this->loadModel('Image');
+            $imageinfo = $this->Image->findById($seller_photo);
+            $imagepart = $imageinfo['Image'];
+            $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS .'resize_'. $imagepart['image_name'] . $imagepart['image_ext'];
+            $this->set("image_user_url", $image_user_url);
+//            debug($image_user_url);
+        }
         $this->set('product', $product);
         $this->set('currencyccode', $currencyCode);
         $this->set('sellername', $sellerName);

@@ -237,7 +237,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                 <div class="uparrowdiv">
                     <div class="row"><br>
                         <div class="col-xs-3 pad_left_right">
-                            <a href="#"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/user_pic.png', true) ?>" alt="..."></a>
+                            <a href="javascript:;;"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/'.'upload/'.$image_user_url, true) ?>" alt="..."></a>
                         </div>
                         <div class="col-sm-9 pad_left_right">
                             <h3 class="media-heading text-primary" style="color:#2c3e50;"><?php echo $sellername; ?></h3>

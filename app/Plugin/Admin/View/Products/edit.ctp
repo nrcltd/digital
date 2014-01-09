@@ -10,7 +10,7 @@
     <?php echo $this->Session->flash(); ?>
     <div class="">
         <div class="col-sm-4">
-            <button type="submit" class="btn btn-success btn-md btn-block"><i  style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br><b>Upload photos</b></button>
+            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-success btn-md btn-block"><i  style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br><b>Upload photos</b></button>
             <br>
         </div>
         <div class="col-sm-4"></div>
@@ -100,8 +100,39 @@
 
     </div>
 </div><br>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
+            </div>
+            <div class="modal-body">
+                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <script type="text/javascript">
     function productlist() {
         window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>';
+    }
+    
+    function updateimage(imageid) {
+        var productid = $("#ProductId").val();
+        var data = {imageid: imageid, productid : productid};
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'updateavatar')); ?>",
+            data: data,
+            success: function(data) {
+                
+            }
+
+        });
     }
 </script>
