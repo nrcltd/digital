@@ -107,6 +107,11 @@ class ProductsController extends AppController {
             $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
             $this->set("image_product_url", $image_user_url);
         }
+
+        $this->loadModel('ProductFile');
+        $productfile = $this->ProductFile->findById($product['Product']['product_file_id']);
+
+        $this->set('productfile', $productfile);
         $this->set('product', $product);
         $this->set('currencyccode', $currencyCode);
         $this->set('sellername', $sellerName);
