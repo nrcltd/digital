@@ -82,6 +82,9 @@ CakePlugin::load('Admin',array('bootstrap' => true));
  * Export csv
  */
 CakePlugin::load('Export'); 
+
+
+CakePlugin::load('PaypalIpn');
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
  *
@@ -117,6 +120,4 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-
-CakePlugin::load('PaypalIpn');
 

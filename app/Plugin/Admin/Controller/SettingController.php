@@ -2,6 +2,7 @@
 
 App::uses('AdminAppController', 'Admin.Controller');
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 class SettingController extends AdminAppController {
 
@@ -80,8 +81,96 @@ class SettingController extends AdminAppController {
                 $this->Option->updateAll(
                         array('Option.option_value' => '\'' . $imageid . '\''), array('Option.option_name' => 'seller_photo')
                 );
-                
+
 //                debug($imageid);
+            }
+        }
+        exit();
+    }
+
+    public function sendemail() {
+
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+
+                $this->loadModel('Option');
+                $option = $this->Option->findByOptionName('smtp_host');
+                $smtp_host = '';
+                if ($option) {
+                    $smtp_host = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_port');
+                $smtp_port = '';
+                if ($option) {
+                    $smtp_port = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_user');
+                $smtp_user = '';
+                if ($option) {
+                    $smtp_user = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_password');
+                $smtp_password = '';
+                if ($option) {
+                    $smtp_password = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_test_user');
+                $smtp_test_user = '';
+                if ($option) {
+                    $smtp_test_user = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('use_php_email');
+                $use_php_email = '';
+                if ($option) {
+                    $use_php_email = $option['Option']['option_value'];
+                }
+                $gmail = array();
+                if ($use_php_email === '0') {
+                    $gmail = array(
+                        'host' => $smtp_host,
+                        'port' => $smtp_port,
+                        'username' => $smtp_user,
+                        'password' => $smtp_password,
+                        'transport' => 'Smtp',
+                        'tls' => true,
+                        'timeout' => 30,
+                        'client' => null,
+                        'log' => false,
+                    );
+                } else {
+                    $gmail = array(
+                        'transport' => 'Mail',
+                        'from' => $smtp_user,
+                            //'charset' => 'utf-8',
+                            //'headerCharset' => 'utf-8',
+                    );
+                }
+
+                $email = new CakeEmail($gmail);
+                $email->emailFormat('html');
+                $email->to($smtp_test_user);
+                $email->from($smtp_user);
+                $email->subject('Test Message');
+                try {
+                    if ($email->send('This is a test message')) {
+                        $result = array();
+                        $result['result_code'] = '1';
+                        echo json_encode($result);
+                    } else {
+                        $result = array();
+                        $result['result_code'] = '-1';
+                        echo json_encode($result);
+                    }
+                } catch (Exception $ex) {
+                    $result = array();
+                    $result['result_code'] = '-1';
+                    echo json_encode($result);
+                }
             }
         }
         exit();

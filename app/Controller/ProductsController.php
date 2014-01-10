@@ -88,14 +88,24 @@ class ProductsController extends AppController {
         if ($option) {
             $seller_photo = $option['Option']['option_value'];
         }
+
+        $this->loadModel('Image');
         $this->set("image_user_url", '');
         if (!empty($seller_photo)) {
-            $this->loadModel('Image');
+
             $imageinfo = $this->Image->findById($seller_photo);
             $imagepart = $imageinfo['Image'];
-            $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS .'resize_'. $imagepart['image_name'] . $imagepart['image_ext'];
+            $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
             $this->set("image_user_url", $image_user_url);
 //            debug($image_user_url);
+        }
+//        debug($product);
+        $product_image_id = $product['Product']['product_image_id'];
+        if (!empty($product_image_id)) {
+            $imageinfo = $this->Image->findById($product_image_id);
+            $imagepart = $imageinfo['Image'];
+            $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+            $this->set("image_product_url", $image_user_url);
         }
         $this->set('product', $product);
         $this->set('currencyccode', $currencyCode);

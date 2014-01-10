@@ -200,6 +200,25 @@
             <div class="right-inner-addon" style="margin-bottom:5px;">
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
                 <?php
+                echo $this->Form->input('smtp_port', array(
+                    'type' => 'text',
+                    'label' => false,
+                    'value' => $smtp_port,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'Smtp port'
+                ));
+                ?>
+            </div>
+        </div>
+        <div class="col-sm-7"></div>
+    </div>
+
+    <div class="" style="clear:both;">
+        <div class="col-sm-5">
+            <div class="right-inner-addon" style="margin-bottom:5px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
+                <?php
                 echo $this->Form->input('smtp_user', array(
                     'type' => 'text',
                     'label' => false,
@@ -214,7 +233,6 @@
         <div class="col-sm-7"></div>
     </div>
 
-
     <div class="" style="clear:both;">
         <div class="col-sm-5">
             <div class="right-inner-addon" style="margin-bottom:5px;">
@@ -222,7 +240,7 @@
 
                 <?php
                 echo $this->Form->input('smtp_password', array(
-                    'type' => 'text',
+                    'type' => 'password',
                     'label' => false,
                     'value' => $smtp_password,
                     'class' => 'form-control',
@@ -234,10 +252,28 @@
         </div>
         <div class="col-sm-4">
             <div class="right-inner-addon">
-                <button type="submit" class="btn btn-success btn-md btn-block"><b>Send a test mail</b></button>
+                <button id="btnsendemail" type="button" data-loading-text="Sending..." class="btn btn-success btn-md btn-block" onclick="sendemail();"><b>Send a test mail</b></button>
             </div>
         </div>
         <div class="col-sm-3"></div>
+    </div>
+    <div class="" style="clear:both;">
+        <div class="col-sm-5">
+            <div class="right-inner-addon" style="margin-bottom:5px;">
+                <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
+                <?php
+                echo $this->Form->input('smtp_test_user', array(
+                    'type' => 'text',
+                    'label' => false,
+                    'value' => $smtp_test_user,
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'Test user'
+                ));
+                ?>
+            </div>
+        </div>
+        <div class="col-sm-7"></div>
     </div>
 
 
@@ -286,6 +322,9 @@
     </div>
 
     <?php echo $this->Form->end(); ?>
+</div>
+<div class="row" style="visibility: hidden;">
+    wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
 </div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -342,7 +381,7 @@
     $(function() {
         $('.checkbox').removeClass('checkbox');
     })
-    
+
     function updateimage(imageid) {
         var data = {imageid: imageid};
         $.ajax({
@@ -350,7 +389,25 @@
             url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updateavatar')); ?>",
             data: data,
             success: function(data) {
-                
+
+            }
+
+        });
+    }
+
+    function sendemail() {
+        $("#btnsendemail").html("<b>Sending...</b>");
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'sendemail')); ?>",
+            success: function(data) {
+                $("#btnsendemail").html("<b>Send a test mail</b>");
+                var obj = $.parseJSON(data);
+                if (obj.result_code === "1") {
+                    alert("Send email successfully!");
+                } else {
+                    alert("Send email fail!");
+                }
             }
 
         });

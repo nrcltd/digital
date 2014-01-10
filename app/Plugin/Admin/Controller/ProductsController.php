@@ -39,19 +39,24 @@ class ProductsController extends AdminAppController {
     }
 
     public function edit($id = null) {
+//                    debug($this->request->isPost());
         if ($this->request->isPost()) {
+//            debug($this->request);
             $data = $this->request->data;
+//            debug($data);
             $product_id = $this->Product->updateProduct($data);
             if ($product_id == false) {
 //                exit();
                 return;
             } else {
-                $products = $this->Product->findById($product_id);
-//                debug($products);
-                $this->set('products', $products);
-                $this->setMenuItems();
-                $this->Session->setFlash('Product is updated successfully!');
-                $this->render('edit');
+//                $products = $this->Product->findById($product_id);
+////                debug($products);
+//                $this->set('products', $products);
+//                $this->setMenuItems();
+//                $this->Session->setFlash('Product is updated successfully!');
+//                $this->render('edit');
+                
+                 $this->Redirect(array('controller' => 'products', 'action' => 'index'));
             }
         } else {
             $products = $this->Product->findById($id);

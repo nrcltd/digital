@@ -10,6 +10,7 @@ class InstantPaymentNotificationsController extends PaypalIpnAppController {
  */
 	public function beforeFilter(){
 		parent::beforeFilter();
+//                debug('test');
 		if (isset($this->Auth)) {
 			$this->Auth->allow('process');
 		}
@@ -17,8 +18,7 @@ class InstantPaymentNotificationsController extends PaypalIpnAppController {
 		  $this->Security->validatePost = false;
 		}
 	}
-
-/**
+    /**
  * Paypal IPN processing action..
  * Intake for a paypal_ipn callback performed by paypal itself.
  * This action will take the paypal callback, verify it (so trickery) and

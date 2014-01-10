@@ -88,7 +88,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                     </div>
 
                     <section id="header_img" style="height:300px; 
-                             background-image:url('<?php echo $this->Html->url('/img/download_link.jpg', true) ?>')">
+                             background-image:url('<?php echo $this->Html->url('/img/'.'upload/'.$image_product_url, true) ?>')">
                     </section>
 
                     <br>

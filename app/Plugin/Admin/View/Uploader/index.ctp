@@ -63,9 +63,9 @@ if (strlen($large_photo_exists) > 0) {
     ?>
     <h2>Create Thumbnail</h2>
     <div align="center">
-        <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $_SESSION['user_file_ext']; ?>" style="float: left; margin-right: 10px;" id="thumbnail" alt="Create Thumbnail" />
+        <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="float: left; margin-right: 10px;" id="thumbnail" alt="Create Thumbnail" />
         <div style="border:1px #e5e5e5 solid; float:left; position:relative; overflow:hidden; width:<?php echo $thumb_width; ?>px; height:<?php echo $thumb_height; ?>px;">
-            <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $_SESSION['user_file_ext']; ?>" style="position: relative;" alt="Thumbnail Preview" />
+            <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="position: relative;" alt="Thumbnail Preview" />
         </div>
         <br style="clear:both;"/>
         <form name="thumbnail" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>" method="post">

@@ -24,7 +24,18 @@ class Product extends AppModel {
             'rule_3' => array(
                 'rule' => 'notEmpty'
             )
+        ),
+        'product_image_id' => array(
+            'rule_4' => array(
+                'rule' => 'notEmpty'
+            )
+        ),
+        'product_file_id' => array(
+            'rule_5' => array(
+                'rule' => 'notEmpty'
+            )
         )
+        
     );
 
     public function addProduct($data) {

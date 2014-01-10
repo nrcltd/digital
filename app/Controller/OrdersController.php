@@ -86,6 +86,13 @@ class OrdersController extends AppController {
                 $optionCode = $theme['Theme']['theme_code'];
             }
         }
+        $option = $this->Option->findByOptionName('seller_paypal_account');
+        $seller_paypal_account = '';
+        if ($option) {
+            $seller_paypal_account = $option['Option']['option_value'];
+        }
+        
+        $this->set('seller_paypal_account', $seller_paypal_account);
 //        debug($this->request);
         $orderid = $this->request->query['id'];
         $tokencode = $this->request->query['token'];

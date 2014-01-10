@@ -62,10 +62,11 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                                         <td>
                                             <a href="<?php echo $this->Html->url(array('controller' => 'products',
-                                                'action'=>'view', $product["Product"]['id'])) ?>"><?php echo $product["Product"]['product_name'] ?></a>
+    'action' => 'view', $product["Product"]['id']))
+?>"><?php echo $product["Product"]['product_name'] ?></a>
                                         </td>
                                         <td> --- </td>
-                                        <td><?php echo $currencyccode;?><?php echo $product["Product"]['product_price'] ?></td>
+                                        <td><?php echo $currencyccode; ?><?php echo $product["Product"]['product_price'] ?></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -88,45 +89,65 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                                 <div  role="form" >
 
-                                <div class="form-group" style="font-size: 14px;">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                            <span>Customer Name</span><span class="pull-right"></span>
-                                            <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
-                                                <i>Truong Ba Phuong</i></p>
-                                        </li>
-                                        <li>
-                                            <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                            <span>Customer Email</span><span class="pull-right"></span>
-                                            <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
-                                                <i>truong.ba.phuong@gmail.com</i></p>                 
-                                        </li>
-                                    </ul>
+                                    <div class="form-group" style="font-size: 14px;">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
+                                                <span>Customer Name</span><span class="pull-right"></span>
+                                                <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
+                                                    <i><?php echo $order['Order']['customer_name'] ?></i></p>
+                                            </li>
+                                            <li>
+                                                <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
+                                                <span>Customer Email</span><span class="pull-right"></span>
+                                                <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
+                                                    <i><?php echo $order['Order']['customer_email'] ?></i></p>                 
+                                            </li>
+                                        </ul>
 
 
-                                    <div class="right-inner-addon control-group">
+                                        <div class="right-inner-addon control-group">
 
-                                    </div><br>
-                                    <div class="right-inner-addon control-group">
+                                        </div><br>
+                                        <div class="right-inner-addon control-group">
 
-                                    </div><br>
-                                    <div class="control-group">
+                                        </div><br>
+                                        <div class="control-group">
 
-                                    </div><br>
-                                    <div id="demo" class="collapse out">
-                                        <input class="form-control" type="text" placeholder="Coupon code"> 
+                                        </div><br>
+                                        <div id="demo" class="collapse out">
+                                            <input class="form-control" type="text" placeholder="Coupon code"> 
+                                        </div>
+
+                                        <!-- <hr style="border-top: 1.5px dotted green; width:150px" /> -->
+                                        <!--<button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Buy</b></button>-->
+                                        <?php
+//                                         echo $this->Paypal->button('Pay Now', array('test' =>  true,'amount' => '12.00', 'item_name' => 'test item',
+//                                             'class' => 'btn btn-primary btn-lg btn-block',
+//                                             'style' => 'font-size: 24px;'));
+//                                    
+                                        ?>
+
+                                        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                                            <div class="paypal-form">
+                                                <input type="hidden" name="business" value="<?php echo $seller_paypal_account;?>">
+                                                <input type="hidden" name="notify_url" value="<?php echo $this->Html->url(array('plugin' => 'paypal_ipn', 'controller' => 'instantpaymentnotifications', 'action' => 'process'), true); ?>">
+                                                <input type="hidden" name="currency_code" value="USD">
+                                                <input type="hidden" name="lc" value="US">
+                                                <input type="hidden" name="item_name" value="Buy <?php echo $product["Product"]['product_name'] ?>">
+                                                <input type="hidden" name="amount" value="<?php echo $product["Product"]['product_price'] ?>">
+                                                <input type="hidden" name="encrypt" value="">
+                                                <input type="hidden" name="test" value="1">
+                                                <input type="hidden" name="style" value="font-size: 24px;">
+                                                <input type="hidden" name="type" value="paynow">
+                                                <input type="hidden" name="cmd" value="_xclick">
+                                            </div>
+                                            <div class="submit">
+                                                <!--<input type="submit" value="Pay Now">-->
+                                                <button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Pay Now</b></button>
+                                            </div>
+                                        </form>
                                     </div>
-
-                                    <!-- <hr style="border-top: 1.5px dotted green; width:150px" /> -->
-                                    <!--<button type="submit" class="btn btn-primary btn-lg btn-block" style="font-size: 24px;"><b>Buy</b></button>-->
-                                    <?php 
-                                         echo $this->Paypal->button('Pay Now', array('amount' => '12.00', 'item_name' => 'test item',
-                                             'class' => 'btn btn-primary btn-lg btn-block',
-                                             'style' => 'font-size: 24px;'));
-                                    ?>
-                                    
-                                </div>
                                 </div>
                             </div></div>
 

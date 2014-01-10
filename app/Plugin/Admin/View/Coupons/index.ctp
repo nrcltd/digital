@@ -12,7 +12,7 @@
 
         <div class="col-sm-4" style="margin-bottom:5px;">
             <div class="btn-group"  style="margin-bottom:5px;">
-                <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;"><?php echo $productname;?></button>
+                <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;"><?php echo $productname; ?></button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:15%;">
                     <span class="caret"></span>
                 </button>
@@ -68,7 +68,9 @@
     </div>
 
 </div>
-
+<div class="row" style="visibility: hidden;">
+    wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
+</div>
 <script type="text/javascript">
     function search() {
         $("#SearchForm").submit();

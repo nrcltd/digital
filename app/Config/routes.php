@@ -45,7 +45,7 @@ Router::connect(
 );
 
 /* Paypal IPN plugin */
-Router::connect('/paypal_ipn/process', array('plugin' => 'paypal_ipn', 'controller' => 'InstantPaymentNotifications', 'action' => 'process'));
+//Router::connect('/paypal_ipn/process', array('plugin' => 'paypal_ipn', 'controller' => 'InstantPaymentNotifications', 'action' => 'process'));
 /* Optional Route, but nice for administration */
 //Router::connect('/paypal_ipn/:action/*', array('admin' => 'true', 'plugin' => 'paypal_ipn', 'controller' => 'InstantPaymentNotifications', 'action' => 'index'));
 /* End Paypal IPN plugin */

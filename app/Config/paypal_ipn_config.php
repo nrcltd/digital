@@ -30,7 +30,7 @@ class PaypalIpnConfig {
 	  var $test = array(
 		'business'      => 'truong.ba.phuong-facilitator@gmail.com',         // 'live_email@paypal.com', //Your Paypal email account
 		'server'        => 'https://www.sandbox.paypal.com',        // Main paypal server.
-		'notify_url'    => 'http://localhost/digital/paypal_ipn/process',
+		'notify_url'    => 'http://localhost/digital/paypal_ipn/instantpaymentnotifications/process',
                                                             // 'http://test.yoursite.com/paypal_ipn/process',
                                                             // Notify_url... set this to the process path of your
                                                             // paypal_ipn::instant_payment_notification::process action

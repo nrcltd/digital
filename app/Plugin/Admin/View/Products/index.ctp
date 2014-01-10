@@ -42,7 +42,9 @@
                             <td>0</td>
                         <?php endif; ?>
                         <td><?php echo $products[$index]['Product']['product_price']; ?></td>
-                        <td><a href="<?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?>"><?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?></a> <button type="button" class="btn btn-success btn-xs">copy</button></td>
+                        <td><a href="<?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?>"><?php echo $this->Html->url(array('plugin' => '', 'controller' => 'products', 'action' => 'view', $products[$index]['Product']['id']), true); ?></a>
+                            <!--<button type="button" class="btn btn-success btn-xs">copy</button>-->
+                        </td>
                     </tr>
                 <?php } ?>
             <?php endif; ?>
@@ -51,7 +53,9 @@
     </div><div class="pull-right" style="visibility: hidden">Iphone Ipad</div>
 
 </div>
-
+<div class="row" style="visibility: hidden;">
+    wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
+</div>
 <script type="text/javascript">
     function search() {
         $("#SearchForm").submit();

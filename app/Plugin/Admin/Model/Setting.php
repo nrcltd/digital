@@ -29,6 +29,11 @@ class Setting extends AppModel {
             'rule_3' => array(
                 'rule' => 'notEmpty'
             )
+        ), 
+        'smtp_test_user' => array(
+            'rule_3' => array(
+                'rule' => 'notEmpty'
+            )
         )
     );
     public $_schema = array(
