@@ -95,7 +95,7 @@ class ProductsController extends AppController {
 
             $imageinfo = $this->Image->findById($seller_photo);
             $imagepart = $imageinfo['Image'];
-            $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+            $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
             $this->set("image_user_url", $image_user_url);
 //            debug($image_user_url);
         }
@@ -104,7 +104,7 @@ class ProductsController extends AppController {
         if (!empty($product_image_id)) {
             $imageinfo = $this->Image->findById($product_image_id);
             $imagepart = $imageinfo['Image'];
-            $image_user_url = $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'] . DS . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+            $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
             $this->set("image_product_url", $image_user_url);
         }
 
