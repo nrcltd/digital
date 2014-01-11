@@ -18,13 +18,13 @@ echo $this->Html->script('/Admin/js/morris-0.4.3.min.js');
 <div class="tab-pane fade in active" id="Dashboard">
     <br>
     <div class="col-sm-3">
-        <button type="submit" class="btn btn-success btn-md btn-block"><b>Weekly</b></button>
+        <button type="button" class="btn btn-success btn-md btn-block" onclick="weeklyreport();"><b>Weekly</b></button>
     </div>
     <div class="col-sm-1">
 
     </div>
     <div class="col-sm-3">
-        <button type="submit" class="btn btn-success btn-md btn-block"><b>Monthly</b></button>
+        <button type="button" class="btn btn-success btn-md btn-block" onclick="monthlyreport();"><b>Monthly</b></button>
     </div>
     <div class="col-sm-3"></div>
     <div class="col-sm-3"></div> <br><br><br>
@@ -46,22 +46,27 @@ echo $this->Html->script('/Admin/js/morris-0.4.3.min.js');
 <script type="text/javascript">
     new Morris.Area({
         element: 'myfirstchart',
-        data: [
-            {period: '2010 Q1', iphone: 2666, ipad: null, itouch: 2647},
-            {period: '2010 Q2', iphone: 2778, ipad: 2294, itouch: 2441},
-            {period: '2010 Q3', iphone: 4912, ipad: 1969, itouch: 2501},
-            {period: '2010 Q4', iphone: 3767, ipad: 3597, itouch: 5689},
-            {period: '2011 Q1', iphone: 6810, ipad: 1914, itouch: 2293},
-            {period: '2011 Q2', iphone: 5670, ipad: 4293, itouch: 1881},
-            {period: '2011 Q3', iphone: 4820, ipad: 3795, itouch: 1588},
-            {period: '2011 Q4', iphone: 15073, ipad: 5967, itouch: 5175},
-            {period: '2012 Q1', iphone: 10687, ipad: 4460, itouch: 2028},
-            {period: '2012 Q2', iphone: 8432, ipad: 5713, itouch: 1791}
-        ],
+        data: [<?php echo $values; ?>],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: [<?php echo $keywords ?>],
+        labels: [<?php echo $labels ?>],
         pointSize: 2,
         hideHover: 'auto'
     });
+
+    function weeklyreport() {
+        window.location = '<?php
+        echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard',
+    'action' => 'index',
+    '?' => array('report' => 'weekly')));
+?>';
+    }
+
+    function monthlyreport() {
+        window.location = '<?php
+        echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard',
+    'action' => 'index',
+    '?' => array('report' => 'monthly')));
+?>';
+    }
 </script>

@@ -63,7 +63,7 @@
                     <td><?php echo $orders[$index]['Order']['customer_name'] ?></td>
                     <td><?php echo $orders[$index]['Order']['customer_email'] ?></td>
                     <td><?php echo date_format(date_create($orders[$index]["Order"]['purchased_date']), 'jS M Y'); ?></td>
-                    <td><button type="button" class="btn btn-warning btn-xs">Resend invoice</button></td>
+                    <td><button type="button" id="sendinvoice<?php echo$orders[$index]["Order"]["id"];?>" onclick="sendinvoice(<?php echo$orders[$index]["Order"]["id"];?>);" class="btn btn-warning btn-xs">Resend invoice</button></td>
                 </tr>
             <?php } ?>
 
@@ -77,5 +77,19 @@
 <script type="text/javascript">
     function search() {
         $("#SearchForm").submit();
+    }
+    
+    function sendinvoice(invoiceid) {
+        $("#sendinvoice" + invoiceid).html("Sending...");
+         var data = {orderid: invoiceid};
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'customers', 'action' => 'sendinvoice')); ?>",
+            data: data,
+            success: function(data) {
+                $("#sendinvoice" + invoiceid).html("Resend invoice");
+            }
+
+        });
     }
 </script>

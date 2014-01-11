@@ -17,14 +17,21 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html>
-<head>
-	<title><?php echo $title_for_layout; ?></title>
-</head>
-<body>
-	<?php echo $this->fetch('content'); ?>
+    <head>
+        <?php echo $this->Html->charset(); ?>
+        <title>
+            <?php echo $title_for_layout; ?>
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<p>This email was sent using the <a href="http://cakephp.org">CakePHP Framework</a></p>
-</body>
+<!--        <link rel="stylesheet" type="text/css" href="<?php echo $this->Html->url('/css/main/font-awesome.css', true) ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->Html->url('/css/main/bootstrap.css', true) ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo $this->Html->url('/css/main/basecss', true) ?>" id="callCss" media="screen">
+        <style type="text/css" id="enject"></style>-->
+    </head>
+    <body>
+        <?php echo $this->fetch('content'); ?>
+    </body>
 </html>

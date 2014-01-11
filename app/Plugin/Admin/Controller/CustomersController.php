@@ -2,6 +2,7 @@
 
 App::uses('AdminAppController', 'Admin.Controller');
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 class CustomersController extends AdminAppController {
 
@@ -45,6 +46,105 @@ class CustomersController extends AdminAppController {
 
         $this->Export->exportCsv($orders, "customers_export_" . date("Y-m-d") . ".csv");
 //        die();
+    }
+
+    public function sendinvoice() {
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+                $orderid = $this->request->data['orderid'];
+//            $orderid = 62;
+                $order = $this->Order->findById($orderid);
+
+                $this->loadModel('Option');
+                $option = $this->Option->findByOptionName('smtp_host');
+                $smtp_host = '';
+                if ($option) {
+                    $smtp_host = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_port');
+                $smtp_port = '';
+                if ($option) {
+                    $smtp_port = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_user');
+                $smtp_user = '';
+                if ($option) {
+                    $smtp_user = $option['Option']['option_value'];
+                }
+
+                $option = $this->Option->findByOptionName('smtp_password');
+                $smtp_password = '';
+                if ($option) {
+                    $smtp_password = $option['Option']['option_value'];
+                }
+
+                $smtp_test_user = $order['Order']['customer_email'];
+
+                $option = $this->Option->findByOptionName('use_php_email');
+                $use_php_email = '';
+                if ($option) {
+                    $use_php_email = $option['Option']['option_value'];
+                }
+                $gmail = array();
+                if ($use_php_email === '0') {
+                    $gmail = array(
+                        'host' => $smtp_host,
+                        'port' => $smtp_port,
+                        'username' => $smtp_user,
+                        'password' => $smtp_password,
+                        'transport' => 'Smtp',
+                        'tls' => true,
+                        'timeout' => 30,
+                        'client' => null,
+                        'log' => false,
+                    );
+                } else {
+                    $gmail = array(
+                        'transport' => 'Mail',
+                        'from' => $smtp_user,
+                            //'charset' => 'utf-8',
+                            //'headerCharset' => 'utf-8',
+                    );
+                }
+
+                $email = new CakeEmail($gmail);
+                $email->template('default', 'default');
+                $email->emailFormat('html');
+                $email->to($smtp_test_user);
+                $email->from($smtp_user);
+
+                $product_id = $order['Order']['product_id'];
+                $this->loadModel('Product');
+                $product = $this->Product->findById($product_id);
+
+                $email->subject('Invoice: #' . $order['Order']['id'] . ' - Buy ' . $product["Product"]['product_name'] . ' - ' . $order['Order']['customer_name']);
+
+
+                $content = $order['Order']['id'] . '\n' . $order['Order']['purchased_date'] .
+                        '\n' . $product["Product"]['id'] . '\n' . $product["Product"]['product_name']
+                        . '\n' . $product["Product"]['product_price'] .
+                        '\n' . $order['Order']['customer_name'] .
+                        '\n' . $order['Order']['customer_email'];
+                try {
+                    if ($email->send($content)) {
+                        $result = array();
+                        $result['result_code'] = '1';
+                        echo json_encode($result);
+                    } else {
+                        $result = array();
+                        $result['result_code'] = '-1';
+                        echo json_encode($result);
+                    }
+                } catch (Exception $ex) {
+                    $result = array();
+                    $result['result_code'] = '-1';
+                    echo json_encode($result);
+                }
+            }
+        }
+        exit();
     }
 
 }
