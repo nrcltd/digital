@@ -108,7 +108,7 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-3"><button type="submit" name="saveproduct" class="btn btn-success btn-md btn-block"><b>Save</b></i></button><br></div>
             <div class="col-sm-3"><button type="button" data-toggle="modal" data-target="#myModal1" class="btn btn-success btn-md btn-block"><b>Add File</b</i></button><br></div>
-            <div class="col-sm-3"><button type="button" class="btn btn-warning btn-md btn-block"><b>Pause</b></i></button><br></div>
+            <div class="col-sm-3"><button type="button" class="btn btn-warning btn-md btn-block" onclick="pauseproduct();" id="btnpause"><b><?php echo $activelabel;?></b></i></button><br></div>
             <div class="col-sm-1"></div>
         </div>
         <!--        </form>-->
@@ -116,7 +116,7 @@
         <br>
 
 
-
+        <input type="hidden" id="pausedprodcut" value="<?php echo $activelabelvalue;?>"/>
     </div>
 </div><br>
 <div class="row" style="visibility: hidden;">
@@ -178,5 +178,29 @@
 
     function updateproductfile(productfileid) {
         $("#ProductProductFileId").val(productfileid);
+    }
+    
+    function pauseproduct() {
+        
+        var productid = $("#ProductId").val();
+        var paused = $("#pausedprodcut").val();
+        var data = {paused: paused, productid: productid};
+        $("#btnpause").html("<b>Submit...</b></i>");
+        $.ajax({
+            type: "POST",
+            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'pauseproduct')); ?>",
+            data: data,
+            success: function(data) {
+                $("#btnpause").html("<b>Pause</b></i>");
+                var obj = $.parseJSON(data);
+                $("#pausedprodcut").val(obj.result_code);
+                if (obj.result_code === "1") {
+                   $("#btnpause").html("<b>Pause</b></i>");
+                } else {
+                   $("#btnpause").html("<b>Active</b></i>");
+                }
+            }
+
+        });
     }
 </script>

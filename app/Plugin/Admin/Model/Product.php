@@ -35,7 +35,6 @@ class Product extends AppModel {
                 'rule' => 'notEmpty'
             )
         )
-        
     );
 
     public function addProduct($data) {
@@ -61,6 +60,13 @@ class Product extends AppModel {
             return $this->id;
         }
         return false;
+    }
+
+    public function pauseproduct($productid, $paused) {
+        $this->id = $productid;
+        $this->set('product_paused', $paused);
+        $this->save();
+        return $this->id;
     }
 
     public function searchProducts($keyword = '') {

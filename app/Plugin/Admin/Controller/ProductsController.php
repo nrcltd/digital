@@ -55,16 +55,41 @@ class ProductsController extends AdminAppController {
 //                $this->setMenuItems();
 //                $this->Session->setFlash('Product is updated successfully!');
 //                $this->render('edit');
-                
-                 $this->Redirect(array('controller' => 'products', 'action' => 'index'));
+
+                $this->Redirect(array('controller' => 'products', 'action' => 'index'));
             }
         } else {
             $products = $this->Product->findById($id);
             $this->set('products', $products);
+
+            if ($products['Product']['product_paused'] == 0) {
+                $this->set('activelabel', 'Pause');
+                $this->set('activelabelvalue', '1');
+            } else {
+                $this->set('activelabel', 'Active');
+                $this->set('activelabelvalue', '0');
+            }
+
 //        debug($products);
             $this->setMenuItems();
             $this->render('edit');
         }
+    }
+
+    public function pauseproduct() {
+        if ($this->request->isPost()) {
+            $productid = $this->request->data('productid');
+            $paused = $this->request->data('paused');
+            $this->Product->pauseproduct($productid, $paused);
+            $result = array();
+            if ($paused == 0) {
+                $result['result_code'] = '1';
+            } else {
+                $result['result_code'] = '0';
+            }
+            echo json_encode($result);
+        }
+        exit();
     }
 
     public function updateavatar() {
