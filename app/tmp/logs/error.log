@@ -97,3 +97,14 @@ Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-01-14 12:08:36 Error: [MissingActionException] Action CouponsController::delete18() could not be found.
+Exception Attributes: array (
+  'controller' => 'CouponsController',
+  'action' => 'delete18',
+)
+Request URL: /digital/admin/coupons/delete18
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/digital/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(CouponsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

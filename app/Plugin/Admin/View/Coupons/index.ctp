@@ -61,7 +61,7 @@
                     <td><?php echo $coupons[$index]['Coupon']['coupon_code'] ?></td>
                     <td><?php echo $coupons[$index]['Coupon']['coupon_amount'] ?></td>
                     <td><?php echo $coupons[$index]['Coupon']['coupon_quantity'] ?></td>
-                    <td><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'delete', $coupons[$index]['Coupon']['id'])); ?>"><button type="button" class="btn btn-warning btn-xs">Delete</button></a></td>
+                    <td><a href="javascript:deletecoupon(<?php echo $coupons[$index]['Coupon']['id']; ?>);"><button type="button" class="btn btn-warning btn-xs">Delete</button></a></td>
                 </tr>
             <?php } ?>
         </table>
@@ -74,5 +74,14 @@
 <script type="text/javascript">
     function search() {
         $("#SearchForm").submit();
+    }
+
+    function deletecoupon(id) {
+        var coupon = confirm('Are you sure to delete?');
+
+        if (coupon == true)
+        {
+            window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'coupons', 'action' => 'delete')); ?>' + '/' + id;
+        }
     }
 </script>
