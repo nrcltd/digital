@@ -65,13 +65,13 @@
                         <i class="glyphicon glyphicon-link"></i>
                         <!--<input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">-->
                         <?php
-                        echo $this->Form->input('seller_facebook_id', array(
+                        echo $this->Form->input('seller_facebook_url', array(
                             'type' => 'text',
                             'label' => false,
-                            'value' => $seller_facebook_id,
+                            'value' => $seller_facebook_url,
                             'class' => 'form-control',
                             'style' => 'font-size:12px',
-                            'placeholder' => ''
+                            'placeholder' => 'facebook url'
                         ));
                         ?>
                     </div>
@@ -82,13 +82,13 @@
                         <i class="glyphicon glyphicon-link"></i>
                         <!--<input class="form-control" id="focusedInput" type="text" placeholder="" style="font-size:12px;">-->
                         <?php
-                        echo $this->Form->input('seller_twitter_id', array(
+                        echo $this->Form->input('seller_twitter_url', array(
                             'type' => 'text',
                             'label' => false,
-                            'value' => $seller_twitter_id,
+                            'value' => $seller_twitter_url,
                             'class' => 'form-control',
                             'style' => 'font-size:12px',
-                            'placeholder' => ''
+                            'placeholder' => 'twitter url'
                         ));
                         ?>
                     </div>

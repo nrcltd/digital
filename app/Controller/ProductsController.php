@@ -110,7 +110,24 @@ class ProductsController extends AppController {
 
         $this->loadModel('ProductFile');
         $productfile = $this->ProductFile->findById($product['Product']['product_file_id']);
-
+ 
+        $facebook_url = '';
+        $twitter_url = '';
+        
+        $option = $this->Option->findByOptionName('seller_facebook_url');
+        
+        if ($option) {
+            $facebook_url = $option['Option']['option_value'];
+        }
+        
+        $option = $this->Option->findByOptionName('seller_twitter_url');
+        
+        if ($option) {
+            $twitter_url = $option['Option']['option_value'];
+        }
+        
+        $this->set('facebook_url', $facebook_url);
+        $this->set('twitter_url', $twitter_url);
         $this->set('productfile', $productfile);
         $this->set('product', $product);
         $this->set('currencyccode', $currencyCode);

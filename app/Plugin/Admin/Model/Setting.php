@@ -15,12 +15,12 @@ class Setting extends AppModel {
                 'rule' => 'notEmpty'
             )
         ),
-        'seller_facebook_id' => array(
+        'seller_facebook_url' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
             )
         ),
-        'seller_twitter_id' => array(
+        'seller_twitter_url' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
             )
@@ -45,11 +45,11 @@ class Setting extends AppModel {
             'type' => 'string',
             'length' => 512
         ),
-        'seller_facebook_id' => array(
+        'seller_facebook_url' => array(
             'type' => 'string',
             'length' => 512
         ),
-        'seller_twitter_id' => array(
+        'seller_twitter_url' => array(
             'type' => 'string',
             'length' => 512
         ),

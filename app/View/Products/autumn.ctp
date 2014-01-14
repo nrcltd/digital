@@ -246,8 +246,8 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                             <!-- Social icons begin ======================================== -->
                             <p>
-                                <a href="#"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
-                                <a href="#"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
+                                <a href="<?php echo $facebook_url;?>" target="_blank"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
+                                <a href="<?php echo $twitter_url;?>" target="_blank"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
                             </p>
                             <!-- Social icons end ======================================== -->
                         </div>

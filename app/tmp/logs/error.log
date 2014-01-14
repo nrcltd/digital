@@ -1,0 +1,99 @@
+2014-01-14 10:04:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/09/resize_1389305142.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:04:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:05:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:24:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:26:13 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:26:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:35:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:36:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:37:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:37:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-14 10:42:52 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
