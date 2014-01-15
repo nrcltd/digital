@@ -29,7 +29,7 @@ class Setting extends AppModel {
             'rule_3' => array(
                 'rule' => 'notEmpty'
             )
-        ), 
+        ),
         'smtp_test_user' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
@@ -62,6 +62,10 @@ class Setting extends AppModel {
             'length' => 512
         ),
         'seller_password' => array(
+            'type' => 'string',
+            'length' => 512
+        ),
+        'confirm_seller_password' => array(
             'type' => 'string',
             'length' => 512
         ),

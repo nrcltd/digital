@@ -125,11 +125,11 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                     <ul class="list-unstyled">
                                         <li>
                                             <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                            <span><?php echo $productfile['ProductFile']['product_file_extension']?></span><span class="pull-right">894.39kb</span>
+                                            <span><?php echo $productfile['ProductFile']['product_file_extension']?></span><span class="pull-right"><?php echo $filesize;?></span>
                                             <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
                                                 <i>Includes working file*</i></p>
                                         </li>
-                                        <li>
+                                        <li style="visibility: hidden">
                                             <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
                                             <span><?php echo $productfile['ProductFile']['product_file_description']?></span><span class="pull-right"></span>                   
                                         </li>

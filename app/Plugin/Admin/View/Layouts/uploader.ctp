@@ -24,7 +24,7 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
         <?php echo $this->Html->script('/Admin/js/jquery-1.8.3.min.js'); ?>
         <?php echo $this->Html->script('/Admin/js/jquery.imgareaselect.min.js'); ?>
     </head>
-    <body>
+    <body style="margin: 0px">
         <?php echo $this->fetch('content'); ?>
     </body>
 </html>

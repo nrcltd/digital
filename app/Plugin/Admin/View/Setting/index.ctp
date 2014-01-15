@@ -128,22 +128,44 @@
                 <i class="glyphicon glyphicon-lock"></i>
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="New password" style="font-size:12px;">-->
 
-                <input class="form-control" id="seller_password" type="password" placeholder="New password" style="font-size:12px;">
+                <!--<input class="form-control" id="seller_password" type="password" placeholder="New password" style="font-size:12px;">-->
 
+                <?php
+                echo $this->Form->input('seller_password', array(
+                    'type' => 'password',
+                    'label' => false,
+                    'id' => 'seller_password',
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'New password'
+                ));
+                ?>
             </div>
         </div>
         <div class="col-sm-5">
             <H4 style="visibility: hidden;">Confirm password</H4>
             <div class="right-inner-addon">
                 <i class="glyphicon glyphicon-lock"></i>
-                <input class="form-control" id="confirm_seller_password" type="password" placeholder="Confirm password" style="font-size:12px;">
+                <!--<input class="form-control" id="confirm_seller_password" type="password" placeholder="Confirm password" style="font-size:12px;">-->
+
+
+                <?php
+                echo $this->Form->input('confirm_seller_password', array(
+                    'type' => 'password',
+                    'label' => false,
+                    'id' => 'confirm_seller_password',
+                    'class' => 'form-control',
+                    'style' => 'font-size:12px',
+                    'placeholder' => 'Confirm password'
+                ));
+                ?>
             </div>
         </div>
-        <div class="col-sm-2">
-            <H4 style="visibility: hidden;">OK</H4>
-            <button type="button" class="btn-circle btn-green" onclick="updatepassword();"><span class="glyphicon glyphicon-ok"></span></button>
-            <button type="button" class="btn-circle btn-red" onclick="resetpassword();"><span class="glyphicon glyphicon-remove"></span></button>
-        </div>
+        <!--        <div class="col-sm-2">
+                    <H4 style="visibility: hidden;">OK</H4>
+                    <button type="button" class="btn-circle btn-green" onclick="updatepassword();"><span class="glyphicon glyphicon-ok"></span></button>
+                    <button type="button" class="btn-circle btn-red" onclick="resetpassword();"><span class="glyphicon glyphicon-remove"></span></button>
+                </div>-->
     </div>
 
 
@@ -335,7 +357,7 @@
                 <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
             </div>
             <div class="modal-body">
-                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>"></iframe>
+                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', 'mode' => 1)); ?>"></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -373,6 +395,7 @@
         });
     }
 
+
     function updatetheme(id, theme_name) {
         $("#frontend_theme").val(id);
         $("#theme_value_selector").html(theme_name);
@@ -380,6 +403,27 @@
 
     $(function() {
         $('.checkbox').removeClass('checkbox');
+
+
+        $("#SettingIndexForm").submit(function(event) {
+            var password = $("#seller_password").val();
+            var confirm_seller_password = $("#confirm_seller_password").val();
+            if ((password.length === 0) && (confirm_seller_password.length === 0))
+                return;
+            else if ((password.length === 0)) {
+                event.preventDefault();
+            } else if (confirm_seller_password.length === 0) {
+                event.preventDefault();
+            }
+            if (password.length < 6)
+                event.preventDefault();
+            if (confirm_seller_password.length < 6)
+                event.preventDefault();
+            if (password !== confirm_seller_password)
+                event.preventDefault();
+
+            return;
+        });
     })
 
     function updateimage(imageid) {

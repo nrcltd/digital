@@ -48,7 +48,11 @@ if (strlen($large_photo_exists) > 0) {
         });
 
         $(window).load(function() {
-            $('#thumbnail').imgAreaSelect({aspectRatio: '1:<?php echo $thumb_height / $thumb_width; ?>', onSelectChange: preview});
+            $('#thumbnail').imgAreaSelect({aspectRatio: '1:<?php if ($photo_mode == 0) {
+        echo $current_large_image_height / $current_large_image_width;
+    } else {
+        echo $thumb_height / $thumb_width;
+    } ?>', onSelectChange: preview});
         });
 
     </script>
@@ -63,19 +67,20 @@ if (strlen($large_photo_exists) > 0) {
     ?>
     <h2>Create Thumbnail</h2>
     <div align="center">
-        <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="float: left; margin-right: 10px;" id="thumbnail" alt="Create Thumbnail" />
-        <div style="border:1px #e5e5e5 solid; float:left; position:relative; overflow:hidden; width:<?php echo $thumb_width; ?>px; height:<?php echo $thumb_height; ?>px;">
+        <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="float: left;" id="thumbnail" alt="Create Thumbnail" />
+        <div style="margin-top: 10px;border:1px #e5e5e5 solid; float:left; position:relative; overflow:hidden; width:<?php echo $thumb_width; ?>px; height:<?php echo $thumb_height; ?>px;">
             <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="position: relative;" alt="Thumbnail Preview" />
         </div>
         <br style="clear:both;"/>
-        <form name="thumbnail" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>" method="post">
+        <form name="thumbnail" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', 'mode' => $photo_mode)); ?>" method="post">
             <input type="hidden" name="x1" value="" id="x1" />
             <input type="hidden" name="y1" value="" id="y1" />
             <input type="hidden" name="x2" value="" id="x2" />
             <input type="hidden" name="y2" value="" id="y2" />
             <input type="hidden" name="w" value="" id="w" />
             <input type="hidden" name="h" value="" id="h" />
-
+            <input type="hidden" name="photo_mode" value="<?php echo $photo_mode ?>" id="photo_mode" />
+            
             <input type="hidden" name="year" value="<?php echo $year; ?>"/>
             <input type="hidden" name="month" value="<?php echo $month; ?>" />
             <input type="hidden" name="day" value="<?php echo $day; ?>" />
@@ -87,8 +92,9 @@ if (strlen($large_photo_exists) > 0) {
     </div>
     <hr />
 <?php } ?>
-<form name="photo" enctype="multipart/form-data" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index')); ?>" method="post">
+<form name="photo" enctype="multipart/form-data" action="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', 'mode' => $photo_mode)); ?>" method="post">
     Photo 
     <input type="file" name="image" size="30" /> 
+    <input type="hidden" name="photo_mode" value="<?php echo $photo_mode ?>" id="photo_mode" />
     <input type="submit" name="upload" value="Upload" />
 </form>

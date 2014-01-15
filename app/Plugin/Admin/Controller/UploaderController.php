@@ -18,7 +18,7 @@ class UploaderController extends AdminAppController {
     var $thumb_image_name = '';
     var $resize_image_name = '';
     var $max_file = "10";
-    var $max_width = "500";
+    var $max_width = "750";
     var $thumb_width = "100";
     var $thumb_height = "100";
     var $allowed_image_types = array('image/pjpeg' => "jpg", 'image/jpeg' => "jpg", 'image/jpg' => "jpg", 'image/png' => "png", 'image/x-png' => "png", 'image/gif' => "gif");
@@ -31,13 +31,16 @@ class UploaderController extends AdminAppController {
 
     public function index() {
         error_reporting(E_ALL ^ E_NOTICE);
-
+        $mode = $this->request->named['mode'];
         $folder = 'upload';
         $rootfolder = WWW_ROOT . 'img' . DS . $folder;
 
         $this->set('update_image_info', false);
         $large_photo_exists = '';
         $error = '';
+
+        $this->set('thumb_width', $this->thumb_width);
+        $this->set('thumb_height', $this->thumb_height);
         if ($this->request->isPost()) {
 
 //            if (!isset($_SESSION['random_key']) || strlen($_SESSION['random_key']) == 0) {
@@ -59,7 +62,7 @@ class UploaderController extends AdminAppController {
                 $this->set('fileext', $filename_ext);
 //                debug($this->request);
             }
-            
+
             $this->upload_dir = $rootfolder . DS . $year . DS . $month . DS . $day;
             $this->upload_path = $rootfolder . DS . $year . DS . $month . DS . $day . DS;
             $this->set('upload_path', 'img' . DS . $folder . DS . $year . DS . $month . DS . $day . DS);
@@ -148,6 +151,8 @@ class UploaderController extends AdminAppController {
 
                         $width = $this->getWidth($this->large_image_location);
                         $height = $this->getHeight($this->large_image_location);
+//                        $this->set('thumb_width', $width);
+//                        $this->set('thumb_height', $height);
                         //Scale the image if it is greater than the width set above
                         if ($width > $this->max_width) {
                             $scale = $this->max_width / $width;
@@ -182,6 +187,8 @@ class UploaderController extends AdminAppController {
 
                 $width = $this->getWidth($this->large_image_location);
                 $height = $this->getHeight($this->large_image_location);
+//                $this->set('thumb_width', $width);
+//                $this->set('thumb_height', $height);
                 $imageid = $this->Image->addImage($width, $height, $filename_temp, date("Y"), date("m"), date("d"), $filename_ext);
 
                 $this->set('update_image_info', true);
@@ -191,11 +198,11 @@ class UploaderController extends AdminAppController {
 
         if (file_exists($this->large_image_location)) {
             if (file_exists($this->thumb_image_location)) {
-                $thumb_photo_exists = "<img src=\"" . $this->upload_path . $this->thumb_image_name  . "\" alt=\"Thumbnail Image\"/>";
+                $thumb_photo_exists = "<img src=\"" . $this->upload_path . $this->thumb_image_name . "\" alt=\"Thumbnail Image\"/>";
             } else {
                 $thumb_photo_exists = "";
             }
-            $large_photo_exists = "<img src=\"" . $this->upload_path . $this->large_image_name  . "\" alt=\"Large Image\"/>";
+            $large_photo_exists = "<img src=\"" . $this->upload_path . $this->large_image_name . "\" alt=\"Large Image\"/>";
         } else {
             $large_photo_exists = "";
             $thumb_photo_exists = "";
@@ -216,10 +223,14 @@ class UploaderController extends AdminAppController {
         } else {
             $this->set('resize_image_name', $this->large_image_name);
         }
-        $this->set('thumb_width', $this->thumb_width);
-        $this->set('thumb_height', $this->thumb_height);
-        $this->set('error', $error);
 
+        $this->set('error', $error);
+        
+        if (empty($mode)) {
+            $this->set('photo_mode', '0');
+        } else {
+           $this->set('photo_mode', $mode); 
+        }
 //        debug($this->large_image_location);
     }
 

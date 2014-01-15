@@ -16,7 +16,9 @@ class SettingController extends AdminAppController {
         if ($this->request->isPost()) {
 
             $setting = $this->request->data['Setting'];
-//            debug($setting);
+//            debug($this->request);
+            $seller_password = $setting['seller_password'];
+            $this->updatepassword($seller_password);
             foreach (array_keys($setting) as $key) {
 //                debug($setting[$key]);
 
@@ -55,10 +57,10 @@ class SettingController extends AdminAppController {
         $this->render('index');
     }
 
-    public function updatepassword() {
+    public function updatepassword($newpassword) {
         if ($this->Session->check('User')) {
             if ($this->request->isPost()) {
-                $newpassword = $this->request->data('password');
+//                $newpassword = $this->request->data('password');
                 $userid = $this->Session->read('UserID');
 
                 $this->loadModel('User');
@@ -69,7 +71,7 @@ class SettingController extends AdminAppController {
 //                debug(md5($newpassword));
             }
         }
-        exit();
+//        exit();
     }
 
     public function updateavatar() {
