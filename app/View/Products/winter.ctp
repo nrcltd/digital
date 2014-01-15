@@ -17,6 +17,59 @@ echo $this->Html->css('winter/bootstrap.css');
 echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'screen'));
 ?>
 <div class="container-fluid" style="background:rgba(34, 34, 34, 0);">
+
+    <nav class="navbar navbar-wrapper navbar-inverse" role="navigation">
+        <div class="container" style="display: none">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                <!--      <a class="navbar-brand" href="#">Digital Sell</a> -->
+            </div> 
+            <!-- Collect the nav links, forms, and other content for toggling -->         
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class=""><a href="#"><span class="icon-home"></span> Home</a></li>   
+                    <li><a href="#"><span class="icon-group"></span> About Us</a></li>
+                    <li><a href="#"><span class="icon-comment"></span> Contact Us</a></li>
+                </ul>
+                <ul class="nav navbar-nav">
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            <span class="icon-user"></span>Log in / Sign up<strong class="caret"></strong></a>
+                        <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                            <!-- Login form here -->
+                            <div class="account-wall">
+                                 <!-- <img class="profile-img" src="themes/images/photo.png" alt=""> -->
+
+                                <button type="button" class="btn btn-primary btn-circle btn-xl">
+                                    <i style="font-size:1.4em;" class="glyphicon glyphicon-user"></i></button>
+
+                                <form class="form-signin">
+                                    <input type="text" class="form-control" placeholder="Username" required autofocus>
+                                    <input type="password" class="form-control" placeholder="Password" required>
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                                    <label class="checkbox pull-left">
+                                        <input type="checkbox" value="remember-me"> Remember me
+                                    </label>
+                                    <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                                </form>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>           
+        </div>
+    </nav>  
+
     <div class="row">
         <div class="col-sm-3"></div>
 
@@ -25,62 +78,6 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
         <div class="col-sm-6">  
             <body style="background-image:url('<?php echo $this->Html->url('/img/pattern/winter.png', true) ?>'); center;">
-
-                <nav class="navbar navbar-wrapper navbar-inverse navbar-fixed-top" role="navigation">
-                    <div class="container" style="display: none">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-                            <!--      <a class="navbar-brand" href="#">Digital Sell</a> -->
-                        </div> 
-                        <!-- Collect the nav links, forms, and other content for toggling -->         
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class=""><a href="#"><span class="icon-home"></span> Home</a></li>   
-                                <li><a href="#"><span class="icon-group"></span> About Us</a></li>
-                                <li><a href="#"><span class="icon-comment"></span> Contact Us</a></li>
-                            </ul>
-                            <ul class="nav navbar-nav">
-
-
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-                                        <span class="icon-user"></span>Log in / Sign up<strong class="caret"></strong></a>
-                                    <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                                        <!-- Login form here -->
-                                        <div class="account-wall">
-                                             <!-- <img class="profile-img" src="themes/images/photo.png" alt=""> -->
-
-                                            <button type="button" class="btn btn-primary btn-circle btn-xl">
-                                                <i style="font-size:1.4em;" class="glyphicon glyphicon-user"></i></button>
-
-                                            <form class="form-signin">
-                                                <input type="text" class="form-control" placeholder="Username" required autofocus>
-                                                <input type="password" class="form-control" placeholder="Password" required>
-                                                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                                                <label class="checkbox pull-left">
-                                                    <input type="checkbox" value="remember-me"> Remember me
-                                                </label>
-                                                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>           
-                    </div>
-                </nav>  
-
-
-
-
                 <!-- Body content begin -->
 
                 <div class="row">
@@ -90,7 +87,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                     </div>
 
                     <section id="header_img" style="height:300px; 
-                             background-image:url('<?php echo $this->Html->url('/img/'.'upload/'.$image_product_url, true) ?>')">
+                             background-image:url('<?php echo $this->Html->url('/img/' . 'upload/' . $image_product_url, true) ?>')">
                     </section>
 
                     <br>
@@ -126,13 +123,13 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                     <ul class="list-unstyled">
                                         <li>
                                             <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                            <span><?php echo $productfile['ProductFile']['product_file_extension']?></span><span class="pull-right"><?php echo $filesize;?></span>
+                                            <span><?php echo $productfile['ProductFile']['product_file_extension'] ?></span><span class="pull-right"><?php echo $filesize; ?></span>
                                             <p style="color: rgba(0, 0, 0, 0.4);margin-left:24px; font-size:12px;">
                                                 <i>Includes working file*</i></p>
                                         </li>
                                         <li style="visibility: hidden">
                                             <button class="btn-circle btn-customize"><span class="glyphicon glyphicon-ok"></span></button>
-                                            <span><?php echo $productfile['ProductFile']['product_file_description']?></span><span class="pull-right"></span>                   
+                                            <span><?php echo $productfile['ProductFile']['product_file_description'] ?></span><span class="pull-right"></span>                   
                                         </li>
                                     </ul>
 
@@ -151,7 +148,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 //                                            'data-validation-regex-message' => 'Alphabets and numbers only'
                                         ));
                                         ?>
-                                    </div><br>
+                                    </div><div class="left-outer-addon"><i style="font-size:0.7em;color:red;" class="icon-star-empty"></i></div><br>
                                     <div class="right-inner-addon control-group">
                                         <i class="icon-envelope"></i>
                                         <!--<input class="form-control" id="focusedInput" type="text" placeholder="Email">-->
@@ -238,7 +235,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                 <div class="uparrowdiv">
                     <div class="row"><br>
                         <div class="col-xs-3 pad_left_right">
-                            <a href="javascript:;;"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/'.'upload/'.$image_user_url, true) ?>" alt="..."></a>
+                            <a href="javascript:;;"><img class="media-object img-circle img-responsive" src="<?php echo $this->Html->url('/img/' . 'upload/' . $image_user_url, true) ?>" alt="..."></a>
                         </div>
                         <div class="col-sm-9 pad_left_right">
                             <h3 class="media-heading text-primary" style="color:#2c3e50;"><?php echo $sellername; ?></h3>
@@ -247,8 +244,8 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                             <!-- Social icons begin ======================================== -->
                             <p>
-                                <a href="<?php echo $facebook_url;?>" target="_blank"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
-                                <a href="<?php echo $twitter_url;?>" target="_blank"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
+                                <a href="<?php echo $facebook_url; ?>" target="_blank"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
+                                <a href="<?php echo $twitter_url; ?>" target="_blank"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
                             </p>
                             <!-- Social icons end ======================================== -->
                         </div>

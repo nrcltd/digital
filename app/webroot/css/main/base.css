@@ -1,10 +1,9 @@
 /******************** CSS CUSTOMIZE ***********************/
-body{margin:0px; padding-top: 70px;padding-bottom: 20px;
+body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 }
 
 /* downarrowdiv hover*/
-.col-sm-6:hover, .thumbnail:hover {-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);box-shadow: 0 5px 10px rgba(0, 0, 0, 1);}
-
+.col-sm-6, .thumbnail:hover {-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);box-shadow: 0 5px 10px rgba(0, 0, 0, 1);}
 
 /* signin form */
 .form-signin
@@ -159,6 +158,12 @@ body{margin:0px; padding-top: 70px;padding-bottom: 20px;
 .left-inner-addon i {
     position: absolute;
     padding: 10px 12px;
+}
+
+.left-outer-addon i {
+    position: absolute;
+    right: 0px;
+    margin: -26px 20px;
 }
 
 .left-inner-addon img {
