@@ -111,8 +111,8 @@
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
+    <div class="modal-dialog" style="width: 930px">
+        <div class="modal-content" style="width: 930px">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
@@ -172,6 +172,12 @@
         $("#ProductAddForm").submit(function(event) {
             var ProductProductImageId = $("#ProductProductImageId").val();
             var ProductProductFileId = $("#ProductProductFileId").val();
+            var Prices = $("#ProductProductPrice").val();
+            if (!parseFloat(Prices)) {
+                alert("The price is not valid!");
+                event.preventDefault();
+                return;
+            }
             if (ProductProductImageId.length === 0) {
                 event.preventDefault();
                 alert("Please add image for product!");

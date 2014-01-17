@@ -52,7 +52,12 @@ if (strlen($large_photo_exists) > 0) {
         echo $current_large_image_height / $current_large_image_width;
     } else {
         echo $thumb_height / $thumb_width;
-    } ?>', onSelectChange: preview});
+    } ?>', 
+                <?php if ($photo_mode == 0) { ?>
+                onSelectChange: preview, minHeight: 300, minWidth: 700, resizable : false});
+                <?php } else {?>
+                 onSelectChange: preview, minHeight: 150, minWidth: 150, resizable : false});
+                <?php }?>
         });
 
     </script>
@@ -68,7 +73,7 @@ if (strlen($large_photo_exists) > 0) {
     <h2>Create Thumbnail</h2>
     <div align="center">
         <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="float: left;" id="thumbnail" alt="Create Thumbnail" />
-        <div style="margin-top: 10px;border:1px #e5e5e5 solid; float:left; position:relative; overflow:hidden; width:<?php echo $thumb_width; ?>px; height:<?php echo $thumb_height; ?>px;">
+        <div style="border:1px #e5e5e5 solid; float:left; position:relative; overflow:hidden; width:<?php echo $thumb_width; ?>px; height:<?php echo $thumb_height; ?>px;">
             <img src="<?php echo $this->webroot . $upload_path . $large_image_name . $fileext; ?>" style="position: relative;" alt="Thumbnail Preview" />
         </div>
         <br style="clear:both;"/>

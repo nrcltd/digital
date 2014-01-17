@@ -65,6 +65,22 @@ class ProductsController extends AdminAppController {
                 $imagepart = $imageinfo['Image'];
                 $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
                 $this->set("image_user_url", $image_user_url);
+
+                $this->loadModel('ProductFile');
+                $productfile = $this->ProductFile->findById($products['Product']['product_file_id']);
+                $filesizetemp = '';
+                $filesize = $productfile['ProductFile']['product_file_size'];
+                if ($filesize < 1024) {
+                    $filesizetemp = number_format($filesize, 2, '.', '') . 'KB';
+                } else if ($filesize >= 1024) {
+                    $filesizetemp = number_format($filesize / 1024, 2, '.', '') . 'MB';
+                } else if ($filesize >= (1024 * 1024)) {
+                    $filesizetemp = number_format($filesize / (1024 * 1024), 2, '.', '') . 'GB';
+                }
+
+                $this->set('filesize_product', $filesizetemp);
+                $this->set('filename_product', $productfile['ProductFile']['product_file_description']);
+
                 if ($products['Product']['product_paused'] == 0) {
                     $this->set('activelabel', 'Pause');
                     $this->set('activelabelvalue', '1');

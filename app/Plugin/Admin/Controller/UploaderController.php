@@ -139,6 +139,19 @@ class UploaderController extends AdminAppController {
                 } else {
                     $error = "Select an image for upload";
                 }
+                if (strlen($error) == 0) {
+                    $widthLimit = $this->getWidth($userfile_tmp);
+                    $heightLimit = $this->getHeight($userfile_tmp);
+
+                    if ($widthLimit < 750) {
+                        $error = 'Images must be mininal 750px in width and 300px in height. Your image size is: width: ' . $widthLimit . 'px' . ' height: ' . $heightLimit . 'px';
+                    }
+                    if (strlen($error) == 0) {
+                        if ($heightLimit < 300) {
+                            $error = 'Images must be mininal 750px in width and 300px in height. Your image size is: width: ' . $widthLimit . 'px' . ' height: ' . $heightLimit . 'px';
+                        }
+                    }
+                }
                 //Everything is ok, so we can upload the image.
                 if (strlen($error) == 0) {
 
