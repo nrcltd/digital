@@ -22,8 +22,9 @@ class ProductsController extends AdminAppController {
 
     public function add() {
         $this->setMenuItems();
-
-        if ($this->request->isPost()) {
+        $this->set("image_user_url", '');
+        $this->set('hidephoto', 'none');
+        if ($this->request->isPost() || (!empty($this->request->data))) {
             $data = $this->request->data;
             $result = $this->Product->addProduct($data);
             if ($result == false) {
@@ -40,13 +41,42 @@ class ProductsController extends AdminAppController {
 
     public function edit($id = null) {
 //                    debug($this->request->isPost());
-        if ($this->request->isPost()) {
+//                    debug($this->request->data);
+
+        $this->set("image_user_url", '');
+        $this->set('hidephoto', 'block');
+        $this->set('hidefile', 'block');
+        if ($this->request->isPost() || (!empty($this->request->data))) {
 //            debug($this->request);
             $data = $this->request->data;
 //            debug($data);
             $product_id = $this->Product->updateProduct($data);
             if ($product_id == false) {
 //                exit();
+
+                $products = $this->Product->findById($id);
+                $products['Product']['product_name'] = $data['Product']['product_name'];
+                $products['Product']['product_description'] = $data['Product']['product_description'];
+                $products['Product']['product_price'] = $data['Product']['product_price'];
+                $this->set('products', $products);
+                $user_photo_id = $products['Product']['product_image_id'];
+                $this->loadModel('Image');
+                $imageinfo = $this->Image->findById($user_photo_id);
+                $imagepart = $imageinfo['Image'];
+                $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+                $this->set("image_user_url", $image_user_url);
+                if ($products['Product']['product_paused'] == 0) {
+                    $this->set('activelabel', 'Pause');
+                    $this->set('activelabelvalue', '1');
+                } else {
+                    $this->set('activelabel', 'Active');
+                    $this->set('activelabelvalue', '0');
+                }
+
+//        debug($products);
+                $this->setMenuItems();
+                $this->render('edit');
+
                 return;
             } else {
 //                $products = $this->Product->findById($product_id);
@@ -69,8 +99,26 @@ class ProductsController extends AdminAppController {
                 $this->set('activelabel', 'Active');
                 $this->set('activelabelvalue', '0');
             }
+            $user_photo_id = $products['Product']['product_image_id'];
+            $this->loadModel('Image');
+            $imageinfo = $this->Image->findById($user_photo_id);
+            $imagepart = $imageinfo['Image'];
+            $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+            $this->set("image_user_url", $image_user_url);
 
-//        debug($products);
+            $this->loadModel('ProductFile');
+            $productfile = $this->ProductFile->findById($products['Product']['product_file_id']);
+            $filesizetemp = '';
+            $filesize = $productfile['ProductFile']['product_file_size'];
+            if ($filesize < 1024) {
+                $filesizetemp = number_format($filesize, 2, '.', '') . 'KB';
+            } else if ($filesize >= 1024) {
+                $filesizetemp = number_format($filesize / 1024, 2, '.', '') . 'MB';
+            } else if ($filesize >= (1024 * 1024)) {
+                $filesizetemp = number_format($filesize / (1024 * 1024), 2, '.', '') . 'GB';
+            }
+            $this->set('filesize_product', $filesizetemp);
+            $this->set('filename_product', $productfile['ProductFile']['product_file_description']);
             $this->setMenuItems();
             $this->render('edit');
         }

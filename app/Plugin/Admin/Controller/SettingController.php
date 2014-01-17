@@ -15,24 +15,29 @@ class SettingController extends AdminAppController {
         $this->loadModel('Option');
         if ($this->request->isPost()) {
 
-            $setting = $this->request->data['Setting'];
+            $this->Setting->set($this->request->data);
+            if ($this->Setting->validates()) {
+                $setting = $this->request->data['Setting'];
 //            debug($this->request);
-            $seller_password = $setting['seller_password'];
-            $this->updatepassword($seller_password);
-            foreach (array_keys($setting) as $key) {
+                $seller_password = $setting['seller_password'];
+                $this->updatepassword($seller_password);
+                foreach (array_keys($setting) as $key) {
 //                debug($setting[$key]);
 
-                $option = $this->Option->findByOptionName($key);
+                    $option = $this->Option->findByOptionName($key);
 //                $id = $option['Option']['id'];
 
-                $this->Option->updateAll(
-                        array('Option.option_value' => '\'' . $setting[$key] . '\''), array('Option.option_name' => $key)
-                );
+                    $this->Option->updateAll(
+                            array('Option.option_value' => '\'' . $setting[$key] . '\''), array('Option.option_name' => $key)
+                    );
 
 //                $this->Option->Id = $id;
 //                $this->Option->saveField('option_value', $setting[$key]);
 //                debug($id . $this->Option->saveField('option_value', $setting[$key]));
+                }
             }
+
+//            debug($this->Setting->validates());
         }
 
         $options = $this->Option->find('all');
@@ -49,6 +54,22 @@ class SettingController extends AdminAppController {
             $frontend_theme = $option['Option']['option_value'];
         }
 
+        $option = $this->Option->findByOptionName('seller_photo');
+        $user_photo_id = '';
+        if (!empty($option)) {
+            $user_photo_id = $option['Option']['option_value'];
+        }
+        $this->set("image_user_url", '');
+        if (empty($user_photo_id)) {
+            $this->set('hidephoto', 'none');
+        } else {
+            $this->set('hidephoto', 'block');
+            $this->loadModel('Image');
+            $imageinfo = $this->Image->findById($user_photo_id);
+            $imagepart = $imageinfo['Image'];
+            $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+            $this->set("image_user_url", $image_user_url);
+        }
         $themes = $this->Theme->find('all');
         $th = $this->Theme->findById($frontend_theme);
         $this->set('theme_selector', ($th['Theme']['theme_name']));

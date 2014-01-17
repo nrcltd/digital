@@ -43,7 +43,7 @@ if (strlen($large_photo_exists) > 0) {
                 }
             });
     <?php if ($update_image_info == true) { ?>
-                parent.updateimage(<?php echo $image_id ?>);
+                parent.updateimage(<?php echo $image_id ?>, '<?php echo $image_path;?>');
     <?php } ?>
         });
 

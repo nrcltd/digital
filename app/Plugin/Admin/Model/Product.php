@@ -18,6 +18,14 @@ class Product extends AppModel {
         'product_price' => array(
             'rule_2' => array(
                 'rule' => 'notEmpty'
+            ),
+            'decimal' => array(
+                'rule' => array('decimal'),
+                'message' => 'Please supply the price of product.'
+            ),
+            'range' => array(
+                'rule' => array('range', 0, 1000000000),
+                'message' => 'The price of product can not be 0.'
             )
         ),
         'product_description' => array(
@@ -58,6 +66,8 @@ class Product extends AppModel {
             $this->id = $data['Product']['id'];
             $this->save($data, false);
             return $this->id;
+        } else {
+            
         }
         return false;
     }

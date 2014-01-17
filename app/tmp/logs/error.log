@@ -990,3 +990,534 @@ Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-01-16 00:36:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:03:18 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:04:10 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:04:13 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:04:15 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:04:19 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:05:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:06:02 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:06:19 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:06:32 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:08:09 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:08:11 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:08:13 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:08:17 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:08:20 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:08:22 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:38:51 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:39:08 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:39:14 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:39:27 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:40:09 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 21:43:12 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:02:43 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:03:41 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:04:22 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:10:53 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:11:36 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:11:48 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:22:47 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:23:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:25:23 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-16 22:28:01 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:25:06 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:30:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:30:57 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:35:13 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:35:38 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:38:06 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:39:15 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:39:23 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:40:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:41:42 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:41:59 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 00:43:14 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:02:23 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:03:36 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:03:40 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:04:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:05:01 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:11:19 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:12:02 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:12:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:14:33 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:15:10 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:30:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /digital/img/upload/2014/01/11/resize_1389422681.jpg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:31:31 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:32:37 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:38:14 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-01-17 01:40:34 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /digital/Admin/js/jquery.min.map
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/digital/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

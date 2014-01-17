@@ -18,23 +18,45 @@ class Setting extends AppModel {
         'seller_facebook_url' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
+            ),
+            'url' => array(
+                'rule' => 'url',
+                'message' => 'Please input a valid url.'
             )
         ),
         'seller_twitter_url' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
+            ),
+            'url' => array(
+                'rule' => 'url',
+                'message' => 'Please input a valid url.'
             )
         ),
         'seller_paypal_account' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
+            ),
+            'email' => array(
+                'rule' => array('email'),
+                'message' => 'Please input a valid email.'
             )
         ),
         'smtp_test_user' => array(
             'rule_3' => array(
                 'rule' => 'notEmpty'
+            ),
+            'email' => array(
+                'rule' => array('email'),
+                'message' => 'Please input a valid email.'
             )
-        )
+        ),
+        'smtp_user' => array(
+            'email' => array(
+                'rule' => array('email'),
+                'message' => 'Please input a valid email.'
+            )
+        ),
     );
     public $_schema = array(
         'seller_name' => array(

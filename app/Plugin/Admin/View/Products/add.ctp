@@ -25,7 +25,11 @@
             ?>
             <br>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div id="thumbnail_user_containner" style="display: <?php echo $hidephoto; ?>">
+                <img id="thumbnail_user_photo" style="height: 90px" class="media-object img-thumbnail img-responsive center" src="<?php echo $this->Html->url('/img/' . 'upload/' . $image_user_url, true) ?>" alt="...">
+            </div>
+        </div>
         <div class="col-sm-4">
             <button type="button" class="btn btn-md btn-block" style="background-color:black;color:white;" onclick="productlist();"><b>Product list  </b><i class="glyphicon glyphicon-list"></i></button>
         </div>
@@ -77,7 +81,10 @@
                     ?>
                 </td>
             </tr>
-            </tr>
+            <tr style="display: none" id="product_file_container">
+                <td colspan="2"><label class="form-control no-border" id="filename_product">a</label></td>
+                <td><label class="form-control no-border" id="filesize_product">a</label></td>
+            </tr></tr>
         </table>
         <?php
         echo $this->Form->input('product_file_id', array(
@@ -146,11 +153,39 @@
         window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>';
     }
 
-    function updateimage(imageid) {
+    function updateimage(imageid, imagepath) {
         $("#ProductProductImageId").val(imageid);
+        $("#thumbnail_user_containner").css('display', 'block');
+        $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
     }
 
-    function updateproductfile(productfileid) {
+    function updateproductfile(productfileid, filename, filesize) {
         $("#ProductProductFileId").val(productfileid);
+        $("#product_file_container").removeAttr('style');
+        ;
+
+        $("#filename_product").html(filename);
+        $("#filesize_product").html(filesize);
     }
+
+    $(function() {
+        $("#ProductAddForm").submit(function(event) {
+            var ProductProductImageId = $("#ProductProductImageId").val();
+            var ProductProductFileId = $("#ProductProductFileId").val();
+            if (ProductProductImageId.length === 0) {
+                event.preventDefault();
+                alert("Please add image for product!");
+                return;
+
+            }
+            if (ProductProductFileId.length === 0) {
+                event.preventDefault();
+                alert("Please upload a file for product!");
+                return;
+
+            }
+
+            return;
+        });
+    })
 </script>

@@ -41,6 +41,7 @@ class UploaderController extends AdminAppController {
 
         $this->set('thumb_width', $this->thumb_width);
         $this->set('thumb_height', $this->thumb_height);
+        $this->set('image_path', '');
         if ($this->request->isPost()) {
 
 //            if (!isset($_SESSION['random_key']) || strlen($_SESSION['random_key']) == 0) {
@@ -193,6 +194,7 @@ class UploaderController extends AdminAppController {
 
                 $this->set('update_image_info', true);
                 $this->set('image_id', $imageid);
+                $this->set('image_path', date("Y") . '/' . date("m") . '/' . date("d") . '/' . 'thumbnail_' . $filename_temp . $filename_ext);
             }
         }
 

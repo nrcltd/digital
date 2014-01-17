@@ -50,6 +50,11 @@ class ProductsController extends AppController {
             $this->index();
             return;
         }
+        
+        if ($product['Product']['product_paused'] == 1) {
+            $this->index();
+            return;
+        }
 //        debug($product['Product']['product_name']);
         // load theme
         $this->loadModel('Option');

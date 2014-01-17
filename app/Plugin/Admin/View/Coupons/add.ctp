@@ -7,7 +7,7 @@
 <!-- Tab add coupons  -->  
 <div class="tab-pane fade in active" id="add-coupons">
     <?php
-    echo $this->Form->create('Coupon', array('url' => array('controller' => 'coupons', 'action' => 'add')));
+    echo $this->Form->create('Coupon', array('url' => array('controller' => 'coupons', 'action' => 'add', $product)));
     ?>
     <div class="">
         <!--        <div class="col-sm-6" style="margin-bottom:5px;">

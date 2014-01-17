@@ -22,6 +22,7 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
         echo $this->Html->css('/Admin/css/font-awesome.css');
         echo $this->Html->css('/Admin/css/bootstrap.css', array('id' => 'callCss', 'media' => 'screen'));
         echo $this->Html->css('/Admin/css/base.css');
+        echo $this->Html->css('/Admin/css/error.css');
         echo $this->Html->meta('icon');
         ?>
         <?php echo $this->Html->script('/Admin/js/jquery.js'); ?>

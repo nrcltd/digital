@@ -21,6 +21,9 @@
         <div class="col-sm-3" style="float:left;text-align:center;">
             <button type="submit" class="btn btn-circle btn-lg btn-success btn-md btn-block" data-toggle="modal" data-target="#myModal">
                 <i style="font-size:50px;" class="glyphicon glyphicon-plus"></i><br></button><b>Upload photos</b>
+            <div id="thumbnail_user_containner" style="display: <?php echo $hidephoto; ?>">
+                <img id="thumbnail_user_photo" class="media-object img-circle img-responsive center" style="width: 50px; height: 50px" src="<?php echo $this->Html->url('/img/' . 'upload/' . $image_user_url, true) ?>" alt="...">
+            </div>
         </div>
         <div class="col-sm-9" style="float:right;">
 
@@ -426,7 +429,7 @@
         });
     })
 
-    function updateimage(imageid) {
+    function updateimage(imageid, imagepath) {
         var data = {imageid: imageid};
         $.ajax({
             type: "POST",
@@ -437,6 +440,9 @@
             }
 
         });
+
+        $("#thumbnail_user_containner").css('display', 'block');
+        $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
     }
 
     function sendemail() {

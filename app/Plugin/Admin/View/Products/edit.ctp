@@ -25,7 +25,11 @@
             ?>
             <br>
         </div>
-        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div id="thumbnail_user_containner" style="display: <?php echo $hidephoto; ?>">
+                <img id="thumbnail_user_photo" class="media-object img-thumbnail img-responsive center" style="height: 90px" src="<?php echo $this->Html->url('/img/' . 'upload/' . $image_user_url, true) ?>" alt="...">
+            </div>
+        </div>
         <div class="col-sm-4">
             <button type="button" class="btn btn-md btn-block" style="background-color:black;color:white;" onclick="productlist();"><b>Product list  </b><i class="glyphicon glyphicon-list"></i></button>
         </div>
@@ -92,6 +96,9 @@
                     ?>
                 </td>
             </tr>
+            <tr>
+                <td colspan="2"><label class="form-control no-border" id="filename_product"><?php echo $filename_product; ?></label></td>
+                <td><label class="form-control no-border" id="filesize_product"><?php echo $filesize_product; ?></label></td>
             </tr>
         </table>
 
@@ -108,15 +115,14 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-3"><button type="submit" name="saveproduct" class="btn btn-success btn-md btn-block"><b>Save</b></i></button><br></div>
             <div class="col-sm-3"><button type="button" data-toggle="modal" data-target="#myModal1" class="btn btn-success btn-md btn-block"><b>Add File</b</i></button><br></div>
-            <div class="col-sm-3"><button type="button" class="btn btn-warning btn-md btn-block" onclick="pauseproduct();" id="btnpause"><b><?php echo $activelabel;?></b></i></button><br></div>
+            <div class="col-sm-3"><button type="button" class="btn btn-warning btn-md btn-block" onclick="pauseproduct();" id="btnpause"><b><?php echo $activelabel; ?></b></i></button><br></div>
             <div class="col-sm-1"></div>
         </div>
         <!--        </form>-->
         <?php echo $this->Form->end(); ?>
         <br>
 
-
-        <input type="hidden" id="pausedprodcut" value="<?php echo $activelabelvalue;?>"/>
+        <input type="hidden" id="pausedprodcut" value="<?php echo $activelabelvalue; ?>"/>
     </div>
 </div><br>
 <div class="row" style="visibility: hidden;">
@@ -161,7 +167,7 @@
         window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>';
     }
 
-    function updateimage(imageid) {
+    function updateimage(imageid, imagepath) {
         $("#ProductProductImageId").val(imageid);
         var productid = $("#ProductId").val();
         var data = {imageid: imageid, productid: productid};
@@ -174,14 +180,18 @@
             }
 
         });
+        $("#thumbnail_user_containner").css('display', 'block');
+        $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
     }
 
-    function updateproductfile(productfileid) {
+    function updateproductfile(productfileid, filename, filesize) {
         $("#ProductProductFileId").val(productfileid);
+        $("#filename_product").html(filename);
+        $("#filesize_product").html(filesize);
     }
-    
+
     function pauseproduct() {
-        
+
         var productid = $("#ProductId").val();
         var paused = $("#pausedprodcut").val();
         var data = {paused: paused, productid: productid};
@@ -195,9 +205,9 @@
                 var obj = $.parseJSON(data);
                 $("#pausedprodcut").val(obj.result_code);
                 if (obj.result_code === "1") {
-                   $("#btnpause").html("<b>Pause</b></i>");
+                    $("#btnpause").html("<b>Pause</b></i>");
                 } else {
-                   $("#btnpause").html("<b>Active</b></i>");
+                    $("#btnpause").html("<b>Active</b></i>");
                 }
             }
 

@@ -35,11 +35,27 @@ class Coupon extends AppModel {
         'coupon_quantity' => array(
             'rule_1' => array(
                 'rule' => 'notEmpty'
+            ),
+            'numeric' => array(
+                'rule' => 'numeric',
+                'message' => 'Please supply the number of coupons.'
+            ),
+            'range' => array(
+                'rule'    => array('range', 0, 1000000000),
+                'message' => 'The number of coupons can not be 0.'
             )
         ),
         'coupon_amount' => array(
             'rule_2' => array(
                 'rule' => 'notEmpty'
+            ),
+            'decimal' => array(
+                'rule' => array('decimal'),
+                'message' => 'Please supply the amount of coupons.'
+            ),
+            'range' => array(
+                'rule'    => array('range', 0, 1000000000),
+                'message' => 'The amount of coupons can not be 0.'
             )
         )
     );
@@ -56,7 +72,7 @@ class Coupon extends AppModel {
         }
         $data['Coupon']['coupon_created_date'] = date("Y-m-d H:i:s");
         $couponcode = $this->generateCouponCode(1, $availableCouponCode, 6);
-//        debug($availableCouponCode);
+//        debug($data);
         $data['Coupon']['coupon_code'] = $couponcode[0];
         $this->set($data);
 
@@ -66,6 +82,8 @@ class Coupon extends AppModel {
             $this->save($data);
             $data['id'] = $this->id;
             return $data;
+        } else {
+//            debug($this->validates());
         }
 
         return false;

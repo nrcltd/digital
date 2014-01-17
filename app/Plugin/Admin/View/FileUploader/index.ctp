@@ -61,7 +61,7 @@
 //                alert(newString);
                 var obj = $.parseJSON(newString);
                 if (obj.result_code === "1") {
-                    parent.updateproductfile(obj.productfileid);
+                    parent.updateproductfile(obj.productfileid, obj.productfilename, obj.productfilesize);
                 }
             }
         };

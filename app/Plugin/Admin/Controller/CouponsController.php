@@ -40,6 +40,7 @@ class CouponsController extends AdminAppController {
 
         if ($this->request->isPost()) {
             $data = $this->request->data;
+//            debug($data);
             $this->set('product', $data['Coupon']['product_id']);
             $coupon_id = $this->Coupon->addCoupon($data);
             if ($coupon_id == false) {

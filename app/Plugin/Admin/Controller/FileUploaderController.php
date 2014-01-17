@@ -62,11 +62,26 @@ class FileUploaderController extends AdminAppController {
                     $result = array();
                     $result['result_code'] = '1';
                     $result['productfileid'] = $productfileid;
+
+                    $filesizetemp = '';
+                    $filesize = $userfile_size;
+                    if ($filesize < 1024) {
+                        $filesizetemp = number_format($filesize, 2, '.', '') . 'KB';
+                    } else if ($filesize >= 1024) {
+                        $filesizetemp = number_format($filesize / 1024, 2, '.', '') . 'MB';
+                    } else if ($filesize >= (1024 * 1024)) {
+                        $filesizetemp = number_format($filesize / (1024 * 1024), 2, '.', '') . 'GB';
+                    }
+
+                    $result['productfilename'] = $userfile_name;
+                    $result['productfilesize'] = $filesizetemp;
                     echo json_encode($result);
                 } catch (Exception $ex) {
                     $result = array();
                     $result['result_code'] = '-1';
                     $result['productfileid'] = '';
+                    $result['productfilename'] = '';
+                    $result['productfilesize'] = '';
                     echo json_encode($result);
                 }
             }
