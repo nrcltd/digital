@@ -415,15 +415,28 @@
                 return;
             else if ((password.length === 0)) {
                 event.preventDefault();
+                alert("Please input your password!");
+                return;
             } else if (confirm_seller_password.length === 0) {
                 event.preventDefault();
+                alert("Please input your confirm-password!");
+                return;
             }
-            if (password.length < 6)
+            if (password.length < 6) {
                 event.preventDefault();
-            if (confirm_seller_password.length < 6)
+                alert("Password should be at least 6 chars long");
+                return;
+            }
+            if (confirm_seller_password.length < 6) {
                 event.preventDefault();
-            if (password !== confirm_seller_password)
+                alert("Confirm-password should be at least 6 chars long");
+                return;
+            }
+            if (password !== confirm_seller_password) {
                 event.preventDefault();
+                alert("Your confirm-password is not matched!");
+                return;
+            }
 
             return;
         });

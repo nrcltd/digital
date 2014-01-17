@@ -33,7 +33,7 @@ App::uses('Validation', 'Utility');
  */
 class OrdersController extends AppController {
 
-    public $helpers = array('Html','Form','PaypalIpn.Paypal');
+    public $helpers = array('Html', 'Form', 'PaypalIpn.Paypal');
 
     public function index() {
         $this->layout = 'error404';
@@ -91,7 +91,7 @@ class OrdersController extends AppController {
         if ($option) {
             $seller_paypal_account = $option['Option']['option_value'];
         }
-        
+
         $this->set('seller_paypal_account', $seller_paypal_account);
 //        debug($this->request);
         $orderid = $this->request->query['id'];
@@ -105,7 +105,7 @@ class OrdersController extends AppController {
             return;
         }
 
-        $order = $this->Order->findOrder($orderid,$tokencode);
+        $order = $this->Order->findOrder($orderid, $tokencode);
 //        debug($order);
         $this->set('theme', $optionCode);
         if ($order == false) {
@@ -114,20 +114,32 @@ class OrdersController extends AppController {
         }
         $product_id = $order['Order']['product_id'];
 //        debug($product_id);
-        
+
+        $discount = 0;
+        $discountlabel = '---';
+        $couponcode = $order['Order']['coupon_code'];
+        if (!empty($couponcode)) {
+            $this->loadModel('Coupon');
+            $discount = $this->Coupon->getDiscount($couponcode);
+            if ($discount > 0) {
+                $discountlabel = $discount;
+            }
+        }
         $this->loadModel('Product');
         $product = $this->Product->findById($product_id);
         $this->set('product', $product);
-        
+
         $this->loadModel('Option');
         $option = $this->Option->findByOptionName('currency_code');
         $currencyCode = '$';
         if ($option) {
-           $currencyCode = $option['Option']['option_value']; 
+            $currencyCode = $option['Option']['option_value'];
         }
         $this->set('currencyccode', $currencyCode);
+        $this->set('discount', $discount);
+        $this->set('discountlabel', $discountlabel);
         $this->set('order', $order);
-        $this->set('title_for_layout', 'Invoice #'.$order['Order']['id']);
+        $this->set('title_for_layout', 'Invoice #' . $order['Order']['id']);
     }
 
 }

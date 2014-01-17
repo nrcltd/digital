@@ -65,8 +65,8 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
     'action' => 'view', $product["Product"]['id']))
 ?>"><?php echo $product["Product"]['product_name'] ?></a>
                                         </td>
-                                        <td> --- </td>
-                                        <td><?php echo $currencyccode; ?><?php echo $product["Product"]['product_price'] ?></td>
+                                        <td class="center"><?php if ($discount > 0) {echo $currencyccode; }?><?php echo $discountlabel;?></td>
+                                        <td class="center"><?php echo $currencyccode; ?><?php echo $product["Product"]['product_price'] - $discount ?></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -135,7 +135,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                                 <input type="hidden" name="currency_code" value="USD">
                                                 <input type="hidden" name="lc" value="US">
                                                 <input type="hidden" name="item_name" value="Buy <?php echo $product["Product"]['product_name'] ?>">
-                                                <input type="hidden" name="amount" value="<?php echo $product["Product"]['product_price'] ?>">
+                                                <input type="hidden" name="amount" value="<?php echo $product["Product"]['product_price'] - $discount ?>">
                                                 <input type="hidden" name="encrypt" value="">
                                                 <input type="hidden" name="test" value="1">
                                                 <input type="hidden" name="style" value="font-size: 24px;">

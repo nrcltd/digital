@@ -29,7 +29,8 @@ class UploaderController extends AdminAppController {
     var $thumb_image_location = '';
     var $resize_image_location = '';
 
-    public function index() {
+    public function index($id = null) {
+//        debug($id);
         error_reporting(E_ALL ^ E_NOTICE);
         $mode = $this->request->named['mode'];
         $folder = 'upload';
@@ -227,11 +228,11 @@ class UploaderController extends AdminAppController {
         }
 
         $this->set('error', $error);
-        
+
         if (empty($mode)) {
             $this->set('photo_mode', '0');
         } else {
-           $this->set('photo_mode', $mode); 
+            $this->set('photo_mode', $mode);
         }
 //        debug($this->large_image_location);
     }

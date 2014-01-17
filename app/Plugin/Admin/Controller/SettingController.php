@@ -79,6 +79,9 @@ class SettingController extends AdminAppController {
     }
 
     public function updatepassword($newpassword) {
+        if (empty($newpassword)) {
+            return;
+        }
         if ($this->Session->check('User')) {
             if ($this->request->isPost()) {
 //                $newpassword = $this->request->data('password');

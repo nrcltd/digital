@@ -47,12 +47,14 @@ class DashboardController extends AdminAppController {
 
                 $products = $this->Product->findById($productid);
 
-                $productname = $products['Product']['product_name'];
+                if (!empty($products)) {
+                    $productname = $products['Product']['product_name'];
 
-                $temp = str_replace(' ', '_', $productname);
-                $keywords = $keywords . '\'' . strtolower($temp) . '\',';
-                $labels = $labels . '\'' . $productname . '\',';
-                $productnames[] = strtolower($temp);
+                    $temp = str_replace(' ', '_', $productname);
+                    $keywords = $keywords . '\'' . strtolower($temp) . '\',';
+                    $labels = $labels . '\'' . $productname . '\',';
+                    $productnames[] = strtolower($temp);
+                }
             }
         }
 
@@ -81,7 +83,7 @@ class DashboardController extends AdminAppController {
 
                     $items = $this->Order->find('all', array(
                         'conditions' => $conditions,
-                        'fields' => array('DISTINCT Order.product_id')
+                        'fields' => array('Order.product_id')
                     ));
 
                     $values = $values . ' ' . $name . ': ' . count($items) . ',';
@@ -124,13 +126,14 @@ class DashboardController extends AdminAppController {
                 $productid = $productidarr[$index1];
 
                 $products = $this->Product->findById($productid);
+                if (!empty($products)) {
+                    $productname = $products['Product']['product_name'];
 
-                $productname = $products['Product']['product_name'];
-
-                $temp = str_replace(' ', '_', $productname);
-                $keywords = $keywords . '\'' . strtolower($temp) . '\',';
-                $labels = $labels . '\'' . $productname . '\',';
-                $productnames[] = strtolower($temp);
+                    $temp = str_replace(' ', '_', $productname);
+                    $keywords = $keywords . '\'' . strtolower($temp) . '\',';
+                    $labels = $labels . '\'' . $productname . '\',';
+                    $productnames[] = strtolower($temp);
+                }
             }
         }
 
@@ -158,7 +161,7 @@ class DashboardController extends AdminAppController {
 
                     $items = $this->Order->find('all', array(
                         'conditions' => $conditions,
-                        'fields' => array('DISTINCT Order.product_id')
+                        'fields' => array('Order.product_id')
                     ));
 
                     $values = $values . ' ' . $name . ': ' . count($items) . ',';

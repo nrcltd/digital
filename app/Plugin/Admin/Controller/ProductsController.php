@@ -40,7 +40,7 @@ class ProductsController extends AdminAppController {
     }
 
     public function edit($id = null) {
-//                    debug($this->request->isPost());
+//                    debug($id);
 //                    debug($this->request->data);
 
         $this->set("image_user_url", '');

@@ -137,7 +137,7 @@
                 <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
             </div>
             <div class="modal-body">
-                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', 'mode' => 0)); ?>"></iframe>
+                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', $products['Product']['product_image_id'] ,'mode' => 0)); ?>"></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
