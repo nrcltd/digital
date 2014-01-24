@@ -64,7 +64,6 @@ class DashboardController extends AdminAppController {
 
         $year = date('Y');
         $month = date('m');
-//        debug($month);
 
         $values = '';
         if (!empty($productidarr)) {
@@ -77,9 +76,7 @@ class DashboardController extends AdminAppController {
                 $values = $values . '{period: \'' . substr($time_value, strpos($time_value, ' ')) . '\',';
                  
                 $start = date('Y-m-01', strtotime($query_date));
-//                debug($start);
                 $end = date('Y-m-t', strtotime($query_date));
-//                debug($end);
 
 
                 for ($index2 = 0; $index2 < count($productidarr); $index2++) {
@@ -122,7 +119,6 @@ class DashboardController extends AdminAppController {
         $this->set('keywords', $keywords);
         $this->set('labels', $labels);
         $this->set('values', $values);
-//        debug($values);
     }
 
     function generateweekly() {
@@ -162,12 +158,9 @@ class DashboardController extends AdminAppController {
 
         $year = date('Y');
         $month = date('m');
-//        debug($month);
         $values = '';
         if (!empty($productidarr)) {
             for ($index3 = 1; $index3 <= $month; $index3++) {
-//                $values = $values . '{period: \'' . $year . ' ' . $index3 . '\',';
-
                 $query_date = $year . '-' . $index3 . '-01';
                 
                 
@@ -176,10 +169,7 @@ class DashboardController extends AdminAppController {
                 $values = $values . '{period: \'' . substr($time_value, strpos($time_value, ' ')) . '\',';
                 
                 $start = date('Y-m-01', strtotime($query_date));
-//                debug($start);
                 $end = date('Y-m-t', strtotime($query_date));
-//                debug($end);
-
 
                 for ($index2 = 0; $index2 < count($productidarr); $index2++) {
                     $productid = $productidarr[$index2];
@@ -207,7 +197,7 @@ class DashboardController extends AdminAppController {
                 $values = $values . '},';
             }
         }
-//        $values = substr($values, 0, strlen($values) - 1);
+
         if (strlen($values) > 0) {
             $values = substr($values, 0, strlen($values) - 1);
         }
@@ -223,7 +213,6 @@ class DashboardController extends AdminAppController {
         $this->set('keywords', $keywords);
         $this->set('labels', $labels);
         $this->set('values', $values);
-//        debug($values);
     }
 
 }

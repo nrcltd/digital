@@ -43,7 +43,7 @@ if (strlen($large_photo_exists) > 0) {
                 }
             });
     <?php if ($update_image_info == true) { ?>
-                parent.updateimage(<?php echo $image_id ?>, '<?php echo $image_path;?>');
+                parent.updateimage(<?php echo $image_id ?>, '<?php echo $image_path;?>', <?php echo $filename; ?>);
     <?php } ?>
         });
 
@@ -54,7 +54,7 @@ if (strlen($large_photo_exists) > 0) {
 //        echo 'aspectRatio: 1:'.$thumb_height / $thumb_width.',';
     } ?>
                 <?php if ($photo_mode == 0) { ?>
-                onSelectChange: preview, minHeight: 300, minWidth: 750, maxHeight: 300, maxWidth: 750, resizable : false});
+                onSelectChange: preview, minHeight: 300, minWidth: 700, maxHeight: 300, maxWidth: 700, resizable : false});
                 <?php } else {?>
                  onSelectChange: preview, minHeight: 300, minWidth: 300, maxHeight: 300, maxWidth: 300, resizable : false});
                 <?php }?>
@@ -91,7 +91,6 @@ if (strlen($large_photo_exists) > 0) {
             <input type="hidden" name="day" value="<?php echo $day; ?>" />
             <input type="hidden" name="filename" value="<?php echo $filename; ?>" />
             <input type="hidden" name="fileext" value="<?php echo $fileext; ?>" />
-
             <input type="submit" name="upload_thumbnail" value="Save Thumbnail" id="save_thumb" />
         </form>
     </div>

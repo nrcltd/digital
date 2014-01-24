@@ -42,10 +42,7 @@ class OrdersController extends AppController {
     }
 
     public function add() {
-//        $this->Order->set($this->request->data);
-//        debug($this->Order);
         $data = $this->request->data;
-//        debug($data);
         $result = $this->Order->addOrder($data);
         if ($result == false) {
             $this->index();
@@ -89,19 +86,6 @@ class OrdersController extends AppController {
                 ));
             }
         }
-//        debug($this->Order->invalidFields());
-//        $this->Order->save();
-//        debug($this->Order->validates());
-//        if ($this->Order->validates()) {
-//            // it validated logic
-//            debug($this->Order->invalidFields());
-//            exit;
-//        } else {
-//            // didn't validate logic
-////            debug($this->Order->validates());
-//            $errors = $this->Order->validationErrors;
-//            debug($this->request->data['Order']['customer_email']);
-//        }
     }
 
     function sendorder($orderid, $token) {
@@ -197,8 +181,6 @@ class OrdersController extends AppController {
 
         $orderid = $this->request->query['id'];
         $tokencode = $this->request->query['token'];
-//        debug($orderid);
-//        debug($tokencode);
         if (empty($orderid)) {
             $this->index();
             return;
@@ -209,7 +191,6 @@ class OrdersController extends AppController {
         }
 
         $order = $this->Order->findPaidOrder($orderid, $tokencode);
-//        debug($order);
         if ($order == false) {
             $this->index();
             return;
@@ -218,7 +199,6 @@ class OrdersController extends AppController {
 
         $this->loadModel('Product');
         $product = $this->Product->findById($product_id);
-//        debug($product);
         if ($product == false) {
             $this->index();
             return;
@@ -235,30 +215,11 @@ class OrdersController extends AppController {
                 . DS . $filepro['product_file_month']
                 . DS . $filepro['product_file_day']
                 . DS . $filepro['product_file_name'] . $filepro['product_file_extension'];
-//        debug($file_path);
-
         $this->autoRender = false;
         $ext = substr($filepro['product_file_extension'], 1, strlen($filepro['product_file_extension']) - 1);
-//        $this->response->type($this->response->getMimeType($ext));
-//        $this->response->header(array('Content-type' => '\'' . $this->response->getMimeType($ext) . '\''));
-//        $this->response->file($file_path, array('download' => true, 'name' => $filepro['product_file_description']));
         $this->response->file($file_path);
         $this->response->download($filepro['product_file_description']);
-//        debug($file_path);
-//        $this->view = 'Media';
-//        $params = array(
-//            'id' => $filepro['product_file_name'] . $filepro['product_file_extension'],
-//            'name' => $filepro['product_file_description'],
-//            'download' => true,
-//            'extension' => $ext, // must be lower case
-//            'path' => $rootfolder . DS . $filepro['product_file_year']
-//                . DS . $filepro['product_file_month']
-//                . DS . $filepro['product_file_day']
-//                . DS
-//        );
-//        $this->set($params);
         return $this->response;
-//        exit();
     }
 
     public function bought() {
@@ -296,7 +257,6 @@ class OrdersController extends AppController {
         }
 
         $this->set('seller_paypal_account', $seller_paypal_account);
-//        debug($this->request);
         $orderid = $this->request->query['id'];
         $tokencode = $this->request->query['token'];
         if (empty($orderid)) {
@@ -309,14 +269,12 @@ class OrdersController extends AppController {
         }
 
         $order = $this->Order->checkOrder($orderid, $tokencode);
-//        debug($order);
         $this->set('theme', $optionCode);
         if ($order == false) {
             $this->index();
             return;
         }
         $product_id = $order['Order']['product_id'];
-//        debug($product_id);
 
         $discount = 0;
         $discountlabel = '---';

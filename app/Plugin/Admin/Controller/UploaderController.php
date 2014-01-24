@@ -18,7 +18,7 @@ class UploaderController extends AdminAppController {
     var $thumb_image_name = '';
     var $resize_image_name = '';
     var $max_file = "10";
-    var $max_width = "750";
+    var $max_width = "700";
     var $thumb_width = "100";
     var $thumb_height = "100";
     var $allowed_image_types = array('image/pjpeg' => "jpg", 'image/jpeg' => "jpg", 'image/jpg' => "jpg", 'image/png' => "png", 'image/x-png' => "png", 'image/gif' => "gif");
@@ -30,7 +30,6 @@ class UploaderController extends AdminAppController {
     var $resize_image_location = '';
 
     public function index($id = null) {
-//        debug($id);
         error_reporting(E_ALL ^ E_NOTICE);
         $mode = $this->request->named['mode'];
         $folder = 'upload';
@@ -62,7 +61,6 @@ class UploaderController extends AdminAppController {
                 $filename_temp = $this->request->data['filename'];
                 $filename_ext = $this->request->data['fileext'];
                 $this->set('fileext', $filename_ext);
-//                debug($this->request);
             }
 
             $this->upload_dir = $rootfolder . DS . $year . DS . $month . DS . $day;
@@ -106,7 +104,6 @@ class UploaderController extends AdminAppController {
 
             $data = $this->request->data;
             if (!empty($data['upload'])) {
-//            debug($this->request);
                 //Get the file information
                 $userfile_name = $_FILES['image']['name'];
                 $userfile_tmp = $_FILES['image']['tmp_name'];
@@ -151,12 +148,12 @@ class UploaderController extends AdminAppController {
                     }
 
                     if ($mode_image == 0) {
-                        if ($widthLimit < 750) {
-                            $error = 'Images must be mininal 750px in width and 300px in height. Your image size is: width: ' . $widthLimit . 'px' . ' height: ' . $heightLimit . 'px';
+                        if ($widthLimit < 700) {
+                            $error = 'Images must be mininal 700px in width and 300px in height. Your image size is: width: ' . $widthLimit . 'px' . ' height: ' . $heightLimit . 'px';
                         }
                         if (strlen($error) == 0) {
                             if ($heightLimit < 300) {
-                                $error = 'Images must be mininal 750px in width and 300px in height. Your image size is: width: ' . $widthLimit . 'px' . ' height: ' . $heightLimit . 'px';
+                                $error = 'Images must be mininal 700px in width and 300px in height. Your image size is: width: ' . $widthLimit . 'px' . ' height: ' . $heightLimit . 'px';
                             }
                         }
                     } else {
@@ -203,8 +200,7 @@ class UploaderController extends AdminAppController {
             }
 
             if (!empty($this->request->data['upload_thumbnail']) && strlen($this->large_image_location) > 0) {
-                //Get the new coordinates to crop the image.
-//                        debug($this->request);
+
                 $x1 = $this->request->data["x1"];
                 $y1 = $this->request->data["y1"];
                 $x2 = $this->request->data["x2"];
@@ -261,14 +257,14 @@ class UploaderController extends AdminAppController {
 
         if (empty($mode)) {
             $this->set('photo_mode', '0');
-            $this->set('thumb_width', 250);
+            $this->set('thumb_width', 252);
+            $this->set('thumb_height', 108);
         } else {
             if ($mode == 0) {
                 $this->set('thumb_width', $this->thumb_width);
             }
             $this->set('photo_mode', $mode);
         }
-//        debug($this->large_image_location);
     }
 
     function resizeImage($image, $width, $height, $scale) {

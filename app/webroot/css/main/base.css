@@ -5,6 +5,12 @@ body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 /* downarrowdiv hover*/
 .col-sm-6, .thumbnail:hover {-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);box-shadow: 0 5px 10px rgba(0, 0, 0, 1);}
 
+.col-sm-12, .thumbnail:hover {
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
 /* signin form */
 .form-signin
 {
@@ -86,32 +92,32 @@ body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 
 /* circle button */
 .btn-circle {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  padding: 3px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px;
-  border-width: 0px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding: 3px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    border-width: 0px;
 }
 .btn-circle.btn-lg {
-  width: 50px;
-  height: 50px;
-  padding: 10px 16px;
-  font-size: 18px;
-  line-height: 1.33;
-  border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
 }
 .btn-circle.btn-xl {
-  width: 70px;
-  height: 70px;
-  margin-left: 65px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  line-height: 1.33;
-  border-radius: 35px;
-  vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    margin-left: 65px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 1.33;
+    border-radius: 35px;
+    vertical-align: middle;
 }
 /* circle button end*/
 /* -------chuyen table thanh div------------ */
@@ -125,7 +131,7 @@ body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 }*/
 .row
 {
-  display: table-row;
+    display: table-row;
 }
 /*.cell
 {
@@ -175,7 +181,7 @@ body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 .left-addon img {
     position: absolute;
     margin: -14px -14px;
-/*    z-index: 11;*/
+    /*    z-index: 11;*/
 }
 
 .right-inner-addon {
@@ -192,10 +198,10 @@ body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 
 /* --------padding--------- */
 
- .pad_left_right {
-  position: relative;
-  padding-right: 15px;
-  padding-left: 15px;
+.pad_left_right {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 /* --------end--------- */
@@ -217,13 +223,13 @@ body{margin:0px; padding-top: 0px;padding-bottom: 20px;
 */
 
 @media (min-width: 768px) {
-  .navbar-collapse.collapse {
-    text-align: none;
-    padding-left: 21%;
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
- /*   background-color: gray;*/
-  }
+    .navbar-collapse.collapse {
+        text-align: none;
+        padding-left: 21%;
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+        /*   background-color: gray;*/
+    }
 }

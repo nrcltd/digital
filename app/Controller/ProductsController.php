@@ -55,7 +55,6 @@ class ProductsController extends AppController {
             $this->index();
             return;
         }
-//        debug($product['Product']['product_name']);
         // load theme
         $this->loadModel('Option');
         $option = $this->Option->findByOptionName('frontend_theme');
@@ -68,8 +67,6 @@ class ProductsController extends AppController {
                 $optionCode = $theme['Theme']['theme_code'];
             }
         }
-//        debug($option);
-
         $option = $this->Option->findByOptionName('currency_code');
         $currencyCode = '$';
         if ($option) {
@@ -102,9 +99,7 @@ class ProductsController extends AppController {
             $imagepart = $imageinfo['Image'];
             $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
             $this->set("image_user_url", $image_user_url);
-//            debug($image_user_url);
         }
-//        debug($product);
         $product_image_id = $product['Product']['product_image_id'];
         if (!empty($product_image_id)) {
             $imageinfo = $this->Image->findById($product_image_id);

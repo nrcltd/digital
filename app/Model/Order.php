@@ -57,15 +57,11 @@ class Order extends AppModel {
         $data['Order']['orderstatus'] = 'Pending';
         $data['Order']['purchased_date'] = date("Y-m-d H:i:s");
         $this->set($data);
-//        debug($data);
-//        debug($this->invalidFields());
         if ($this->validates()) {
 
             $this->create();
             $this->save($data);
             $data['id'] = $this->id;
-//            $dataToken = array('id' =>  $data['id'], 'token_id' => $this->Token->addToken());
-//            debug($this->saveField('token_id', $this->Token->addToken()));
             $token = $this->Token->addToken($this->id);
             $data['token'] = $token['token_code'];
 
@@ -79,7 +75,6 @@ class Order extends AppModel {
             'conditions' => array(
                 'Token.token_code' => $token_code)
         ));
-//        debug($token);
         if (empty($token)) {
             return false;
         }
@@ -92,13 +87,11 @@ class Order extends AppModel {
             'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
                 'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
         ));
-//debug($result);
         if (empty($result)) {
             return false;
         } else {
             return $result;
         }
-//        debug($token);
     }
 
     public function findPaidOrder($orderid, $token_code) {
@@ -106,7 +99,6 @@ class Order extends AppModel {
             'conditions' => array(
                 'Token.token_code' => $token_code)
         ));
-//        debug($token);
         if (empty($token)) {
             return false;
         }
@@ -120,13 +112,11 @@ class Order extends AppModel {
             'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
                 'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
         ));
-//debug($result);
         if (empty($result)) {
             return false;
         } else {
             return $result;
         }
-//        debug($token);
     }
 
     public function checkOrder($orderid, $token_code) {
@@ -134,7 +124,6 @@ class Order extends AppModel {
             'conditions' => array(
                 'Token.token_code' => $token_code)
         ));
-//        debug($token);
         if (empty($token)) {
             return false;
         }
@@ -148,28 +137,17 @@ class Order extends AppModel {
             'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
                 'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
         ));
-//debug($result);
         if (empty($result)) {
             return false;
         } else {
             return $result;
         }
-//        debug($token);
     }
 
     public function updateOrder($status, $orderid) {
-//        $this->id = $orderid;
-//        $this->set('orderstatus', $status);
-//        $data = array('id' => $orderid, 'orderstatus' => $status);
-//        $this->save($data);
-
         $this->updateAll(
                 array('Order.orderstatus' => '\'' . $status . '\''), array('Order.id' => $orderid)
         );
-
-//        debug($this->save($data));
-//        debug($orderid);
-//        debug($status);
         return $this->id;
     }
 

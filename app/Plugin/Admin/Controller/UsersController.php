@@ -20,8 +20,6 @@ class UsersController extends AdminAppController {
             if ($user != false) {
 //                $this->Session->setFlash('Thank you for logging in!');
                 $this->Session->write('User', $user);
-//                debug($user[0]['User']['id']);
-//                exit();
                 $this->Session->write('UserID', $user[0]['User']['id']);
                 $this->Redirect(array('controller' => 'dashboard', 'action' => 'index'));
                 exit();

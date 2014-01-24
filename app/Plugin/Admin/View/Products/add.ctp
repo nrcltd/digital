@@ -144,7 +144,9 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+<input type="hidden" id="oldimagefile" value="">
+<input type="hidden" id="oldimagefilename" value="">
+<input type="hidden" id="oldproductfile" value="">
 <div class="row" style="visibility: hidden;">
     wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
 </div>
@@ -153,7 +155,27 @@
         window.location = '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'index')); ?>';
     }
 
-    function updateimage(imageid, imagepath) {
+    function updateimage(imageid, imagepath, oldname) {
+
+        var oldimagefile = $("#oldimagefile").val();
+        var oldimagefilename = $("#oldimagefilename").val();
+        if (oldimagefile.length > 0) {
+            if (oldimagefilename != oldname) {
+                var olddata = {imageid: oldimagefile};
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'admin_app', 'action' => 'deleteimagefiles')); ?>",
+                    data: olddata,
+                    success: function(data) {
+
+                    }
+
+                });
+            }
+        }
+        $("#oldimagefile").val(imageid);
+        $("#oldimagefilename").val(oldname);
+
         $("#ProductProductImageId").val(imageid);
         $("#thumbnail_user_containner").css('display', 'block');
         $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
@@ -168,6 +190,23 @@
         $("#filename_product").html(filename);
         $("#filesize_product").html(filesize);
         $('#myModal1').modal('hide');
+        
+        
+        var oldproductfile = $("#oldproductfile").val();
+        if (oldproductfile.length > 0) {
+                var olddata = {imageid: oldproductfile};
+                $.ajax({
+                    type: "POST",
+                    url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'admin_app', 'action' => 'deleteproductfiles')); ?>",
+                    data: olddata,
+                    success: function(data) {
+
+                    }
+
+                });
+        }
+        $("#oldproductfile").val(productfileid);
+        
     }
 
     $(function() {

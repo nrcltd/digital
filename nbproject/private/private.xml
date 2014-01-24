@@ -3,21 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Model/Setting.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/CouponsController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Controller/OrdersController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/AdminAppController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/UsersController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/spring.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Model/Order.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Controller/ProductsController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/View/Layouts/default.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/SettingController.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Customers/index.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/UploaderController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/winter.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/CustomersController.php</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/autumn.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Orders/invoice.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/View/Products/summer.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Dashboard/index.ctp</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Config/paypal_ipn_config.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/PaypalIpn/Model/InstantPaymentNotification.php</file>
-            <file>file:/Applications/XAMPP/htdocs/digital/app/Controller/AppController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Model/Coupon.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Model/Image.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Config/bootstrap.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Products/add.ctp</file>
             <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/DashboardController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Setting/index.ctp</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/Controller/ProductsController.php</file>
+            <file>file:/Applications/XAMPP/htdocs/digital/app/Plugin/Admin/View/Products/edit.ctp</file>
         </group>
     </open-files>
 </project-private>

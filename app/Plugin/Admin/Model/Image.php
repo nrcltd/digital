@@ -14,7 +14,6 @@ class Image extends AppModel {
             $this->set('image_month', $month);
             $this->set('image_day', $day);
             $this->set('image_ext', $ext);
-//        debug($month);
             $this->save();
         } else {
             $this->set('id', $img['Image']['id']);
@@ -25,7 +24,6 @@ class Image extends AppModel {
             $this->set('image_month', $month);
             $this->set('image_day', $day);
             $this->set('image_ext', $ext);
-//        debug($month);
             $this->save();
         }
         return $this->id;

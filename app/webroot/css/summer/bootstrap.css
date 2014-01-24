@@ -258,6 +258,14 @@ body, .col-sm-6 {
   background-color: #fff;
   z-index:0;
 }
+body, .col-sm-12 {
+  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.428571429;
+  color: #858585;
+  background-color: #fff;
+  z-index:0;
+}
 input,
 button,
 select,

@@ -11,10 +11,8 @@ class ProductsController extends AdminAppController {
 
     public function index() {
         $keyword = $this->request->query('keyword');
-//        debug(empty($keyword));
         $this->set('keyword', $keyword);
         $products = $this->Product->searchProducts($keyword);
-//        debug($products);
         $this->set('products', $products);
         $this->setMenuItems();
         $this->render('index');
@@ -29,30 +27,22 @@ class ProductsController extends AdminAppController {
             $result = $this->Product->addProduct($data);
             if ($result == false) {
                 $this->render('add');
-//                exit();
                 return;
             } else {
                 $this->Redirect(array('controller' => 'products', 'action' => 'index'));
-//                exit();
             }
         }
         $this->render('add');
     }
 
     public function edit($id = null) {
-//                    debug($id);
-//                    debug($this->request->data);
-
         $this->set("image_user_url", '');
         $this->set('hidephoto', 'block');
         $this->set('hidefile', 'block');
         if ($this->request->isPost() || (!empty($this->request->data))) {
-//            debug($this->request);
             $data = $this->request->data;
-//            debug($data);
             $product_id = $this->Product->updateProduct($data);
             if ($product_id == false) {
-//                exit();
 
                 $products = $this->Product->findById($id);
                 $products['Product']['product_name'] = $data['Product']['product_name'];
@@ -65,7 +55,7 @@ class ProductsController extends AdminAppController {
                 $imagepart = $imageinfo['Image'];
                 $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
                 $this->set("image_user_url", $image_user_url);
-
+                $this->set('oldimagefilename', $imagepart['image_name']);
                 $this->loadModel('ProductFile');
                 $productfile = $this->ProductFile->findById($products['Product']['product_file_id']);
                 $filesizetemp = '';
@@ -89,19 +79,11 @@ class ProductsController extends AdminAppController {
                     $this->set('activelabelvalue', '0');
                 }
 
-//        debug($products);
                 $this->setMenuItems();
                 $this->render('edit');
 
                 return;
             } else {
-//                $products = $this->Product->findById($product_id);
-////                debug($products);
-//                $this->set('products', $products);
-//                $this->setMenuItems();
-//                $this->Session->setFlash('Product is updated successfully!');
-//                $this->render('edit');
-
                 $this->Redirect(array('controller' => 'products', 'action' => 'index'));
             }
         } else {

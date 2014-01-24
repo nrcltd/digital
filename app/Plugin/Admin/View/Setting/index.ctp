@@ -210,7 +210,7 @@
                     }
                     ?>
                 </span>
-                <input class="form-control" id="focusedInput" type="text" placeholder="User PHP mail" style="font-size:12px;">
+                <label class="form-control" id="focusedInput" placeholder="User PHP mail" style="font-size:12px;">User PHP mail</label>
             </div><!-- /input-group -->
             <!--<div class="right-inner-addon">-->
 
@@ -298,231 +298,251 @@
                     }
                     ?>
                 </span>
-                <input class="form-control" id="focusedInput" type="text" placeholder="TLS" style="font-size:12px;">
+                <label class="form-control" id="focusedInput" placeholder="TLS" style="font-size:12px;">TLS</label>
             </div><!-- /input-group -->
         </div>
-         <div class="col-sm-5">
-        <div class="col-sm-2"></div>
-    </div>
-    <div class="" style="clear:both;">
-        <div class="col-sm-10">
-            <div style="  display:block;    
-                 margin: 0px 5px 5px 5px;
-                 border-bottom: 2px solid grey;  
-                 border-left: 2px solid grey; 
-                 border-right: 2px solid grey; 
-                 border-top: none; 
-                 border-top-left-radius:0px;"></div>
-        </div>
-        <div class="col-sm-2"></div>
-    </div>
-    <div class="" style="clear:both;">
-
         <div class="col-sm-5">
-            <div class="right-inner-addon" style="margin-bottom:5px;">
-                <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
-                <?php
-                echo $this->Form->input('smtp_test_user', array(
-                    'type' => 'text',
-                    'label' => false,
-                    'value' => '',
-                    'class' => 'form-control',
-                    'style' => 'font-size:12px',
-                    'placeholder' => 'Test user'
-                ));
-                ?>
-            </div>
+            <div class="col-sm-2"></div>
         </div>
-        <div class="col-sm-5">
-            <div class="right-inner-addon">
-                <button id="btnsendemail" type="button" data-loading-text="Sending..." class="btn btn-success btn-md btn-block" onclick="sendemail();"><b>Send a test mail</b></button>
+        <div class="" style="clear:both;">
+            <div class="col-sm-10">
+                <div style="  display:block;    
+                     margin: 0px 5px 5px 5px;
+                     border-bottom: 2px solid grey;  
+                     border-left: 2px solid grey; 
+                     border-right: 2px solid grey; 
+                     border-top: none; 
+                     border-top-left-radius:0px;"></div>
             </div>
+            <div class="col-sm-2"></div>
         </div>
-        <div class="col-sm-2"></div>
-    </div>
+        <div class="" style="clear:both;">
 
-
-    <div class="" style="clear:both;">          
-        <div class="col-sm-5" style="margin-bottom:5px;">
-            <H4>Themes</H4>
-
-            <div class="btn-group" style="margin-bottom:5px;">
-                <?php
-                echo $this->Form->input('frontend_theme', array(
-                    'type' => 'hidden',
-                    'label' => false,
-                    'value' => $frontend_theme,
-                    'id' => 'frontend_theme'
-                ));
-                ?>
-                <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;" id="theme_value_selector"><?php echo $theme_selector; ?></button>
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:15%;">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu">
-                    <!-- Dropdown menu links -->
-                    <?php for ($index = 0; $index < count($themes); $index++) { ?>
-                        <li><a href="javascript:updatetheme(<?php echo $themes[$index]['Theme']['id'] ?>, '<?php echo $themes[$index]['Theme']['theme_name'] ?>');"><?php echo $themes[$index]['Theme']['theme_name'] ?></a></li>
-                    <?php } ?>
-                </ul>
-            </div>  
-
-
+            <div class="col-sm-5">
+                <div class="right-inner-addon" style="margin-bottom:5px;">
+                    <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
+                    <?php
+                    echo $this->Form->input('smtp_test_user', array(
+                        'type' => 'text',
+                        'label' => false,
+                        'value' => '',
+                        'class' => 'form-control',
+                        'style' => 'font-size:12px',
+                        'placeholder' => 'Test user'
+                    ));
+                    ?>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="right-inner-addon">
+                    <button id="btnsendemail" type="button" data-loading-text="Sending..." class="btn btn-success btn-md btn-block" onclick="sendemail();"><b>Send a test mail</b></button>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
         </div>
 
-        <div class="col-sm-7" style="margin-top:5px;"></div>
+
+        <div class="" style="clear:both;">          
+            <div class="col-sm-5" style="margin-bottom:5px;">
+                <H4>Themes</H4>
+
+                <div class="btn-group" style="margin-bottom:5px;">
+                    <?php
+                    echo $this->Form->input('frontend_theme', array(
+                        'type' => 'hidden',
+                        'label' => false,
+                        'value' => $frontend_theme,
+                        'id' => 'frontend_theme'
+                    ));
+                    ?>
+                    <button type="button" class="btn btn-default btn-block" data-toggle="dropdown" style="width:85%;" id="theme_value_selector"><?php echo $theme_selector; ?></button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:15%;">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <!-- Dropdown menu links -->
+                        <?php for ($index = 0; $index < count($themes); $index++) { ?>
+                            <li><a href="javascript:updatetheme(<?php echo $themes[$index]['Theme']['id'] ?>, '<?php echo $themes[$index]['Theme']['theme_name'] ?>');"><?php echo $themes[$index]['Theme']['theme_name'] ?></a></li>
+                        <?php } ?>
+                    </ul>
+                </div>  
+
+
+            </div>
+
+            <div class="col-sm-7" style="margin-top:5px;"></div>
+        </div>
+
+        <div class="" style="clear:both;">          
+
+            <div class="col-sm-2" style="margin-bottom:5px;">
+                <button type="submit" class="btn btn-success btn-md btn-block"><b>Save</b></button>
+            </div> 
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-success btn-md btn-block"><b>Cancel</b></button>
+            </div> 
+
+            <div class="col-sm-7"></div>
+        </div>
+
+        <?php echo $this->Form->end(); ?>
     </div>
-
-    <div class="" style="clear:both;">          
-
-        <div class="col-sm-2" style="margin-bottom:5px;">
-            <button type="submit" class="btn btn-success btn-md btn-block"><b>Save</b></button>
-        </div> 
-        <div class="col-sm-3">
-            <button type="submit" class="btn btn-success btn-md btn-block"><b>Cancel</b></button>
-        </div> 
-
-        <div class="col-sm-7"></div>
+    <div class="row" style="visibility: hidden;">
+        wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 930px">
+            <div class="modal-content" style="width: 930px">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', 'mode' => 1)); ?>"></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <input type="hidden" id="oldimagefile" value="<?php echo $seller_photo; ?>">
+    <input type="hidden" id="oldimagefilename" value="<?php echo $oldimagefilename; ?>">
+    <script type="text/javascript">
+        function resetpassword() {
+            $("#seller_password").val("");
+            $("#confirm_seller_password").val("");
+        }
 
-    <?php echo $this->Form->end(); ?>
-</div>
-<div class="row" style="visibility: hidden;">
-    wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="width: 930px">
-        <div class="modal-content" style="width: 930px">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
-            </div>
-            <div class="modal-body">
-                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', 'mode' => 1)); ?>"></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<script type="text/javascript">
-    function resetpassword() {
-        $("#seller_password").val("");
-        $("#confirm_seller_password").val("");
-    }
-
-    function updatepassword() {
-        var password = $("#seller_password").val();
-        var confirm_seller_password = $("#confirm_seller_password").val();
-        if (password.length === 0)
-            return;
-        if (confirm_seller_password.length === 0)
-            return;
-        if (password.length < 6)
-            return;
-        if (password !== confirm_seller_password)
-            return;
-        var data = {password: password};
-        $.ajax({
-            type: "POST",
-            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updatepassword')); ?>",
-            data: data,
-            success: function(data) {
-//                alert(data);
-                resetpassword();
-            }
-
-        });
-    }
-
-
-    function updatetheme(id, theme_name) {
-        $("#frontend_theme").val(id);
-        $("#theme_value_selector").html(theme_name);
-    }
-
-    $(function() {
-        $('.checkbox').removeClass('checkbox');
-
-
-        $("#SettingIndexForm").submit(function(event) {
+        function updatepassword() {
             var password = $("#seller_password").val();
             var confirm_seller_password = $("#confirm_seller_password").val();
-            if ((password.length === 0) && (confirm_seller_password.length === 0))
+            if (password.length === 0)
                 return;
-            else if ((password.length === 0)) {
-                event.preventDefault();
-                alert("Please input your password!");
+            if (confirm_seller_password.length === 0)
                 return;
-            } else if (confirm_seller_password.length === 0) {
-                event.preventDefault();
-                alert("Please input your confirm-password!");
+            if (password.length < 6)
                 return;
-            }
-            if (password.length < 6) {
-                event.preventDefault();
-                alert("Password should be at least 6 chars long");
+            if (password !== confirm_seller_password)
                 return;
-            }
-            if (confirm_seller_password.length < 6) {
-                event.preventDefault();
-                alert("Confirm-password should be at least 6 chars long");
-                return;
-            }
-            if (password !== confirm_seller_password) {
-                event.preventDefault();
-                alert("Your confirm-password is not matched!");
-                return;
-            }
+            var data = {password: password};
+            $.ajax({
+                type: "POST",
+                url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updatepassword')); ?>",
+                data: data,
+                success: function(data) {
+                    //                alert(data);
+                    resetpassword();
+                }
 
-            return;
-        });
-    })
-
-    function updateimage(imageid, imagepath) {
-        var data = {imageid: imageid};
-        $.ajax({
-            type: "POST",
-            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updateavatar')); ?>",
-            data: data,
-            success: function(data) {
-
-            }
-
-        });
-
-        $("#thumbnail_user_containner").css('display', 'block');
-        $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
-        $('#myModal').modal('hide');
-    }
-
-    function sendemail() {
-
-        var SettingSmtpTestUser = $("#SettingSmtpTestUser").val();
-        if ((SettingSmtpTestUser.length === 0)) {
-            event.preventDefault();
-            alert("Please input your email testing!");
-            return;
+            });
         }
-        var data = {email: SettingSmtpTestUser};
-        $("#btnsendemail").html("<b>Sending...</b>");
-        $.ajax({
-            type: "POST",
-            data: data,
-            url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'sendemail')); ?>",
-            success: function(data) {
-                $("#btnsendemail").html("<b>Send a test mail</b>");
-                var obj = $.parseJSON(data);
-                if (obj.result_code === "1") {
-                    alert("Send email successfully!");
-                } else {
-                    alert("Send email fail!");
+
+
+        function updatetheme(id, theme_name) {
+            $("#frontend_theme").val(id);
+            $("#theme_value_selector").html(theme_name);
+        }
+
+        $(function() {
+            $('.checkbox').removeClass('checkbox');
+
+
+            $("#SettingIndexForm").submit(function(event) {
+                var password = $("#seller_password").val();
+                var confirm_seller_password = $("#confirm_seller_password").val();
+                if ((password.length === 0) && (confirm_seller_password.length === 0))
+                    return;
+                else if ((password.length === 0)) {
+                    event.preventDefault();
+                    alert("Please input your password!");
+                    return;
+                } else if (confirm_seller_password.length === 0) {
+                    event.preventDefault();
+                    alert("Please input your confirm-password!");
+                    return;
+                }
+                if (password.length < 6) {
+                    event.preventDefault();
+                    alert("Password should be at least 6 chars long");
+                    return;
+                }
+                if (confirm_seller_password.length < 6) {
+                    event.preventDefault();
+                    alert("Confirm-password should be at least 6 chars long");
+                    return;
+                }
+                if (password !== confirm_seller_password) {
+                    event.preventDefault();
+                    alert("Your confirm-password is not matched!");
+                    return;
+                }
+
+                return;
+            });
+        })
+
+        function updateimage(imageid, imagepath, oldname) {
+            var oldimagefile = $("#oldimagefile").val();
+            var oldimagefilename = $("#oldimagefilename").val();
+            if (oldimagefile.length > 0) {
+                if (oldimagefilename != oldname) {
+                    var olddata = {imageid: oldimagefile};
+                    $.ajax({
+                        type: "POST",
+                        url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'admin_app', 'action' => 'deleteimagefiles')); ?>",
+                        data: olddata,
+                        success: function(data) {
+
+                        }
+
+                    });
                 }
             }
+            var data = {imageid: imageid};
+            $("#oldimagefile").val(imageid);
+            $("#oldimagefilename").val(oldname);
+            $.ajax({
+                type: "POST",
+                url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'updateavatar')); ?>",
+                data: data,
+                success: function(data) {
 
-        });
-    }
-</script>
+                }
+
+            });
+
+            $("#thumbnail_user_containner").css('display', 'block');
+            $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
+            $('#myModal').modal('hide');
+        }
+
+        function sendemail() {
+
+            var SettingSmtpTestUser = $("#SettingSmtpTestUser").val();
+            if ((SettingSmtpTestUser.length === 0)) {
+                event.preventDefault();
+                alert("Please input your email testing!");
+                return;
+            }
+            var data = {email: SettingSmtpTestUser};
+            $("#btnsendemail").html("<b>Sending...</b>");
+            $.ajax({
+                type: "POST",
+                data: data,
+                url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'sendemail')); ?>",
+                success: function(data) {
+                    $("#btnsendemail").html("<b>Send a test mail</b>");
+                    var obj = $.parseJSON(data);
+                    if (obj.result_code === "1") {
+                        alert("Send email successfully!");
+                    } else {
+                        alert("Send email fail!");
+                    }
+                }
+
+            });
+        }
+    </script>

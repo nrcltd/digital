@@ -73,7 +73,6 @@ class Coupon extends AppModel {
         }
         $data['Coupon']['coupon_created_date'] = date("Y-m-d H:i:s");
         $couponcode = $this->generateCouponCode(1, $availableCouponCode, 6);
-//        debug($data);
         $data['Coupon']['coupon_code'] = $couponcode[0];
         $this->set($data);
 
@@ -91,7 +90,7 @@ class Coupon extends AppModel {
             $data['id'] = $this->id;
             return $data;
         } else {
-//            debug($this->validates());
+            
         }
 
         return false;

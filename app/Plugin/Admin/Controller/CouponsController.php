@@ -23,8 +23,6 @@ class CouponsController extends AdminAppController {
         if (!empty($productkey)) {
             $productstemp = $this->Product->findById($productkey);
             if (!empty($productstemp)) {
-//                debug($productstemp);
-
                 $productname = $productstemp['Product']['product_name'];
             }
         }
@@ -40,12 +38,10 @@ class CouponsController extends AdminAppController {
 
         if ($this->request->isPost()) {
             $data = $this->request->data;
-//            debug($data);
             $productprice = $data['productprice'];
             $this->set('product', $data['Coupon']['product_id']);
             $coupon_id = $this->Coupon->addCoupon($data, $productprice);
             if ($coupon_id == false) {
-//                exit();
                 $this->loadModel('Product');
                 $product = $this->Product->findById($data['Coupon']['product_id']);
                 $this->set('productprice', $product['Product']['product_price']);

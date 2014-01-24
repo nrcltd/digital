@@ -49,7 +49,6 @@ class AdminAppController extends AppController {
         $this->menu[2] = '';
         $this->menu[3] = '';
         $this->menu[4] = '';
-//        debug($this->params['controller']);
         if (strtolower($this->params['controller']) == 'dashboard') {
             $this->menu[0] = 'active';
         }
@@ -180,6 +179,63 @@ class AdminAppController extends AppController {
         }
 
         return $result;
+    }
+
+    public function deleteimagefiles() {
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+                $imageid = $this->request->data('imageid');
+                $this->loadModel('Image');
+                $imageinfo = $this->Image->findById($imageid);
+                $imagepart = $imageinfo['Image'];
+                $folder = 'upload';
+                $rootfolder = WWW_ROOT . 'img' . DS . $folder;
+                $parentfolfer = $rootfolder . DS . $imagepart['image_year'] . DS . $imagepart['image_month'] . DS . $imagepart['image_day'];
+                $image_user_url_resize = $parentfolfer . DS . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
+
+                $image_user_url_orginal = $parentfolfer . DS . 'orginal_' . $imagepart['image_name'] . $imagepart['image_ext'];
+
+                $image_user_url_thumbnail = $parentfolfer . DS . 'thumbnail_' . $imagepart['image_name'] . $imagepart['image_ext'];
+
+
+                if (file_exists($image_user_url_resize)) {
+                    unlink($image_user_url_resize);
+                }
+
+                if (file_exists($image_user_url_orginal)) {
+                    unlink($image_user_url_orginal);
+                }
+
+                if (file_exists($image_user_url_thumbnail)) {
+                    unlink($image_user_url_thumbnail);
+                }
+            }
+        }
+
+        exit();
+    }
+
+    public function deleteproductfiles() {
+        if ($this->Session->check('User')) {
+            if ($this->request->isPost()) {
+                $imageid = $this->request->data('imageid');
+                $this->loadModel('ProductFile');
+                $productfile = $this->ProductFile->findById($imageid);
+
+                $filepro = $productfile['ProductFile'];
+                $folder = 'upload';
+                $rootfolder = WWW_ROOT . 'img' . DS . $folder;
+                $file_path = $rootfolder . DS . $filepro['product_file_year']
+                        . DS . $filepro['product_file_month']
+                        . DS . $filepro['product_file_day']
+                        . DS . $filepro['product_file_name'] . $filepro['product_file_extension'];
+                if (file_exists($file_path)) {
+                    unlink($file_path);
+                }
+            }
+        }
+
+        exit();
     }
 
 }

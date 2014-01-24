@@ -11,38 +11,24 @@ class SettingController extends AdminAppController {
     public $uses = array('Admin.Setting', 'Admin.Theme');
 
     public function index() {
-//        debug($this->Option);
         $this->loadModel('Option');
         if ($this->request->isPost()) {
 
             $this->Setting->set($this->request->data);
             if ($this->Setting->validates()) {
                 $setting = $this->request->data['Setting'];
-//            debug($this->request);
                 $seller_password = $setting['seller_password'];
                 $this->updatepassword($seller_password);
                 foreach (array_keys($setting) as $key) {
-//                debug($setting[$key]);
-
                     $option = $this->Option->findByOptionName($key);
-//                $id = $option['Option']['id'];
-
                     $this->Option->updateAll(
                             array('Option.option_value' => '\'' . $setting[$key] . '\''), array('Option.option_name' => $key)
                     );
-
-//                $this->Option->Id = $id;
-//                $this->Option->saveField('option_value', $setting[$key]);
-//                debug($id . $this->Option->saveField('option_value', $setting[$key]));
                 }
             }
-
-//            debug($this->Setting->validates());
         }
 
         $options = $this->Option->find('all');
-//        debug($options);
-
         for ($index = 0; $index < count($options); $index++) {
             $op = $options[$index];
             $this->set($op['Option']['option_name'], $op['Option']['option_value']);
@@ -60,6 +46,7 @@ class SettingController extends AdminAppController {
             $user_photo_id = $option['Option']['option_value'];
         }
         $this->set("image_user_url", '');
+        $this->set("oldimagefilename", '');
         if (empty($user_photo_id)) {
             $this->set('hidephoto', 'none');
         } else {
@@ -69,6 +56,7 @@ class SettingController extends AdminAppController {
             $imagepart = $imageinfo['Image'];
             $image_user_url = $imagepart['image_year'] . '/' . $imagepart['image_month'] . '/' . $imagepart['image_day'] . '/' . 'resize_' . $imagepart['image_name'] . $imagepart['image_ext'];
             $this->set("image_user_url", $image_user_url);
+            $this->set("oldimagefilename", $imagepart['image_name']);
         }
         $themes = $this->Theme->find('all');
         $th = $this->Theme->findById($frontend_theme);
@@ -91,24 +79,18 @@ class SettingController extends AdminAppController {
                 $this->User->id = $userid;
                 $data = array('id' => $userid, 'password' => md5($newpassword));
                 $this->User->save($data);
-
-//                debug(md5($newpassword));
             }
         }
-//        exit();
     }
 
     public function updateavatar() {
         if ($this->Session->check('User')) {
             if ($this->request->isPost()) {
                 $this->loadModel('Option');
-//                debug($this->request);
                 $imageid = $this->request->data('imageid');
                 $this->Option->updateAll(
                         array('Option.option_value' => '\'' . $imageid . '\''), array('Option.option_name' => 'seller_photo')
                 );
-
-//                debug($imageid);
             }
         }
         exit();
@@ -155,7 +137,7 @@ class SettingController extends AdminAppController {
                 if ($option) {
                     $use_php_email = $option['Option']['option_value'];
                 }
-                
+
                 $option = $this->Option->findByOptionName('smtp_tls');
                 $smtp_tls = false;
                 if ($option) {
@@ -164,7 +146,7 @@ class SettingController extends AdminAppController {
                         $smtp_tls = true;
                     }
                 }
-                
+
                 $gmail = array();
                 if ($use_php_email === '0') {
                     $gmail = array(
@@ -203,7 +185,6 @@ class SettingController extends AdminAppController {
                         echo json_encode($result);
                     }
                 } catch (Exception $ex) {
-//                    debug($ex);
                     $result = array();
                     $result['result_code'] = '-1';
                     echo json_encode($result);
