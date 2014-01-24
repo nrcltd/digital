@@ -37,7 +37,22 @@
                     <tr>
                         <td><a href="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'products', 'action' => 'edit', $products[$index]['Product']['id'])); ?>"><?php echo $products[$index]['Product']['product_name']; ?></a></td>
                         <?php if (!empty($products)): ?>
-                            <td><?php echo count($products[$index]['Order']); ?></td>
+                            <td><?php 
+                                if (count($products[$index]['Order']) <= 0) {
+                                    echo 0; 
+                                } else {
+                                    $count = 0;
+                                    for ($index1 = 0; $index1 < count($products[$index]['Order']); $index1++) {
+                                        $or = $products[$index]['Order'][$index1];
+                                        if ($or['orderstatus'] == 'paid') {
+                                            $count = $count + 1;
+                                        }
+                                    }
+                                    
+                                    echo $count;
+                                }
+                                ?></td>
+                            
                         <?php else : ?>
                             <td>0</td>
                         <?php endif; ?>

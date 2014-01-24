@@ -48,15 +48,15 @@ if (strlen($large_photo_exists) > 0) {
         });
 
         $(window).load(function() {
-            $('#thumbnail').imgAreaSelect({aspectRatio: '1:<?php if ($photo_mode == 0) {
-        echo $current_large_image_height / $current_large_image_width;
+            $('#thumbnail').imgAreaSelect({<?php if ($photo_mode == 0) {
+//        echo $current_large_image_height / $current_large_image_width;
     } else {
-        echo $thumb_height / $thumb_width;
-    } ?>', 
+//        echo 'aspectRatio: 1:'.$thumb_height / $thumb_width.',';
+    } ?>
                 <?php if ($photo_mode == 0) { ?>
-                onSelectChange: preview, minHeight: 300, minWidth: 700, resizable : false});
+                onSelectChange: preview, minHeight: 300, minWidth: 750, maxHeight: 300, maxWidth: 750, resizable : false});
                 <?php } else {?>
-                 onSelectChange: preview, minHeight: 150, minWidth: 150, resizable : false});
+                 onSelectChange: preview, minHeight: 300, minWidth: 300, maxHeight: 300, maxWidth: 300, resizable : false});
                 <?php }?>
         });
 

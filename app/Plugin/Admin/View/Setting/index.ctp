@@ -275,14 +275,49 @@
                 ?>
             </div>
         </div>
-        <div class="col-sm-4">
-            <div class="right-inner-addon">
-                <button id="btnsendemail" type="button" data-loading-text="Sending..." class="btn btn-success btn-md btn-block" onclick="sendemail();"><b>Send a test mail</b></button>
-            </div>
+        <div class="col-sm-5">
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-2"></div>
     </div>
     <div class="" style="clear:both;">
+        <div class="col-sm-5">
+            <div class="input-group input text" style="margin-bottom:5px;">
+                <span class="input-group-addon">
+                    <?php
+                    if ($smtp_tls == 1) {
+                        echo $this->Form->input('smtp_tls', array(
+                            'type' => 'checkbox',
+                            'label' => false,
+                            'checked' => 'checked'
+                        ));
+                    } else {
+                        echo $this->Form->input('smtp_tls', array(
+                            'type' => 'checkbox',
+                            'label' => false
+                        ));
+                    }
+                    ?>
+                </span>
+                <input class="form-control" id="focusedInput" type="text" placeholder="TLS" style="font-size:12px;">
+            </div><!-- /input-group -->
+        </div>
+         <div class="col-sm-5">
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="" style="clear:both;">
+        <div class="col-sm-10">
+            <div style="  display:block;    
+                 margin: 0px 5px 5px 5px;
+                 border-bottom: 2px solid grey;  
+                 border-left: 2px solid grey; 
+                 border-right: 2px solid grey; 
+                 border-top: none; 
+                 border-top-left-radius:0px;"></div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="" style="clear:both;">
+
         <div class="col-sm-5">
             <div class="right-inner-addon" style="margin-bottom:5px;">
                 <!--<input class="form-control" id="focusedInput" type="text" placeholder="Smtp user" style="font-size:12px;">-->
@@ -290,7 +325,7 @@
                 echo $this->Form->input('smtp_test_user', array(
                     'type' => 'text',
                     'label' => false,
-                    'value' => $smtp_test_user,
+                    'value' => '',
                     'class' => 'form-control',
                     'style' => 'font-size:12px',
                     'placeholder' => 'Test user'
@@ -298,7 +333,12 @@
                 ?>
             </div>
         </div>
-        <div class="col-sm-7"></div>
+        <div class="col-sm-5">
+            <div class="right-inner-addon">
+                <button id="btnsendemail" type="button" data-loading-text="Sending..." class="btn btn-success btn-md btn-block" onclick="sendemail();"><b>Send a test mail</b></button>
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
     </div>
 
 
@@ -456,12 +496,22 @@
 
         $("#thumbnail_user_containner").css('display', 'block');
         $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
+        $('#myModal').modal('hide');
     }
 
     function sendemail() {
+
+        var SettingSmtpTestUser = $("#SettingSmtpTestUser").val();
+        if ((SettingSmtpTestUser.length === 0)) {
+            event.preventDefault();
+            alert("Please input your email testing!");
+            return;
+        }
+        var data = {email: SettingSmtpTestUser};
         $("#btnsendemail").html("<b>Sending...</b>");
         $.ajax({
             type: "POST",
+            data: data,
             url: "<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'setting', 'action' => 'sendemail')); ?>",
             success: function(data) {
                 $("#btnsendemail").html("<b>Send a test mail</b>");

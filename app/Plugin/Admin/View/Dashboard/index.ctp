@@ -18,13 +18,13 @@ echo $this->Html->script('/Admin/js/morris-0.4.3.min.js');
 <div class="tab-pane fade in active" id="Dashboard">
     <br>
     <div class="col-sm-3">
-        <button type="button" class="btn btn-success btn-md btn-block" onclick="weeklyreport();"><b>Weekly</b></button>
+        <button type="button" <?php if($reportkind == 'weekly') echo 'style="color: #2c373d;background-color: #ffffff;border: 2px solid #acacac"'; ?> class="btn btn-success<?php if ($reportkind == 'weekly') echo '.active'; ?> btn-md btn-block" onclick="weeklyreport();"><b>Weekly</b></button>
     </div>
     <div class="col-sm-1">
 
     </div>
     <div class="col-sm-3">
-        <button type="button" class="btn btn-success btn-md btn-block" onclick="monthlyreport();"><b>Monthly</b></button>
+        <button type="button" <?php if($reportkind == 'monthly') echo 'style="color: #2c373d;background-color: #ffffff;border: 2px solid #acacac"'; ?> class="btn btn-success<?php if ($reportkind == 'monthly') echo '.active'; ?> btn-md btn-block" onclick="monthlyreport();"><b>Monthly</b></button>
     </div>
     <div class="col-sm-3"></div>
     <div class="col-sm-3"></div> <br><br><br>
@@ -38,8 +38,8 @@ echo $this->Html->script('/Admin/js/morris-0.4.3.min.js');
         </div>
     </div>
 </div>
-<div class="row" style="visibility: hidden;">
-    wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf
+<div class="container-fluid" style="visibility: hidden;">
+    wer dsfa sdf ertwet  ads rdt wer sad as dgsdf g ert asf asdkfhaksjdfhajsdhfashdfkjahsdf ajskdfhk asdfkjahs dfk akjsdfh asdfhakjsfjashdfkjah sdfakjshdf asjdfh as df ew wer ds gsdfhg sdhw ert dfghsdgf fafafa
 </div>
 
 
@@ -56,17 +56,17 @@ echo $this->Html->script('/Admin/js/morris-0.4.3.min.js');
 
     function weeklyreport() {
         window.location = '<?php
-        echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard',
-    'action' => 'index',
-    '?' => array('report' => 'weekly')));
+                echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard',
+                    'action' => 'index',
+                    '?' => array('report' => 'weekly')));
 ?>';
     }
 
     function monthlyreport() {
         window.location = '<?php
-        echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard',
-    'action' => 'index',
-    '?' => array('report' => 'monthly')));
+                echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'dashboard',
+                    'action' => 'index',
+                    '?' => array('report' => 'monthly')));
 ?>';
     }
 </script>

@@ -144,17 +144,27 @@ class SettingController extends AdminAppController {
                     $smtp_password = $option['Option']['option_value'];
                 }
 
-                $option = $this->Option->findByOptionName('smtp_test_user');
-                $smtp_test_user = '';
-                if ($option) {
-                    $smtp_test_user = $option['Option']['option_value'];
-                }
+//                $option = $this->Option->findByOptionName('smtp_test_user');
+                $smtp_test_user = $this->request->data('email');
+//                if ($option) {
+//                    $smtp_test_user = $option['Option']['option_value'];
+//                }
 
                 $option = $this->Option->findByOptionName('use_php_email');
                 $use_php_email = '';
                 if ($option) {
                     $use_php_email = $option['Option']['option_value'];
                 }
+                
+                $option = $this->Option->findByOptionName('smtp_tls');
+                $smtp_tls = false;
+                if ($option) {
+                    $tempvalue = $option['Option']['option_value'];
+                    if ($tempvalue == '1') {
+                        $smtp_tls = true;
+                    }
+                }
+                
                 $gmail = array();
                 if ($use_php_email === '0') {
                     $gmail = array(
@@ -163,7 +173,7 @@ class SettingController extends AdminAppController {
                         'username' => $smtp_user,
                         'password' => $smtp_password,
                         'transport' => 'Smtp',
-                        'tls' => true,
+                        'tls' => $smtp_tls,
                         'timeout' => 30,
                         'client' => null,
                         'log' => false,
@@ -193,6 +203,7 @@ class SettingController extends AdminAppController {
                         echo json_encode($result);
                     }
                 } catch (Exception $ex) {
+//                    debug($ex);
                     $result = array();
                     $result['result_code'] = '-1';
                     echo json_encode($result);

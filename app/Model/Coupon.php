@@ -1,9 +1,16 @@
 <?php
 
 class Coupon extends AppModel {
-    public function getDiscount($couponcode) {
-        
-        $coupon = $this->findByCouponCode($couponcode);
+
+    public function getDiscount($couponcode, $product_id) {
+
+//        $coupon = $this->findByCouponCode($couponcode);
+
+        $coupon = $this->find('first', array(
+            'conditions' => array('UPPER(Coupon.coupon_code)' => strtoupper($couponcode),
+                'Coupon.product_id' => $product_id)
+        ));
+
         if (!empty($coupon)) {
             $coupon_quantity = $coupon['Coupon']['coupon_quantity'];
             $coupon_amount = $coupon['Coupon']['coupon_amount'];
@@ -16,6 +23,20 @@ class Coupon extends AppModel {
         }
         return 0;
     }
+
+    public function updatequantitycoupon($couponcode, $product_id) {
+
+        $coupon = $this->find('first', array(
+            'conditions' => array('UPPER(Coupon.coupon_code)' => strtoupper($couponcode),
+                'Coupon.product_id' => $product_id)
+        ));
+
+        $this->updateAll(
+                array('Coupon.coupon_used' => $coupon['Coupon']['coupon_used'] + 1), array('UPPER(Coupon.coupon_code)' => strtoupper($couponcode),
+                'Coupon.product_id' => $product_id)
+        );
+    }
+
 }
 
 ?>

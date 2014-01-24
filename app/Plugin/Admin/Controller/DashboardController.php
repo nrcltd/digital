@@ -15,16 +15,20 @@ class DashboardController extends AdminAppController {
         $report = $this->request->query('report');
         if (empty($report)) {
             $this->generateweekly();
+            $this->set('reportkind', 'weekly');
         } else if ($report == 'weekly') {
             $this->generateweekly();
+            $this->set('reportkind', 'weekly');
         } else if ($report == 'monthly') {
             $this->generatemonthly();
+            $this->set('reportkind', 'monthly');
         }
         $this->render('index');
     }
 
     function generatemonthly() {
         $orderids = $this->Order->find('all', array(
+            'conditions' => array('Order.orderstatus like' => '%paid%'),
             'fields' => array('DISTINCT Order.product_id') //array of conditions
         ));
 
@@ -65,9 +69,13 @@ class DashboardController extends AdminAppController {
         $values = '';
         if (!empty($productidarr)) {
             for ($index3 = 1; $index3 <= count($month); $index3++) {
-                $values = $values . '{period: \'' . $year . ' ' . $index3 . '\',';
+               
 
                 $query_date = $year . '-' . $index3 . '-01';
+                
+                $time_value = date_format(date_create($query_date), 'jS Y M') ;
+                $values = $values . '{period: \'' . substr($time_value, strpos($time_value, ' ')) . '\',';
+                 
                 $start = date('Y-m-01', strtotime($query_date));
 //                debug($start);
                 $end = date('Y-m-t', strtotime($query_date));
@@ -79,14 +87,19 @@ class DashboardController extends AdminAppController {
                     $name = $productnames[$index2];
 
                     $conditions = array('Order.product_id' => $productid,
-                        'Order.purchased_date <=' => $end, 'Order.purchased_date >=' => $start);
+                        'Order.purchased_date <=' => $end, 'Order.purchased_date >=' => $start,
+                        'Order.orderstatus like' => '%paid%');
 
                     $items = $this->Order->find('all', array(
                         'conditions' => $conditions,
                         'fields' => array('Order.product_id')
                     ));
 
-                    $values = $values . ' ' . $name . ': ' . count($items) . ',';
+                    $sale = 'sale';
+                    if (count($items) >= 2) {
+                        $sale = 'sales';
+                    }
+                    $values = $values . ' ' . $name . ': ' . count($items)  . ',';
                 }
                 if (strlen($values) > 0) {
                     $values = substr($values, 0, strlen($values) - 1);
@@ -97,6 +110,15 @@ class DashboardController extends AdminAppController {
         if (strlen($values) > 0) {
             $values = substr($values, 0, strlen($values) - 1);
         }
+
+        if (strlen($keywords) > 0) {
+            $keywords = substr($keywords, 0, strlen($keywords) - 1);
+        }
+
+        if (strlen($labels) > 0) {
+            $labels = substr($labels, 0, strlen($labels) - 1);
+        }
+
         $this->set('keywords', $keywords);
         $this->set('labels', $labels);
         $this->set('values', $values);
@@ -105,6 +127,7 @@ class DashboardController extends AdminAppController {
 
     function generateweekly() {
         $orderids = $this->Order->find('all', array(
+            'conditions' => array('Order.orderstatus like' => '%paid%'),
             'fields' => array('DISTINCT Order.product_id') //array of conditions
         ));
 
@@ -143,9 +166,15 @@ class DashboardController extends AdminAppController {
         $values = '';
         if (!empty($productidarr)) {
             for ($index3 = 1; $index3 <= $month; $index3++) {
-                $values = $values . '{period: \'' . $year . ' ' . $index3 . '\',';
+//                $values = $values . '{period: \'' . $year . ' ' . $index3 . '\',';
 
                 $query_date = $year . '-' . $index3 . '-01';
+                
+                
+                
+                $time_value = date_format(date_create($query_date), 'jS Y M') ;
+                $values = $values . '{period: \'' . substr($time_value, strpos($time_value, ' ')) . '\',';
+                
                 $start = date('Y-m-01', strtotime($query_date));
 //                debug($start);
                 $end = date('Y-m-t', strtotime($query_date));
@@ -157,13 +186,18 @@ class DashboardController extends AdminAppController {
                     $name = $productnames[$index2];
 
                     $conditions = array('Order.product_id' => $productid,
-                        'Order.purchased_date <=' => $end, 'Order.purchased_date >=' => $start);
+                        'Order.purchased_date <=' => $end, 'Order.purchased_date >=' => $start,
+                        'Order.orderstatus like' => '%paid%');
 
                     $items = $this->Order->find('all', array(
                         'conditions' => $conditions,
                         'fields' => array('Order.product_id')
                     ));
 
+                    $sale = 'sale';
+                    if (count($items) >= 2) {
+                        $sale = 'sales';
+                    }
                     $values = $values . ' ' . $name . ': ' . count($items) . ',';
                 }
 
@@ -177,6 +211,15 @@ class DashboardController extends AdminAppController {
         if (strlen($values) > 0) {
             $values = substr($values, 0, strlen($values) - 1);
         }
+
+        if (strlen($keywords) > 0) {
+            $keywords = substr($keywords, 0, strlen($keywords) - 1);
+        }
+
+        if (strlen($labels) > 0) {
+            $labels = substr($labels, 0, strlen($labels) - 1);
+        }
+
         $this->set('keywords', $keywords);
         $this->set('labels', $labels);
         $this->set('values', $values);

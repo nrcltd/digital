@@ -103,9 +103,9 @@ $cakeDescription = __d('digital_shop', 'Digital Sell');
 
 
         <script>
-            $(function() {
-                $('#myTab a:last').tab('show')
-            })
+//            $(function() {
+//                $('#myTab a:last').tab('show')
+//            })
         </script>
 
     </body>

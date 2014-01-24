@@ -160,7 +160,7 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
                                             'placeholder' => 'Email'
                                         ));
                                         ?>
-                                    </div><br>
+                                    </div><div class="left-outer-addon"><i style="font-size:0.7em;color:red;" class="icon-star-empty"></i></div><br>
                                     <div class="control-group">
                                         <!--<input class="form-control" id="focusedInput" type="text" placeholder="Coupon code (if you have any)">-->
                                         <?php
@@ -243,8 +243,12 @@ echo $this->Html->css('main/base.css', array('id' => 'callCss', 'media' => 'scre
 
                             <!-- Social icons begin ======================================== -->
                             <p>
-                                <a href="<?php echo $facebook_url; ?>" target="_blank"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
-                                <a href="<?php echo $twitter_url; ?>" target="_blank"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
+                                <?php if (!empty($facebook_url)) { ?>
+                                    <a href="<?php echo $facebook_url; ?>" target="_blank"><img src="<?php echo $this->Html->url('/img/facebook.png', true) ?>" alt="..."></a>
+                                <?php } ?>
+                                <?php if (!empty($twitter_url)) { ?>
+                                    <a href="<?php echo $twitter_url; ?>" target="_blank"><img src="<?php echo $this->Html->url('/img/twitter.png', true) ?>" alt="..."></a>                   
+                                <?php } ?>
                             </p>
                             <!-- Social icons end ======================================== -->
                         </div>

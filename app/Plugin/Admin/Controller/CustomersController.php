@@ -87,6 +87,16 @@ class CustomersController extends AdminAppController {
                 if ($option) {
                     $use_php_email = $option['Option']['option_value'];
                 }
+                
+                $option = $this->Option->findByOptionName('smtp_tls');
+                $smtp_tls = false;
+                if ($option) {
+                    $tempvalue = $option['Option']['option_value'];
+                    if ($tempvalue == '1') {
+                        $smtp_tls = true;
+                    }
+                }
+                
                 $gmail = array();
                 if ($use_php_email === '0') {
                     $gmail = array(
@@ -95,7 +105,7 @@ class CustomersController extends AdminAppController {
                         'username' => $smtp_user,
                         'password' => $smtp_password,
                         'transport' => 'Smtp',
-                        'tls' => true,
+                        'tls' => $smtp_tls,
                         'timeout' => 30,
                         'client' => null,
                         'log' => false,
@@ -121,12 +131,14 @@ class CustomersController extends AdminAppController {
 
                 $email->subject('Invoice: #' . $order['Order']['id'] . ' - Buy ' . $product["Product"]['product_name'] . ' - ' . $order['Order']['customer_name']);
 
-
+                $this->loadModel('Token');
+                $tokenp = $this->Token->findByOrderId($order['Order']['id']);
                 $content = $order['Order']['id'] . '\n' . $order['Order']['purchased_date'] .
                         '\n' . $product["Product"]['id'] . '\n' . $product["Product"]['product_name']
                         . '\n' . $product["Product"]['product_price'] .
                         '\n' . $order['Order']['customer_name'] .
-                        '\n' . $order['Order']['customer_email'];
+                        '\n' . $order['Order']['customer_email'].
+                        '\n' . $order['Order']['id'] . '\n' . $tokenp['Token']['token_code'];
                 try {
                     if ($email->send($content)) {
                         $result = array();

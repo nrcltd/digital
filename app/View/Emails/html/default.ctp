@@ -27,7 +27,8 @@ $product_name = $content1[3];
 $product_price = $content1[4];
 $customer_name = $content1[5];
 $customer_email = $content1[6];
-
+$orderid = $content1[7];
+$token = trim($content1[8]);
 //foreach ($content as $line):
 //    echo '<p> ' . $line . "</p>\n";
 //endforeach;
@@ -123,6 +124,25 @@ $customer_email = $content1[6];
 
 
                             </div>
+
+                            <div class="panel-heading">
+                                <b><span style="font-size: 26.3px;">Please click link below to download your file.</span></b>
+                                <br>
+                                <a href="<?php
+                                echo $this->Html->url(array('plugin' => '', 'controller' => 'orders',
+                                    'action' => 'download',
+                                    '?' => array(
+                                        'id' => $orderid,
+                                        'token' => $token)), true);
+                                ?>"><?php
+                                       echo $this->Html->url(array('plugin' => '', 'controller' => 'orders',
+                                           'action' => 'download',
+                                           '?' => array(
+                                               'id' => $orderid,
+                                               'token' => $token)), true);
+                                       ?></a>
+                            </div>
+
                         </div>
 
                     </div>

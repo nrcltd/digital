@@ -34,31 +34,33 @@ App::uses('Model', 'Model');
 class Order extends AppModel {
 
     public $validate = array(
-//        'customer_name' => array(
-//            'rule_1' => array(
-//                'rule' => 'alphaNumeric',
-//                'required' => true,
-//                'message' => 'Alphabets and numbers only'
-//            )
-//        ),
+        'customer_name' => array(
+            'rule_3' => array(
+                'rule' => 'notEmpty',
+                'required' => true,
+                'message' => 'Customer name can not be empty.'
+            )
+        ),
         'customer_email' => 'email',
-        'coupon_code' => array (
-           'rule_3' => array(
+        'coupon_code' => array(
+            'rule_3' => array(
                 'rule' => 'alphaNumeric',
                 'allowEmpty' => true,
                 'message' => 'Alphabets and numbers only'
-            ) 
+            )
         )
     );
-    
     public $hasOne = 'Token';
-    
+
     public function addOrder($data) {
+
         $data['Order']['orderstatus'] = 'Pending';
         $data['Order']['purchased_date'] = date("Y-m-d H:i:s");
         $this->set($data);
+//        debug($data);
+//        debug($this->invalidFields());
         if ($this->validates()) {
-            
+
             $this->create();
             $this->save($data);
             $data['id'] = $this->id;
@@ -71,26 +73,26 @@ class Order extends AppModel {
         }
         return false;
     }
-    
-    public  function findOrder($orderid, $token_code) {
+
+    public function findOrder($orderid, $token_code) {
         $token = $this->Token->find('first', array(
             'conditions' => array(
                 'Token.token_code' => $token_code)
         ));
+//        debug($token);
         if (empty($token)) {
             return false;
         }
-        
+
         $token_id = $token['Token']['id'];
         $result = $this->find('first', array(
             'conditions' => array(
-                'Order.id' => $orderid, 
-                'Token.id' => $token_id,
-                'Order.orderstatus' => 'Pending'),
+                'Order.id' => $orderid,
+                'Token.id' => $token_id),
             'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
                 'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
         ));
-        
+//debug($result);
         if (empty($result)) {
             return false;
         } else {
@@ -98,4 +100,77 @@ class Order extends AppModel {
         }
 //        debug($token);
     }
+
+    public function findPaidOrder($orderid, $token_code) {
+        $token = $this->Token->find('first', array(
+            'conditions' => array(
+                'Token.token_code' => $token_code)
+        ));
+//        debug($token);
+        if (empty($token)) {
+            return false;
+        }
+
+        $token_id = $token['Token']['id'];
+        $result = $this->find('first', array(
+            'conditions' => array(
+                'Order.id' => $orderid,
+                'Order.orderstatus' => 'paid',
+                'Token.id' => $token_id),
+            'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
+                'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
+        ));
+//debug($result);
+        if (empty($result)) {
+            return false;
+        } else {
+            return $result;
+        }
+//        debug($token);
+    }
+
+    public function checkOrder($orderid, $token_code) {
+        $token = $this->Token->find('first', array(
+            'conditions' => array(
+                'Token.token_code' => $token_code)
+        ));
+//        debug($token);
+        if (empty($token)) {
+            return false;
+        }
+
+        $token_id = $token['Token']['id'];
+        $result = $this->find('first', array(
+            'conditions' => array(
+                'Order.id' => $orderid,
+                'Order.orderstatus' => 'Pending',
+                'Token.id' => $token_id),
+            'fields' => array('Order.id', 'Order.customer_name', 'Order.customer_email',
+                'Order.purchased_date', 'Order.product_id', 'Order.coupon_code')
+        ));
+//debug($result);
+        if (empty($result)) {
+            return false;
+        } else {
+            return $result;
+        }
+//        debug($token);
+    }
+
+    public function updateOrder($status, $orderid) {
+//        $this->id = $orderid;
+//        $this->set('orderstatus', $status);
+//        $data = array('id' => $orderid, 'orderstatus' => $status);
+//        $this->save($data);
+
+        $this->updateAll(
+                array('Order.orderstatus' => '\'' . $status . '\''), array('Order.id' => $orderid)
+        );
+
+//        debug($this->save($data));
+//        debug($orderid);
+//        debug($status);
+        return $this->id;
+    }
+
 }

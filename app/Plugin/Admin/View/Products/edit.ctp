@@ -130,14 +130,14 @@
 </div>
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="width: 930px">
-        <div class="modal-content" style="width: 930px">
+    <div class="modal-dialog" style="width: 1100px">
+        <div class="modal-content" style="width: 1100px">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">Upload Images</h4>
             </div>
             <div class="modal-body">
-                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', $products['Product']['product_image_id'] ,'mode' => 0)); ?>"></iframe>
+                <iframe id="upload_target" class="container-fluid" height="500" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'uploader', 'action' => 'index', $products['Product']['product_image_id'], 'mode' => 0)); ?>"></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -154,7 +154,7 @@
                 <h4 class="modal-title" id="myModalLabel">Upload File</h4>
             </div>
             <div class="modal-body">
-                <iframe id="upload_target" class="container-fluid" height="150" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'fileuploader', 'action' => 'index')); ?>"></iframe>
+                <iframe id="upload_target" class="container-fluid" height="150" width="100%" name="upload_target" src="<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'file_uploader', 'action' => 'index')); ?>"></iframe>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -182,12 +182,14 @@
         });
         $("#thumbnail_user_containner").css('display', 'block');
         $("#thumbnail_user_photo").attr('src', '<?php echo $this->Html->url('/img/' . 'upload/', true) ?>' + imagepath);
+        $('#myModal').modal('hide');
     }
 
     function updateproductfile(productfileid, filename, filesize) {
         $("#ProductProductFileId").val(productfileid);
         $("#filename_product").html(filename);
         $("#filesize_product").html(filesize);
+        $('#myModal1').modal('hide');
     }
 
     function pauseproduct() {

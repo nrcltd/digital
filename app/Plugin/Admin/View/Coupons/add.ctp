@@ -61,6 +61,7 @@
         <div class="col-sm-6">
         </div>
     </div>
+    <input type="hidden" value="<?php echo $productprice?>" name="productprice" id="productprice"/>
     <?php echo $this->Form->end(); ?>
 </div>
 <div class="row" style="visibility: hidden;">

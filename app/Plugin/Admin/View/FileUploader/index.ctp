@@ -39,7 +39,7 @@
 
         // xhr dung de goi data bang ajax
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'fileuploader', 'action' => 'index')); ?>', true);
+        xhr.open('POST', '<?php echo $this->Html->url(array('plugin' => 'admin', 'controller' => 'file_uploader', 'action' => 'index')); ?>', true);
 
         xhr.upload.onprogress = function(e) {
             if (e.lengthComputable) {

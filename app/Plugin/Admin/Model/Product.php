@@ -24,7 +24,7 @@ class Product extends AppModel {
                 'message' => 'Please supply the price of product.'
             ),
             'range' => array(
-                'rule' => array('range', 0, 1000000000),
+                'rule' => array('range', -0.0000001, 1000000000),
                 'message' => 'The price of product can not be 0.'
             )
         ),

@@ -41,10 +41,14 @@ class CouponsController extends AdminAppController {
         if ($this->request->isPost()) {
             $data = $this->request->data;
 //            debug($data);
+            $productprice = $data['productprice'];
             $this->set('product', $data['Coupon']['product_id']);
-            $coupon_id = $this->Coupon->addCoupon($data);
+            $coupon_id = $this->Coupon->addCoupon($data, $productprice);
             if ($coupon_id == false) {
 //                exit();
+                $this->loadModel('Product');
+                $product = $this->Product->findById($data['Coupon']['product_id']);
+                $this->set('productprice', $product['Product']['product_price']);
                 return;
             } else {
                 $this->Redirect(array('controller' => 'coupons', 'action' => 'index'));
@@ -54,7 +58,10 @@ class CouponsController extends AdminAppController {
                 $this->Redirect(array('controller' => 'coupons', 'action' => 'index'));
                 exit();
             } else {
+                $this->loadModel('Product');
+                $product = $this->Product->findById($id);
                 $this->set('product', $id);
+                $this->set('productprice', $product['Product']['product_price']);
                 $this->setMenuItems();
                 $this->render('add');
             }

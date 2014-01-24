@@ -41,7 +41,7 @@ class Coupon extends AppModel {
                 'message' => 'Please supply the number of coupons.'
             ),
             'range' => array(
-                'rule'    => array('range', 0, 1000000000),
+                'rule' => array('range', 0, 1000000000),
                 'message' => 'The number of coupons can not be 0.'
             )
         ),
@@ -52,15 +52,16 @@ class Coupon extends AppModel {
             'decimal' => array(
                 'rule' => array('decimal'),
                 'message' => 'Please supply the amount of coupons.'
-            ),
-            'range' => array(
-                'rule'    => array('range', 0, 1000000000),
-                'message' => 'The amount of coupons can not be 0.'
             )
+//            ,
+//            'range' => array(
+//                'rule' => array('range', 0, 1000000000),
+//                'message' => 'The amount of coupons can not be 0.'
+//            )
         )
     );
 
-    public function addCoupon($data) {
+    public function addCoupon($data, $price) {
 //        $data['Coupon']['product_id'] = $id;
         $availableCouponCode = array();
         $arrcouponcode = $this->find('all', array(
@@ -76,7 +77,14 @@ class Coupon extends AppModel {
         $data['Coupon']['coupon_code'] = $couponcode[0];
         $this->set($data);
 
+        // check coupon amount
+        $this->validator()->add('coupon_amount', 'range', array(
+            'rule' => array('range', 0, $price + 0.01),
+            'message' => 'The amount of coupons can not be 0 or over '. $price. '$'
+        ));
+
         if ($this->validates()) {
+
 
             $this->create();
             $this->save($data);

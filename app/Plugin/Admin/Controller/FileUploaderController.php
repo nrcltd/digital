@@ -56,7 +56,7 @@ class FileUploaderController extends AdminAppController {
                     $file_ext = strtolower(substr($filename, strrpos($filename, '.') + 1));
                     $filename_ext = "." . $file_ext;
                     move_uploaded_file($userfile_tmp, $this->upload_path . $this->large_file_name . "." . $file_ext);
-                    chmod($this->upload_path . $this->large_file_name . "." . $file_ext, 0777);
+//                    chmod($this->upload_path . $this->large_file_name . "." . $file_ext, 0777);
 
                     $productfileid = $this->ProductFile->addProductFile($filename_temp, $userfile_name, $userfile_size, $year, $month, $day, $filename_ext);
                     $result = array();
